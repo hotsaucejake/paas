@@ -6,9 +6,13 @@ use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
-class User extends Authenticatable
+use dam1r89\PasswordlessAuth\UsersRepository;
+use dam1r89\PasswordlessAuth\Contracts\UsersProvider;
+
+class User extends Authenticatable implements UsersProvider
 {
     use Notifiable;
+    use UsersRepository;
 
     /**
      * The attributes that are mass assignable.

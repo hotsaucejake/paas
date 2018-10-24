@@ -26,7 +26,7 @@ return [
      * Default redirect to
      * Redirect url after user is signed in and intended url is not set
      */
-    'redirect_to' => 'home',
+    'redirect_to' => 'dashboard',
 
     /*
      * If user should be "remembered" after sign-in.

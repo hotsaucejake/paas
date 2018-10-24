@@ -5,6 +5,11 @@ PaaS: Dashboard
 @endsection
 
 
+@section('page-css')
+
+@endsection
+
+
 @section('breadcrumb-title')
 Dashboard
 @endsection

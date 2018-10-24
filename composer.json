@@ -8,6 +8,7 @@
         "php": "^7.1.3",
         "dam1r89/passwordless-auth": "^1.5",
         "fideloper/proxy": "^4.0",
+        "hotsaucejake/toastr-5-laravel": "^0.1.0",
         "laravel/framework": "5.7.*",
         "laravel/tinker": "^1.0",
         "leung/laravel-adminer": "^2.1",

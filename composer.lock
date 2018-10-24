@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "1d556cc41e9aae7f9af87189644c28ea",
+    "content-hash": "40c97216a524b15e82ce89f8278e7489",
     "packages": [
         {
             "name": "dam1r89/passwordless-auth",
@@ -590,6 +590,69 @@
                 "url"
             ],
             "time": "2017-03-20T17:10:46+00:00"
+        },
+        {
+            "name": "hotsaucejake/toastr-5-laravel",
+            "version": "v0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/hotsaucejake/toastr-5-laravel.git",
+                "reference": "e7ca1539942738bdd1a66b369313bc8ecc4b7d27"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/hotsaucejake/toastr-5-laravel/zipball/e7ca1539942738bdd1a66b369313bc8ecc4b7d27",
+                "reference": "e7ca1539942738bdd1a66b369313bc8ecc4b7d27",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/session": ">=5.0.0",
+                "illuminate/support": ">=5.0.0",
+                "php": ">=5.4.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Kamaln7\\Toastr\\ToastrServiceProvider"
+                    ],
+                    "aliases": {
+                        "Toastr": "Kamaln7\\Toastr\\Facades\\Toastr"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Kamaln7\\Toastr\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Kamal Nasser",
+                    "email": "kamal@kamalnasser.net"
+                },
+                {
+                    "name": "Valentin Ivascu",
+                    "email": "oriceon@gmail.com"
+                },
+                {
+                    "name": "HOT SAUCE JAKE",
+                    "email": "get@hotsaucejake.com"
+                }
+            ],
+            "description": "Easy toastr notifications for Laravel 5",
+            "homepage": "https://github.com/hotsaucejake/toastr-5-laravel",
+            "keywords": [
+                "laravel",
+                "notification",
+                "php",
+                "toastr"
+            ],
+            "time": "2018-09-29T15:14:54+00:00"
         },
         {
             "name": "jakub-onderka/php-console-color",

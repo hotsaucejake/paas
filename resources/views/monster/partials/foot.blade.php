@@ -17,4 +17,7 @@
 <!-- ============================================================== -->
 <script src="/monster/assets/plugins/styleswitcher/jQuery.style.switcher.js"></script>
 
+<script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+{!! Toastr::render() !!}
+
 @yield('page-plugins')

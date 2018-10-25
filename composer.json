@@ -12,6 +12,7 @@
         "laravel/framework": "5.7.*",
         "laravel/tinker": "^1.0",
         "leung/laravel-adminer": "^2.1",
+        "orangehill/iseed": "^2.6",
         "spatie/laravel-permission": "^2.23"
     },
     "require-dev": {

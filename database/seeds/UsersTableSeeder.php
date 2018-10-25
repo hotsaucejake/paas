@@ -50,7 +50,7 @@ class UsersTableSeeder extends Seeder
             'Ivan Bickett' => 'ibickett@corus360.com',
             'Daniel Adam' => 'dadam@corus360.com',
             'Louisa Yang' => 'lyang@corus360.com',
-            'Sammy Kite' => 'samantha.kite1@gmail.com',
+            'Sammy-Kite' => 'samantha.kite1@gmail.com',
         ];
 
         foreach($users as $name => $email)

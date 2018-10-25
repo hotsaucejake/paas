@@ -29,6 +29,10 @@ Route::middleware('verified')->prefix('dashboard')->group(function () {
 
     Route::resource('permission', 'PermissionController');
 
+    Route::resource('permanent_placement', 'PermanentPlacementController');
+
+    Route::resource('contract_billing', 'ContractBillingController');
+
 });
 
 Auth::routes();

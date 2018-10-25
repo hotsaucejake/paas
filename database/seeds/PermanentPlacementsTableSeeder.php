@@ -12,12 +12,9 @@ class PermanentPlacementsTableSeeder extends Seeder
      */
     public function run()
     {
-        
 
-        \DB::table('permanent_placements')->delete();
-        
         \DB::table('permanent_placements')->insert(array (
-            0 => 
+            0 =>
             array (
                 'id' => 1,
                 'user_id' => 2,
@@ -43,7 +40,7 @@ class PermanentPlacementsTableSeeder extends Seeder
                 'created_at' => '2017-02-06 20:47:03',
                 'updated_at' => '2017-02-06 21:05:11',
             ),
-            1 => 
+            1 =>
             array (
                 'id' => 2,
                 'user_id' => 3,
@@ -71,7 +68,7 @@ Chicago, IL 60606',
                 'created_at' => '2017-02-17 14:43:23',
                 'updated_at' => '2017-02-20 16:04:36',
             ),
-            2 => 
+            2 =>
             array (
                 'id' => 3,
                 'user_id' => 17,
@@ -97,7 +94,7 @@ Chicago, IL 60606',
                 'created_at' => '2017-02-20 17:36:37',
                 'updated_at' => '2017-02-21 20:25:50',
             ),
-            3 => 
+            3 =>
             array (
                 'id' => 4,
                 'user_id' => 8,
@@ -118,13 +115,13 @@ Chicago, IL 60606',
                 'start_date' => '2017-03-08',
                 'recruiter' => 'Hailey MacLaren',
                 'sales_rep' => 'Meghan Fernandez ',
-                'special_notes' => 'Split with Jim Bannon ATG 
+                'special_notes' => 'Split with Jim Bannon ATG
 New PaaS customer already an ATG active customer.  Please don\'t send this customer any new forms without connecting with a sales rep.  Thank you!',
                 'approved' => 1,
                 'created_at' => '2017-03-07 16:47:00',
                 'updated_at' => '2017-03-07 17:18:36',
             ),
-            4 => 
+            4 =>
             array (
                 'id' => 5,
                 'user_id' => 18,
@@ -134,7 +131,7 @@ New PaaS customer already an ATG active customer.  Please don\'t send this custo
                 'ap_phone' => '917-855-9425',
                 'customer_po' => 'N/A',
                 'customer_status' => 'new',
-                'bill_address' => '3377 Blake Street STE 108 Denver, CO 80205		
+                'bill_address' => '3377 Blake Street STE 108 Denver, CO 80205
 
 
 
@@ -150,7 +147,7 @@ New PaaS customer already an ATG active customer.  Please don\'t send this custo
                 'start_date' => '2017-03-20',
                 'recruiter' => 'April Holland',
                 'sales_rep' => 'April Holland',
-            'special_notes' => 'Spreading perm fee over 3 months -  $2,850 (March 20th) $2,850 (April 20th) $2,800 (May 20th) 					
+            'special_notes' => 'Spreading perm fee over 3 months -  $2,850 (March 20th) $2,850 (April 20th) $2,800 (May 20th)
 
 
 
@@ -162,7 +159,7 @@ New PaaS customer already an ATG active customer.  Please don\'t send this custo
                 'created_at' => '2017-03-08 22:23:47',
                 'updated_at' => '2017-03-09 19:29:27',
             ),
-            5 => 
+            5 =>
             array (
                 'id' => 6,
                 'user_id' => 17,
@@ -189,7 +186,7 @@ Carrolton GA ',
                 'created_at' => '2017-03-10 21:52:52',
                 'updated_at' => '2017-03-10 21:55:34',
             ),
-            6 => 
+            6 =>
             array (
                 'id' => 7,
                 'user_id' => 12,
@@ -218,7 +215,7 @@ Carrolton GA ',
                 'created_at' => '2017-03-15 20:32:11',
                 'updated_at' => '2017-03-15 20:34:21',
             ),
-            7 => 
+            7 =>
             array (
                 'id' => 8,
                 'user_id' => 13,
@@ -246,7 +243,7 @@ Centennial, CO 80112
                 'created_at' => '2017-03-16 05:29:10',
                 'updated_at' => '2017-03-16 14:13:38',
             ),
-            8 => 
+            8 =>
             array (
                 'id' => 9,
                 'user_id' => 13,
@@ -272,7 +269,7 @@ Centennial, CO 80112
                 'created_at' => '2017-03-16 05:32:28',
                 'updated_at' => '2017-03-16 14:13:30',
             ),
-            9 => 
+            9 =>
             array (
                 'id' => 10,
                 'user_id' => 18,
@@ -298,7 +295,7 @@ Centennial, CO 80112
                 'created_at' => '2017-03-17 14:35:45',
                 'updated_at' => '2017-03-17 18:37:29',
             ),
-            10 => 
+            10 =>
             array (
                 'id' => 11,
                 'user_id' => 12,
@@ -309,7 +306,7 @@ Centennial, CO 80112
                 'customer_po' => 'N/A',
                 'customer_status' => 'existing',
                 'bill_address' => '1600 Terrell Mill
-Marietta, GA 
+Marietta, GA
 
 ',
                 'placement_name' => 'Andrew Witherite',
@@ -327,7 +324,7 @@ Marietta, GA
                 'created_at' => '2017-03-20 20:21:35',
                 'updated_at' => '2017-03-20 20:30:50',
             ),
-            11 => 
+            11 =>
             array (
                 'id' => 12,
                 'user_id' => 12,
@@ -338,7 +335,7 @@ Marietta, GA
                 'customer_po' => '',
                 'customer_status' => 'existing',
                 'bill_address' => '1600 Terrell Mill
-Marietta, GA 
+Marietta, GA
 ',
                 'placement_name' => 'Rokahn Campbell ',
                 'placement_email' => 'rok_campbell@yahoo.com',
@@ -355,7 +352,7 @@ Marietta, GA
                 'created_at' => '2017-03-23 16:50:22',
                 'updated_at' => '2017-03-23 17:32:54',
             ),
-            12 => 
+            12 =>
             array (
                 'id' => 13,
                 'user_id' => 18,
@@ -376,7 +373,7 @@ Marietta, GA
                 'start_date' => '2017-04-10',
                 'recruiter' => 'Brandy Busby ',
                 'sales_rep' => 'April Holland',
-                'special_notes' => 'Same as previous deal with Stack Advisors. Spread perm fee over 3 month period. 
+                'special_notes' => 'Same as previous deal with Stack Advisors. Spread perm fee over 3 month period.
 4/10: 3,684
 5/10: 3,683
 6/10: 3,683',
@@ -384,7 +381,7 @@ Marietta, GA
                 'created_at' => '2017-03-23 20:50:26',
                 'updated_at' => '2017-03-23 20:51:29',
             ),
-            13 => 
+            13 =>
             array (
                 'id' => 14,
                 'user_id' => 17,
@@ -411,7 +408,7 @@ Atlanta, GA 30346',
                 'created_at' => '2017-03-24 19:20:16',
                 'updated_at' => '2017-03-24 19:37:21',
             ),
-            14 => 
+            14 =>
             array (
                 'id' => 15,
                 'user_id' => 18,
@@ -437,7 +434,7 @@ Atlanta, GA 30346',
                 'created_at' => '2017-04-07 15:30:55',
                 'updated_at' => '2017-04-07 15:59:05',
             ),
-            15 => 
+            15 =>
             array (
                 'id' => 16,
                 'user_id' => 19,
@@ -464,7 +461,7 @@ DULUTH, GA  30097',
                 'created_at' => '2017-04-10 16:10:17',
                 'updated_at' => '2017-04-10 16:36:13',
             ),
-            16 => 
+            16 =>
             array (
                 'id' => 17,
                 'user_id' => 18,
@@ -490,7 +487,7 @@ DULUTH, GA  30097',
                 'created_at' => '2017-04-24 21:01:40',
                 'updated_at' => '2017-04-25 11:58:18',
             ),
-            17 => 
+            17 =>
             array (
                 'id' => 18,
                 'user_id' => 12,
@@ -516,7 +513,7 @@ DULUTH, GA  30097',
                 'created_at' => '2017-04-28 19:49:58',
                 'updated_at' => '2017-04-28 23:00:06',
             ),
-            18 => 
+            18 =>
             array (
                 'id' => 19,
                 'user_id' => 8,
@@ -526,7 +523,7 @@ DULUTH, GA  30097',
                 'ap_phone' => '831-647-4706',
                 'customer_po' => '',
                 'customer_status' => 'new',
-                'bill_address' => '21 Lower Ragsdale Dr. 
+                'bill_address' => '21 Lower Ragsdale Dr.
 Monterey, CA 93940',
                 'placement_name' => 'Romona Czichos ',
                 'placement_email' => 'lonestarr@sbcglobal.net',
@@ -545,7 +542,7 @@ Split 50% with Peter McLean in ATG',
                 'created_at' => '2017-05-04 19:11:20',
                 'updated_at' => '2017-05-04 19:14:57',
             ),
-            19 => 
+            19 =>
             array (
                 'id' => 20,
                 'user_id' => 12,
@@ -557,7 +554,7 @@ Split 50% with Peter McLean in ATG',
                 'customer_status' => 'existing',
                 'bill_address' => 'HERE Technologies AP
 425 W Randolph St
-Chicago, IL 
+Chicago, IL
 
 Kandow, Kevin <kevin.kandow@here.com>',
                 'placement_name' => 'Mike Cain ',
@@ -577,7 +574,7 @@ UPDATE 5/10: Start date changed to 5/22',
                 'created_at' => '2017-05-05 23:03:18',
                 'updated_at' => '2017-05-16 14:17:02',
             ),
-            20 => 
+            20 =>
             array (
                 'id' => 21,
                 'user_id' => 11,
@@ -603,7 +600,7 @@ UPDATE 5/10: Start date changed to 5/22',
                 'created_at' => '2017-05-24 13:35:50',
                 'updated_at' => '2017-06-14 19:54:29',
             ),
-            21 => 
+            21 =>
             array (
                 'id' => 22,
                 'user_id' => 18,
@@ -629,7 +626,7 @@ UPDATE 5/10: Start date changed to 5/22',
                 'created_at' => '2017-06-02 17:20:59',
                 'updated_at' => '2017-06-02 18:12:19',
             ),
-            22 => 
+            22 =>
             array (
                 'id' => 23,
                 'user_id' => 18,
@@ -655,7 +652,7 @@ UPDATE 5/10: Start date changed to 5/22',
                 'created_at' => '2017-06-12 22:48:53',
                 'updated_at' => '2017-06-13 13:34:43',
             ),
-            23 => 
+            23 =>
             array (
                 'id' => 24,
                 'user_id' => 18,
@@ -681,7 +678,7 @@ UPDATE 5/10: Start date changed to 5/22',
                 'created_at' => '2017-06-12 22:55:32',
                 'updated_at' => '2017-06-13 13:34:15',
             ),
-            24 => 
+            24 =>
             array (
                 'id' => 25,
                 'user_id' => 4,
@@ -713,7 +710,7 @@ UPDATE 5/10: Start date changed to 5/22',
                 'created_at' => '2017-07-05 13:46:12',
                 'updated_at' => '2017-08-23 19:44:30',
             ),
-            25 => 
+            25 =>
             array (
                 'id' => 26,
                 'user_id' => 19,
@@ -723,7 +720,7 @@ UPDATE 5/10: Start date changed to 5/22',
                 'ap_phone' => '4046349100',
                 'customer_po' => '.',
                 'customer_status' => 'existing',
-                'bill_address' => 'QUIKRETE IT 
+                'bill_address' => 'QUIKRETE IT
 6340 SUGARLOAF PARKWAY
 DULUTH, GA  30097',
                 'placement_name' => 'Mark Collins',
@@ -741,7 +738,7 @@ DULUTH, GA  30097',
                 'created_at' => '2017-07-07 21:21:43',
                 'updated_at' => '2017-08-23 19:42:48',
             ),
-            26 => 
+            26 =>
             array (
                 'id' => 27,
                 'user_id' => 7,
@@ -767,7 +764,7 @@ DULUTH, GA  30097',
                 'created_at' => '2017-07-10 18:26:39',
                 'updated_at' => '2017-07-10 18:40:18',
             ),
-            27 => 
+            27 =>
             array (
                 'id' => 28,
                 'user_id' => 12,
@@ -793,7 +790,7 @@ DULUTH, GA  30097',
                 'created_at' => '2017-07-18 14:58:38',
                 'updated_at' => '2017-07-18 15:05:04',
             ),
-            28 => 
+            28 =>
             array (
                 'id' => 29,
                 'user_id' => 18,
@@ -820,7 +817,7 @@ Denver, CO 80222',
                 'created_at' => '2017-07-18 20:05:46',
                 'updated_at' => '2017-07-18 20:19:13',
             ),
-            29 => 
+            29 =>
             array (
                 'id' => 30,
                 'user_id' => 18,
@@ -830,7 +827,7 @@ Denver, CO 80222',
                 'ap_phone' => '501-442-7333',
                 'customer_po' => 'N/A',
                 'customer_status' => 'existing',
-                'bill_address' => '8740 Lucent Blvd, 
+                'bill_address' => '8740 Lucent Blvd,
 Highland Ranch, Colorado 80129',
                 'placement_name' => 'Dilek Kupeli',
                 'placement_email' => 'dilek.kupeli@gmail.com',
@@ -848,7 +845,7 @@ Highland Ranch, Colorado 80129',
                 'created_at' => '2017-07-18 20:12:18',
                 'updated_at' => '2017-07-19 14:39:50',
             ),
-            30 => 
+            30 =>
             array (
                 'id' => 31,
                 'user_id' => 20,
@@ -874,7 +871,7 @@ Highland Ranch, Colorado 80129',
                 'created_at' => '2017-07-21 20:10:00',
                 'updated_at' => '2017-08-08 15:33:54',
             ),
-            31 => 
+            31 =>
             array (
                 'id' => 32,
                 'user_id' => 8,
@@ -902,7 +899,7 @@ Monterey,CA 93940',
                 'created_at' => '2017-07-25 15:07:19',
                 'updated_at' => '2017-08-22 15:46:00',
             ),
-            32 => 
+            32 =>
             array (
                 'id' => 33,
                 'user_id' => 13,
@@ -928,7 +925,7 @@ Monterey,CA 93940',
                 'created_at' => '2017-07-25 16:39:43',
                 'updated_at' => '2017-07-25 17:05:02',
             ),
-            33 => 
+            33 =>
             array (
                 'id' => 34,
                 'user_id' => 13,
@@ -956,7 +953,7 @@ Centennial, CO 80112
                 'created_at' => '2017-07-28 19:57:42',
                 'updated_at' => '2017-07-28 20:12:20',
             ),
-            34 => 
+            34 =>
             array (
                 'id' => 35,
                 'user_id' => 13,
@@ -984,7 +981,7 @@ Centennial, CO 80112
                 'created_at' => '2017-07-28 20:03:54',
                 'updated_at' => '2017-07-28 20:11:36',
             ),
-            35 => 
+            35 =>
             array (
                 'id' => 36,
                 'user_id' => 2,
@@ -1012,7 +1009,7 @@ T. (312) 346-9088',
                 'created_at' => '2017-08-04 17:11:56',
                 'updated_at' => '2017-08-04 18:35:04',
             ),
-            36 => 
+            36 =>
             array (
                 'id' => 37,
                 'user_id' => 2,
@@ -1040,7 +1037,7 @@ Birmingham, AL  35223
                 'created_at' => '2017-08-08 17:37:59',
                 'updated_at' => '2017-08-10 20:17:17',
             ),
-            37 => 
+            37 =>
             array (
                 'id' => 38,
                 'user_id' => 13,
@@ -1067,7 +1064,7 @@ Birmingham, AL  35223
                 'created_at' => '2017-08-22 06:10:35',
                 'updated_at' => '2017-08-25 19:05:44',
             ),
-            38 => 
+            38 =>
             array (
                 'id' => 39,
                 'user_id' => 13,
@@ -1093,7 +1090,7 @@ Birmingham, AL  35223
                 'created_at' => '2017-08-26 04:22:58',
                 'updated_at' => '2017-08-28 16:27:26',
             ),
-            39 => 
+            39 =>
             array (
                 'id' => 40,
                 'user_id' => 13,
@@ -1119,7 +1116,7 @@ Birmingham, AL  35223
                 'created_at' => '2017-08-26 04:25:18',
                 'updated_at' => '2017-08-28 16:27:48',
             ),
-            40 => 
+            40 =>
             array (
                 'id' => 41,
                 'user_id' => 18,
@@ -1145,7 +1142,7 @@ Birmingham, AL  35223
                 'created_at' => '2017-09-11 22:33:52',
                 'updated_at' => '2017-09-11 23:19:05',
             ),
-            41 => 
+            41 =>
             array (
                 'id' => 42,
                 'user_id' => 18,
@@ -1171,7 +1168,7 @@ Birmingham, AL  35223
                 'created_at' => '2017-10-19 22:42:13',
                 'updated_at' => '2017-10-23 16:59:05',
             ),
-            42 => 
+            42 =>
             array (
                 'id' => 43,
                 'user_id' => 18,
@@ -1197,7 +1194,7 @@ Birmingham, AL  35223
                 'created_at' => '2017-11-13 17:15:28',
                 'updated_at' => '2017-11-13 20:04:45',
             ),
-            43 => 
+            43 =>
             array (
                 'id' => 44,
                 'user_id' => 11,
@@ -1224,7 +1221,7 @@ Raleigh, NC  27604',
                 'created_at' => '2017-11-21 15:14:23',
                 'updated_at' => '2017-11-27 21:35:49',
             ),
-            44 => 
+            44 =>
             array (
                 'id' => 45,
                 'user_id' => 20,
@@ -1250,7 +1247,7 @@ Raleigh, NC  27604',
                 'created_at' => '2017-11-28 21:25:29',
                 'updated_at' => '2017-11-28 21:29:43',
             ),
-            45 => 
+            45 =>
             array (
                 'id' => 46,
                 'user_id' => 14,
@@ -1277,7 +1274,7 @@ Raleigh, NC  27604',
                 'created_at' => '2017-12-01 15:18:00',
                 'updated_at' => '2017-12-04 17:08:40',
             ),
-            46 => 
+            46 =>
             array (
                 'id' => 47,
                 'user_id' => 8,
@@ -1303,7 +1300,7 @@ Raleigh, NC  27604',
                 'created_at' => '2017-12-11 15:10:16',
                 'updated_at' => '2017-12-11 16:24:02',
             ),
-            47 => 
+            47 =>
             array (
                 'id' => 48,
                 'user_id' => 20,
@@ -1329,7 +1326,7 @@ Raleigh, NC  27604',
                 'created_at' => '2017-12-15 21:17:42',
                 'updated_at' => '2017-12-21 15:14:36',
             ),
-            48 => 
+            48 =>
             array (
                 'id' => 49,
                 'user_id' => 19,
@@ -1356,7 +1353,7 @@ DULUTH, GA  30097',
                 'created_at' => '2018-01-06 00:21:21',
                 'updated_at' => '2018-01-22 21:45:07',
             ),
-            49 => 
+            49 =>
             array (
                 'id' => 50,
                 'user_id' => 12,
@@ -1385,7 +1382,7 @@ Thanks!  Beth
                 'created_at' => '2018-01-10 21:22:58',
                 'updated_at' => '2018-01-10 21:45:53',
             ),
-            50 => 
+            50 =>
             array (
                 'id' => 51,
                 'user_id' => 20,
@@ -1411,7 +1408,7 @@ Thanks!  Beth
                 'created_at' => '2018-01-17 15:36:13',
                 'updated_at' => '2018-01-17 17:10:50',
             ),
-            51 => 
+            51 =>
             array (
                 'id' => 52,
                 'user_id' => 11,
@@ -1438,7 +1435,7 @@ Newnan, GA 30265',
                 'created_at' => '2018-01-23 21:07:35',
                 'updated_at' => '2018-01-23 21:55:53',
             ),
-            52 => 
+            52 =>
             array (
                 'id' => 53,
                 'user_id' => 12,
@@ -1464,7 +1461,7 @@ Newnan, GA 30265',
                 'created_at' => '2018-01-23 23:58:56',
                 'updated_at' => '2018-01-24 13:42:13',
             ),
-            53 => 
+            53 =>
             array (
                 'id' => 54,
                 'user_id' => 19,
@@ -1491,7 +1488,7 @@ DULUTH, GA  30097',
                 'created_at' => '2018-01-25 14:41:42',
                 'updated_at' => '2018-01-25 14:48:20',
             ),
-            54 => 
+            54 =>
             array (
                 'id' => 55,
                 'user_id' => 17,
@@ -1518,7 +1515,7 @@ Carrolton GA ',
                 'created_at' => '2018-01-29 16:18:50',
                 'updated_at' => '2018-01-29 16:48:09',
             ),
-            55 => 
+            55 =>
             array (
                 'id' => 56,
                 'user_id' => 18,
@@ -1544,7 +1541,7 @@ Carrolton GA ',
                 'created_at' => '2018-02-02 18:22:09',
                 'updated_at' => '2018-02-02 19:13:36',
             ),
-            56 => 
+            56 =>
             array (
                 'id' => 57,
                 'user_id' => 12,
@@ -1557,8 +1554,8 @@ Carrolton GA ',
                 'bill_address' => 'Christophe Heyman
 Vice President, Technology & Innovation
 Catavolt, part of Hexagon
-T: +1 404.410.1303 M: +1 404.786.5449 
-E: christophe.heyman@catavolt.com 
+T: +1 404.410.1303 M: +1 404.786.5449
+E: christophe.heyman@catavolt.com
 ',
                 'placement_name' => 'Erik Grosskurth ',
                 'placement_email' => 'erikgrosskurth@outlook.com',
@@ -1575,7 +1572,7 @@ E: christophe.heyman@catavolt.com
                 'created_at' => '2018-02-09 22:13:32',
                 'updated_at' => '2018-02-12 13:56:17',
             ),
-            57 => 
+            57 =>
             array (
                 'id' => 58,
                 'user_id' => 11,
@@ -1598,14 +1595,14 @@ E: christophe.heyman@catavolt.com
                 'start_date' => '2018-02-26',
                 'recruiter' => 'Christie White',
                 'sales_rep' => 'Beth Smith',
-                'special_notes' => 'Updated 2/21: Fee updated 
+                'special_notes' => 'Updated 2/21: Fee updated
 
 Conversion Fee for G&D bringing on James',
                 'approved' => 1,
                 'created_at' => '2018-02-15 16:47:54',
                 'updated_at' => '2018-02-21 16:06:13',
             ),
-            58 => 
+            58 =>
             array (
                 'id' => 59,
                 'user_id' => 13,
@@ -1631,7 +1628,7 @@ Conversion Fee for G&D bringing on James',
                 'created_at' => '2018-02-19 16:37:50',
                 'updated_at' => '2018-02-19 16:39:45',
             ),
-            59 => 
+            59 =>
             array (
                 'id' => 60,
                 'user_id' => 18,
@@ -1659,7 +1656,7 @@ Lakewood, Colorado 80215
                 'created_at' => '2018-02-19 17:55:06',
                 'updated_at' => '2018-02-19 19:20:53',
             ),
-            60 => 
+            60 =>
             array (
                 'id' => 61,
                 'user_id' => 8,
@@ -1685,7 +1682,7 @@ Lakewood, Colorado 80215
                 'created_at' => '2018-02-20 21:22:04',
                 'updated_at' => '2018-02-20 21:25:26',
             ),
-            61 => 
+            61 =>
             array (
                 'id' => 62,
                 'user_id' => 8,
@@ -1711,7 +1708,7 @@ Lakewood, Colorado 80215
                 'created_at' => '2018-02-26 15:19:32',
                 'updated_at' => '2018-02-27 19:42:55',
             ),
-            62 => 
+            62 =>
             array (
                 'id' => 63,
                 'user_id' => 18,
@@ -1735,7 +1732,7 @@ Lakewood, Colorado 80215
             'special_notes' => 'This grid is replacing the previous one submitted for Brad Logan. Brad is a backfill so we\'re only making money on the difference between his salary and our candidate that he is backfilling. (Shalini Joshi)
 
 Shalini Joshi: $65K
-Bradford Logan: $85K 
+Bradford Logan: $85K
 Diff: 20K
 
 20K*18%= 3600
@@ -1744,7 +1741,7 @@ Diff: 20K
                 'created_at' => '2018-03-02 15:47:38',
                 'updated_at' => '2018-03-02 15:49:17',
             ),
-            63 => 
+            63 =>
             array (
                 'id' => 64,
                 'user_id' => 8,
@@ -1770,7 +1767,7 @@ Diff: 20K
                 'created_at' => '2018-03-07 15:07:42',
                 'updated_at' => '2018-03-07 15:19:07',
             ),
-            64 => 
+            64 =>
             array (
                 'id' => 65,
                 'user_id' => 8,
@@ -1796,7 +1793,7 @@ Diff: 20K
                 'created_at' => '2018-03-08 14:22:22',
                 'updated_at' => '2018-03-08 14:58:15',
             ),
-            65 => 
+            65 =>
             array (
                 'id' => 66,
                 'user_id' => 18,
@@ -1822,7 +1819,7 @@ Diff: 20K
                 'created_at' => '2018-03-08 21:22:36',
                 'updated_at' => '2018-03-08 21:24:33',
             ),
-            66 => 
+            66 =>
             array (
                 'id' => 67,
                 'user_id' => 12,
@@ -1843,13 +1840,13 @@ Diff: 20K
                 'start_date' => '2018-03-30',
                 'recruiter' => 'kori losac',
                 'sales_rep' => 'Beth Smith 100%',
-                'special_notes' => '******  Will gave his 2 week notice on Monday- but is taking a day off or two before starting with Ted on Thursday or Friday the 29th or 30th..   Although he may start code reviews much sooner.. 
+                'special_notes' => '******  Will gave his 2 week notice on Monday- but is taking a day off or two before starting with Ted on Thursday or Friday the 29th or 30th..   Although he may start code reviews much sooner..
 Ron approved:: $2,000 referral fee goes to Zachary Brija AFTER 90 DAYS OF EMPLOYMENT.. So please only commission Kori and I off of $22,300.  Thank you!',
                 'approved' => 1,
                 'created_at' => '2018-03-14 15:51:48',
                 'updated_at' => '2018-03-14 16:06:50',
             ),
-            67 => 
+            67 =>
             array (
                 'id' => 68,
                 'user_id' => 13,
@@ -1875,7 +1872,7 @@ Ron approved:: $2,000 referral fee goes to Zachary Brija AFTER 90 DAYS OF EMPLOY
                 'created_at' => '2018-03-14 21:58:46',
                 'updated_at' => '2018-03-15 12:10:52',
             ),
-            68 => 
+            68 =>
             array (
                 'id' => 69,
                 'user_id' => 18,
@@ -1904,7 +1901,7 @@ Lakewood, Colorado 80215-4440
                 'created_at' => '2018-03-21 19:50:55',
                 'updated_at' => '2018-03-21 19:55:55',
             ),
-            69 => 
+            69 =>
             array (
                 'id' => 70,
                 'user_id' => 12,
@@ -1925,13 +1922,13 @@ Lakewood, Colorado 80215-4440
                 'start_date' => '2018-03-28',
                 'recruiter' => 'Brandy Busby ',
                 'sales_rep' => 'Beth Smith 100%',
-                'special_notes' => 'This is a one time reduced perm fee of 17%.  The reason for this is Daniel does not have Angular 4/5, only version 2, so we struck a deal to help pay for the cost of training Daniel up on the newest version. 
+                'special_notes' => 'This is a one time reduced perm fee of 17%.  The reason for this is Daniel does not have Angular 4/5, only version 2, so we struck a deal to help pay for the cost of training Daniel up on the newest version.
 Daniel starts Wednesday. ',
                 'approved' => 1,
                 'created_at' => '2018-03-26 15:23:03',
                 'updated_at' => '2018-03-26 15:25:54',
             ),
-            70 => 
+            70 =>
             array (
                 'id' => 71,
                 'user_id' => 20,
@@ -1961,7 +1958,7 @@ Charleston, WV  25305
                 'created_at' => '2018-03-28 14:00:51',
                 'updated_at' => '2018-04-13 13:29:41',
             ),
-            71 => 
+            71 =>
             array (
                 'id' => 72,
                 'user_id' => 12,
@@ -1990,7 +1987,7 @@ Charleston, WV  25305
                 'created_at' => '2018-03-29 15:54:09',
                 'updated_at' => '2018-03-29 15:57:54',
             ),
-            72 => 
+            72 =>
             array (
                 'id' => 73,
                 'user_id' => 19,
@@ -2018,7 +2015,7 @@ Boston, MA 02210',
                 'created_at' => '2018-04-10 17:57:40',
                 'updated_at' => '2018-07-02 20:04:03',
             ),
-            73 => 
+            73 =>
             array (
                 'id' => 74,
                 'user_id' => 13,
@@ -2045,7 +2042,7 @@ Suite 100',
                 'created_at' => '2018-04-12 17:11:46',
                 'updated_at' => '2018-04-12 17:15:46',
             ),
-            74 => 
+            74 =>
             array (
                 'id' => 75,
                 'user_id' => 18,
@@ -2071,7 +2068,7 @@ Suite 100',
                 'created_at' => '2018-04-13 17:16:37',
                 'updated_at' => '2018-04-16 12:17:59',
             ),
-            75 => 
+            75 =>
             array (
                 'id' => 76,
                 'user_id' => 8,
@@ -2098,7 +2095,7 @@ Raleigh, NC 27604',
                 'created_at' => '2018-04-17 18:20:48',
                 'updated_at' => '2018-04-17 18:22:50',
             ),
-            76 => 
+            76 =>
             array (
                 'id' => 77,
                 'user_id' => 18,
@@ -2125,7 +2122,7 @@ Raleigh, NC 27604',
                 'created_at' => '2018-04-18 14:33:07',
                 'updated_at' => '2018-04-18 14:40:18',
             ),
-            77 => 
+            77 =>
             array (
                 'id' => 78,
                 'user_id' => 18,
@@ -2152,7 +2149,7 @@ Raleigh, NC 27604',
                 'created_at' => '2018-04-18 14:44:51',
                 'updated_at' => '2018-08-08 19:34:01',
             ),
-            78 => 
+            78 =>
             array (
                 'id' => 79,
                 'user_id' => 12,
@@ -2181,7 +2178,7 @@ Please only commission Christina and Beth on a $21,000 placement fee, as a $5000
                 'created_at' => '2018-04-23 16:00:02',
                 'updated_at' => '2018-04-24 13:36:13',
             ),
-            79 => 
+            79 =>
             array (
                 'id' => 80,
                 'user_id' => 19,
@@ -2208,7 +2205,7 @@ DULUTH, GA  30097',
                 'created_at' => '2018-04-23 22:21:43',
                 'updated_at' => '2018-05-08 14:32:02',
             ),
-            80 => 
+            80 =>
             array (
                 'id' => 81,
                 'user_id' => 18,
@@ -2234,7 +2231,7 @@ DULUTH, GA  30097',
                 'created_at' => '2018-04-24 17:32:55',
                 'updated_at' => '2018-04-24 17:49:22',
             ),
-            81 => 
+            81 =>
             array (
                 'id' => 82,
                 'user_id' => 20,
@@ -2260,7 +2257,7 @@ DULUTH, GA  30097',
                 'created_at' => '2018-04-30 19:46:01',
                 'updated_at' => '2018-04-30 19:48:05',
             ),
-            82 => 
+            82 =>
             array (
                 'id' => 83,
                 'user_id' => 18,
@@ -2286,7 +2283,7 @@ DULUTH, GA  30097',
                 'created_at' => '2018-05-17 15:39:22',
                 'updated_at' => '2018-05-17 15:47:56',
             ),
-            83 => 
+            83 =>
             array (
                 'id' => 84,
                 'user_id' => 8,
@@ -2314,7 +2311,7 @@ Raleigh, NC  27604
                 'created_at' => '2018-05-21 09:53:35',
                 'updated_at' => '2018-05-21 12:14:31',
             ),
-            84 => 
+            84 =>
             array (
                 'id' => 85,
                 'user_id' => 12,
@@ -2343,7 +2340,7 @@ Raleigh, NC  27604
                 'created_at' => '2018-05-25 17:54:42',
                 'updated_at' => '2018-05-29 13:16:35',
             ),
-            85 => 
+            85 =>
             array (
                 'id' => 86,
                 'user_id' => 12,
@@ -2381,7 +2378,7 @@ April Lafforthun
 Senior Talent Acquisition Business Partner
 M: 919.523.6374
 
-HERE Technologies 
+HERE Technologies
 5 Wayside Road Burlington, MA 01803
 42° 29\' 7" N. 71° 11\' 32" W
 
@@ -2393,7 +2390,7 @@ HERE Technologies
                 'created_at' => '2018-05-29 14:30:22',
                 'updated_at' => '2018-07-20 18:45:47',
             ),
-            86 => 
+            86 =>
             array (
                 'id' => 87,
                 'user_id' => 19,
@@ -2420,7 +2417,7 @@ DULUTH, GA  30097',
                 'created_at' => '2018-05-29 20:44:29',
                 'updated_at' => '2018-05-29 20:47:03',
             ),
-            87 => 
+            87 =>
             array (
                 'id' => 88,
                 'user_id' => 8,
@@ -2442,14 +2439,14 @@ Winston Salem NC 27103',
                 'start_date' => '2018-06-19',
                 'recruiter' => 'Kori Losack ',
                 'sales_rep' => 'Meghan Fernandez ',
-                'special_notes' => 'Split 50% with Rick Lummert 
+                'special_notes' => 'Split 50% with Rick Lummert
 
 Updated: start date',
                 'approved' => 1,
                 'created_at' => '2018-05-30 21:12:52',
                 'updated_at' => '2018-06-04 12:01:20',
             ),
-            88 => 
+            88 =>
             array (
                 'id' => 89,
                 'user_id' => 8,
@@ -2475,7 +2472,7 @@ Updated: start date',
                 'created_at' => '2018-06-01 20:59:08',
                 'updated_at' => '2018-06-04 11:56:16',
             ),
-            89 => 
+            89 =>
             array (
                 'id' => 90,
                 'user_id' => 19,
@@ -2502,7 +2499,7 @@ DULUTH, GA  30097',
                 'created_at' => '2018-06-04 21:02:40',
                 'updated_at' => '2018-06-04 21:04:34',
             ),
-            90 => 
+            90 =>
             array (
                 'id' => 91,
                 'user_id' => 19,
@@ -2532,7 +2529,7 @@ Thanks.',
                 'created_at' => '2018-06-26 01:14:44',
                 'updated_at' => '2018-06-26 12:45:22',
             ),
-            91 => 
+            91 =>
             array (
                 'id' => 92,
                 'user_id' => 19,
@@ -2555,7 +2552,7 @@ Boston, MA 02210',
                 'start_date' => '2018-07-02',
                 'recruiter' => 'Tony Orlando',
                 'sales_rep' => 'Dara Merlin 100%',
-                'special_notes' => 'Updated 7/2- New contact for invoices 
+                'special_notes' => 'Updated 7/2- New contact for invoices
 
 Please copy me on the invoice when it goes out.  I will be visiting with the HR team and would like to know when it has been emailed.
 Thank You!',
@@ -2563,7 +2560,7 @@ Thank You!',
                 'created_at' => '2018-06-26 01:24:02',
                 'updated_at' => '2018-07-02 20:02:27',
             ),
-            92 => 
+            92 =>
             array (
                 'id' => 93,
                 'user_id' => 20,
@@ -2574,7 +2571,7 @@ Thank You!',
                 'customer_po' => '111',
                 'customer_status' => 'existing',
                 'bill_address' => 'Supreme Court of Appeals of
-West Virginia 
+West Virginia
 ',
                 'placement_name' => 'Adam Arthur ',
                 'placement_email' => 'aja-14@hotmail.com',
@@ -2591,7 +2588,7 @@ West Virginia
                 'created_at' => '2018-06-27 14:26:04',
                 'updated_at' => '2018-07-06 13:44:41',
             ),
-            93 => 
+            93 =>
             array (
                 'id' => 94,
                 'user_id' => 21,
@@ -2619,7 +2616,7 @@ Alpharetta, GA 30339',
                 'created_at' => '2018-06-28 15:39:26',
                 'updated_at' => '2018-08-01 12:07:58',
             ),
-            94 => 
+            94 =>
             array (
                 'id' => 95,
                 'user_id' => 14,
@@ -2629,7 +2626,7 @@ Alpharetta, GA 30339',
                 'ap_phone' => '303.495.1388  ',
                 'customer_po' => 'PO # 00850-092480',
                 'customer_status' => 'new',
-            'bill_address' => 'NRC-AMR Holdco (00850) 6363 S Fiddlers Green Cir 
+            'bill_address' => 'NRC-AMR Holdco (00850) 6363 S Fiddlers Green Cir
 14th Floor
 Greenwood Village, CO 80111
 ',
@@ -2648,7 +2645,7 @@ Greenwood Village, CO 80111
                 'created_at' => '2018-07-01 02:38:33',
                 'updated_at' => '2018-07-02 12:08:48',
             ),
-            95 => 
+            95 =>
             array (
                 'id' => 96,
                 'user_id' => 14,
@@ -2658,7 +2655,7 @@ Greenwood Village, CO 80111
                 'ap_phone' => '6504268583',
                 'customer_po' => '.',
                 'customer_status' => 'existing',
-                'bill_address' => '425 West Randolph Street 
+                'bill_address' => '425 West Randolph Street
 Chicago, IL 60606',
                 'placement_name' => 'Joshua Sahala',
                 'placement_email' => 'cv@sahala.org',
@@ -2675,7 +2672,7 @@ Chicago, IL 60606',
                 'created_at' => '2018-07-10 14:04:38',
                 'updated_at' => '2018-08-08 19:32:10',
             ),
-            96 => 
+            96 =>
             array (
                 'id' => 97,
                 'user_id' => 12,
@@ -2701,7 +2698,7 @@ Chicago, IL 60606',
             'created_at' => '2018-07-10 18:36:02',
             'updated_at' => '2018-07-10 18:37:03',
         ),
-        97 => 
+        97 =>
         array (
             'id' => 98,
             'user_id' => 17,
@@ -2727,7 +2724,7 @@ Chicago, IL 60606',
             'created_at' => '2018-07-11 19:00:59',
             'updated_at' => '2018-07-12 18:44:58',
         ),
-        98 => 
+        98 =>
         array (
             'id' => 99,
             'user_id' => 18,
@@ -2753,7 +2750,7 @@ Chicago, IL 60606',
             'created_at' => '2018-07-13 21:28:50',
             'updated_at' => '2018-07-16 12:11:21',
         ),
-        99 => 
+        99 =>
         array (
             'id' => 100,
             'user_id' => 14,
@@ -2782,7 +2779,7 @@ After bonus is paid.  Total GP for Recruiter and AM is 18,561. The rest is going
             'created_at' => '2018-07-16 16:31:22',
             'updated_at' => '2018-07-16 16:33:01',
         ),
-        100 => 
+        100 =>
         array (
             'id' => 101,
             'user_id' => 18,
@@ -2808,7 +2805,7 @@ After bonus is paid.  Total GP for Recruiter and AM is 18,561. The rest is going
             'created_at' => '2018-07-30 17:03:51',
             'updated_at' => '2018-07-30 17:40:26',
         ),
-        101 => 
+        101 =>
         array (
             'id' => 102,
             'user_id' => 20,
@@ -2834,7 +2831,7 @@ After bonus is paid.  Total GP for Recruiter and AM is 18,561. The rest is going
             'created_at' => '2018-08-23 14:02:58',
             'updated_at' => '2018-08-29 15:43:12',
         ),
-        102 => 
+        102 =>
         array (
             'id' => 103,
             'user_id' => 19,
@@ -2863,7 +2860,7 @@ Suite 400',
             'created_at' => '2018-08-23 20:58:50',
             'updated_at' => '2018-08-24 12:16:20',
         ),
-        103 => 
+        103 =>
         array (
             'id' => 104,
             'user_id' => 12,
@@ -2873,8 +2870,8 @@ Suite 400',
             'ap_phone' => '678-300-6756',
             'customer_po' => 'PO being created now ',
             'customer_status' => 'existing',
-            'bill_address' => '333 North point Center East 
-Alpharetta, GA 
+            'bill_address' => '333 North point Center East
+Alpharetta, GA
 
 
 ',
@@ -2895,7 +2892,7 @@ I am working on the PO now- will  have it before Luke starts.  Thanks!',
             'created_at' => '2018-08-27 15:33:24',
             'updated_at' => '2018-09-11 14:21:22',
         ),
-        104 => 
+        104 =>
         array (
             'id' => 105,
             'user_id' => 8,
@@ -2905,7 +2902,7 @@ I am working on the PO now- will  have it before Luke starts.  Thanks!',
             'ap_phone' => '336.733.3747',
             'customer_po' => '',
             'customer_status' => 'existing',
-            'bill_address' => '370 Knollwood Street 
+            'bill_address' => '370 Knollwood Street
 Winston Salem ',
             'placement_name' => 'Mitchell Lewars',
             'placement_email' => 'mitchell.lewars@gmail.com',
@@ -2917,14 +2914,14 @@ Winston Salem ',
             'start_date' => '2018-09-24',
             'recruiter' => 'Tony Orlando ',
             'sales_rep' => 'Meghan Fernandez ',
-            'special_notes' => 'we are invoicing the client for 27k and 5k corus will pay out of the 27k for a sign on bonus after 91 days to the candidate. 
+            'special_notes' => 'we are invoicing the client for 27k and 5k corus will pay out of the 27k for a sign on bonus after 91 days to the candidate.
 
 50% split with Rick Lummert ',
             'approved' => 1,
             'created_at' => '2018-09-04 17:32:03',
             'updated_at' => '2018-09-04 17:44:24',
         ),
-        105 => 
+        105 =>
         array (
             'id' => 106,
             'user_id' => 8,
@@ -2934,7 +2931,7 @@ Winston Salem ',
             'ap_phone' => '919.850.1010',
             'customer_po' => '',
             'customer_status' => 'existing',
-            'bill_address' => '2500 Raleigh Blvd 
+            'bill_address' => '2500 Raleigh Blvd
 Raleigh NC 27604',
             'placement_name' => 'Steve Maglione ',
             'placement_email' => 's.maglione@att.net',
@@ -2946,14 +2943,14 @@ Raleigh NC 27604',
             'start_date' => '2018-10-01',
             'recruiter' => 'Kori Losack ',
             'sales_rep' => 'Meghan Fernandez ',
-            'special_notes' => 'We cap at 20K 
+            'special_notes' => 'We cap at 20K
 *This needs to be applied to Extrons credit of 20k for Joe Marker.  Kristen Miller was the recruiter.
 Kori is the recruiter for Steve.  Customer doesnt need a copy of invoice at this time. ',
             'approved' => 1,
             'created_at' => '2018-09-06 16:13:39',
             'updated_at' => '2018-09-06 16:14:44',
         ),
-        106 => 
+        106 =>
         array (
             'id' => 107,
             'user_id' => 8,
@@ -2980,7 +2977,7 @@ Raleigh NC 27604',
             'created_at' => '2018-09-13 13:01:04',
             'updated_at' => '2018-09-13 13:08:50',
         ),
-        107 => 
+        107 =>
         array (
             'id' => 108,
             'user_id' => 17,
@@ -3004,14 +3001,14 @@ Carrolton GA ',
             'sales_rep' => 'Sharon Steingruber',
             'special_notes' => '*****UPDATED WITH INVOICE INFO******
 
-this invoice needs to go directly to Joel Gray!!!!! 
+this invoice needs to go directly to Joel Gray!!!!!
 There needs to be two invoices, split down the middle.   The description on the invoices should be "IT Services"
 ',
             'approved' => 1,
             'created_at' => '2018-09-14 20:08:38',
             'updated_at' => '2018-09-24 15:25:51',
         ),
-        108 => 
+        108 =>
         array (
             'id' => 109,
             'user_id' => 20,
@@ -3038,7 +3035,7 @@ Chattanooga, TN  37408',
             'created_at' => '2018-09-17 14:28:00',
             'updated_at' => '2018-09-17 14:35:09',
         ),
-        109 => 
+        109 =>
         array (
             'id' => 110,
             'user_id' => 17,
@@ -3064,7 +3061,7 @@ Chattanooga, TN  37408',
             'created_at' => '2018-09-19 16:26:27',
             'updated_at' => '2018-09-19 16:28:37',
         ),
-        110 => 
+        110 =>
         array (
             'id' => 111,
             'user_id' => 17,
@@ -3090,7 +3087,7 @@ Chattanooga, TN  37408',
             'created_at' => '2018-09-19 17:40:29',
             'updated_at' => '2018-09-19 17:41:41',
         ),
-        111 => 
+        111 =>
         array (
             'id' => 112,
             'user_id' => 8,
@@ -3117,7 +3114,7 @@ Raleigh NC 27604',
             'created_at' => '2018-09-20 15:09:44',
             'updated_at' => '2018-09-20 16:29:05',
         ),
-        112 => 
+        112 =>
         array (
             'id' => 113,
             'user_id' => 18,
@@ -3143,7 +3140,7 @@ Raleigh NC 27604',
             'created_at' => '2018-10-01 17:10:40',
             'updated_at' => '2018-10-01 18:02:49',
         ),
-        113 => 
+        113 =>
         array (
             'id' => 114,
             'user_id' => 8,
@@ -3153,7 +3150,7 @@ Raleigh NC 27604',
             'ap_phone' => '919.850.1010',
             'customer_po' => '',
             'customer_status' => 'existing',
-            'bill_address' => '2500 Raleigh Blvd 
+            'bill_address' => '2500 Raleigh Blvd
 Raleigh NC 27604',
             'placement_name' => 'Ernest Christley',
             'placement_email' => 'echristley@att.net',
@@ -3170,7 +3167,7 @@ Raleigh NC 27604',
             'created_at' => '2018-10-08 14:23:35',
             'updated_at' => '2018-10-08 14:42:22',
         ),
-        114 => 
+        114 =>
         array (
             'id' => 115,
             'user_id' => 24,
@@ -3198,7 +3195,7 @@ Claremont, NC 28610
             'created_at' => '2018-10-16 13:51:13',
             'updated_at' => '2018-10-16 13:53:04',
         ),
-        115 => 
+        115 =>
         array (
             'id' => 116,
             'user_id' => 13,
@@ -3225,7 +3222,7 @@ Claremont, NC 28610
             'updated_at' => '2018-10-23 12:27:03',
         ),
     ));
-        
-        
+
+
     }
 }

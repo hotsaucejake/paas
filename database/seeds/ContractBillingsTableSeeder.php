@@ -12,12 +12,9 @@ class ContractBillingsTableSeeder extends Seeder
      */
     public function run()
     {
-        
 
-        \DB::table('contract_billings')->delete();
-        
         \DB::table('contract_billings')->insert(array (
-            0 => 
+            0 =>
             array (
                 'id' => 1,
                 'user_id' => 3,
@@ -56,7 +53,7 @@ class ContractBillingsTableSeeder extends Seeder
                 'created_at' => '2017-02-07 19:24:29',
                 'updated_at' => '2017-02-07 19:34:53',
             ),
-            1 => 
+            1 =>
             array (
                 'id' => 2,
                 'user_id' => 14,
@@ -96,7 +93,7 @@ Alpharetta, GA',
                 'created_at' => '2017-02-08 21:35:16',
                 'updated_at' => '2017-02-21 20:09:01',
             ),
-            2 => 
+            2 =>
             array (
                 'id' => 3,
                 'user_id' => 3,
@@ -136,7 +133,7 @@ Bridgewater, Ma 02324',
                 'created_at' => '2017-02-10 15:13:24',
                 'updated_at' => '2017-02-10 15:13:56',
             ),
-            3 => 
+            3 =>
             array (
                 'id' => 4,
                 'user_id' => 13,
@@ -178,7 +175,7 @@ Northglenn, CO 80234
                 'created_at' => '2017-02-10 15:44:29',
                 'updated_at' => '2017-02-28 22:32:37',
             ),
-            4 => 
+            4 =>
             array (
                 'id' => 5,
                 'user_id' => 9,
@@ -220,7 +217,7 @@ Charlotte, NC 28277',
                 'created_at' => '2017-02-16 20:12:51',
                 'updated_at' => '2017-02-21 20:09:01',
             ),
-            5 => 
+            5 =>
             array (
                 'id' => 6,
                 'user_id' => 13,
@@ -261,7 +258,7 @@ Severn, MD 21144
                 'created_at' => '2017-02-17 20:58:48',
                 'updated_at' => '2017-03-06 14:28:58',
             ),
-            6 => 
+            6 =>
             array (
                 'id' => 7,
                 'user_id' => 16,
@@ -300,7 +297,7 @@ Severn, MD 21144
                 'created_at' => '2017-02-23 21:06:03',
                 'updated_at' => '2017-02-24 17:31:05',
             ),
-            7 => 
+            7 =>
             array (
                 'id' => 8,
                 'user_id' => 3,
@@ -340,7 +337,7 @@ IL 60606',
                 'created_at' => '2017-02-23 22:16:46',
                 'updated_at' => '2017-02-23 22:19:42',
             ),
-            8 => 
+            8 =>
             array (
                 'id' => 9,
                 'user_id' => 9,
@@ -380,7 +377,7 @@ Knoxville, TN 37931',
                 'created_at' => '2017-02-27 18:26:23',
                 'updated_at' => '2017-02-27 18:34:57',
             ),
-            9 => 
+            9 =>
             array (
                 'id' => 10,
                 'user_id' => 14,
@@ -421,7 +418,7 @@ Mount Pleasant, SC 29466
                 'created_at' => '2017-02-28 19:33:27',
                 'updated_at' => '2017-03-03 20:22:32',
             ),
-            10 => 
+            10 =>
             array (
                 'id' => 11,
                 'user_id' => 11,
@@ -464,7 +461,7 @@ He needs to be set up in Autotask. Thanks!',
                 'created_at' => '2017-03-02 14:37:23',
                 'updated_at' => '2017-03-02 17:16:49',
             ),
-            11 => 
+            11 =>
             array (
                 'id' => 12,
                 'user_id' => 14,
@@ -505,7 +502,7 @@ Chicago IL, 60603',
                 'created_at' => '2017-03-02 16:31:41',
                 'updated_at' => '2017-03-07 16:39:53',
             ),
-            12 => 
+            12 =>
             array (
                 'id' => 13,
                 'user_id' => 13,
@@ -546,7 +543,7 @@ Centennial, CO',
                 'created_at' => '2017-03-03 18:24:27',
                 'updated_at' => '2017-03-03 18:34:23',
             ),
-            13 => 
+            13 =>
             array (
                 'id' => 14,
                 'user_id' => 13,
@@ -586,7 +583,7 @@ Aurora, CO 80013',
                 'created_at' => '2017-03-03 21:35:41',
                 'updated_at' => '2017-03-03 22:00:02',
             ),
-            14 => 
+            14 =>
             array (
                 'id' => 15,
                 'user_id' => 4,
@@ -626,7 +623,7 @@ Atlanta, GA 30331',
                 'created_at' => '2017-03-06 22:22:51',
                 'updated_at' => '2017-03-07 16:31:07',
             ),
-            15 => 
+            15 =>
             array (
                 'id' => 16,
                 'user_id' => 13,
@@ -667,7 +664,7 @@ Centennial CO',
                 'created_at' => '2017-03-07 16:02:02',
                 'updated_at' => '2017-03-07 16:11:56',
             ),
-            16 => 
+            16 =>
             array (
                 'id' => 17,
                 'user_id' => 3,
@@ -706,7 +703,7 @@ Centennial CO',
                 'created_at' => '2017-03-07 19:33:31',
                 'updated_at' => '2017-08-24 14:57:44',
             ),
-            17 => 
+            17 =>
             array (
                 'id' => 18,
                 'user_id' => 3,
@@ -745,7 +742,7 @@ Centennial CO',
                 'created_at' => '2017-03-07 19:47:17',
                 'updated_at' => '2017-08-24 14:58:19',
             ),
-            18 => 
+            18 =>
             array (
                 'id' => 19,
                 'user_id' => 3,
@@ -784,7 +781,7 @@ Centennial CO',
                 'created_at' => '2017-03-07 20:47:29',
                 'updated_at' => '2017-08-24 14:59:28',
             ),
-            19 => 
+            19 =>
             array (
                 'id' => 20,
                 'user_id' => 3,
@@ -823,7 +820,7 @@ Centennial CO',
                 'created_at' => '2017-03-08 18:40:59',
                 'updated_at' => '2017-08-24 14:58:54',
             ),
-            20 => 
+            20 =>
             array (
                 'id' => 21,
                 'user_id' => 17,
@@ -863,7 +860,7 @@ Alpharetta, GA 30022',
                 'created_at' => '2017-03-08 20:47:40',
                 'updated_at' => '2017-08-24 12:59:17',
             ),
-            21 => 
+            21 =>
             array (
                 'id' => 22,
                 'user_id' => 17,
@@ -904,7 +901,7 @@ Note new pay and bill rate for Magan.  She will be full time with the McDonalds 
                 'created_at' => '2017-03-09 02:25:03',
                 'updated_at' => '2018-06-22 19:55:55',
             ),
-            22 => 
+            22 =>
             array (
                 'id' => 23,
                 'user_id' => 17,
@@ -943,7 +940,7 @@ Note new pay and bill rate for Magan.  She will be full time with the McDonalds 
                 'created_at' => '2017-03-09 02:30:44',
                 'updated_at' => '2018-06-25 18:10:19',
             ),
-            23 => 
+            23 =>
             array (
                 'id' => 24,
                 'user_id' => 17,
@@ -982,7 +979,7 @@ Note new pay and bill rate for Magan.  She will be full time with the McDonalds 
                 'created_at' => '2017-03-09 21:49:15',
                 'updated_at' => '2017-03-09 22:03:30',
             ),
-            24 => 
+            24 =>
             array (
                 'id' => 25,
                 'user_id' => 17,
@@ -1022,7 +1019,7 @@ Dunwoody GA 30338',
                 'created_at' => '2017-03-09 21:51:54',
                 'updated_at' => '2017-03-09 22:03:24',
             ),
-            25 => 
+            25 =>
             array (
                 'id' => 26,
                 'user_id' => 17,
@@ -1061,7 +1058,7 @@ Dunwoody GA 30338',
                 'created_at' => '2017-03-10 14:51:25',
                 'updated_at' => '2017-03-10 15:14:03',
             ),
-            26 => 
+            26 =>
             array (
                 'id' => 27,
                 'user_id' => 13,
@@ -1100,7 +1097,7 @@ Dunwoody GA 30338',
                 'created_at' => '2017-03-10 17:53:44',
                 'updated_at' => '2017-03-10 18:55:30',
             ),
-            27 => 
+            27 =>
             array (
                 'id' => 28,
                 'user_id' => 13,
@@ -1141,7 +1138,7 @@ Denver, CO 80210
                 'created_at' => '2017-03-10 17:58:07',
                 'updated_at' => '2017-03-10 18:21:47',
             ),
-            28 => 
+            28 =>
             array (
                 'id' => 29,
                 'user_id' => 17,
@@ -1181,7 +1178,7 @@ Atlanta GA 30308',
                 'created_at' => '2017-03-14 13:27:39',
                 'updated_at' => '2018-02-26 21:08:17',
             ),
-            29 => 
+            29 =>
             array (
                 'id' => 30,
                 'user_id' => 17,
@@ -1221,7 +1218,7 @@ Suwanee, GA 30024',
                 'created_at' => '2017-03-15 20:50:39',
                 'updated_at' => '2017-08-24 12:57:34',
             ),
-            30 => 
+            30 =>
             array (
                 'id' => 31,
                 'user_id' => 13,
@@ -1262,7 +1259,7 @@ Centennial, CO 80112',
                 'created_at' => '2017-03-16 16:55:04',
                 'updated_at' => '2017-03-16 18:12:48',
             ),
-            31 => 
+            31 =>
             array (
                 'id' => 32,
                 'user_id' => 12,
@@ -1303,7 +1300,7 @@ Chicago, Il 60606',
                 'created_at' => '2017-03-16 19:24:10',
                 'updated_at' => '2017-03-16 19:58:45',
             ),
-            32 => 
+            32 =>
             array (
                 'id' => 33,
                 'user_id' => 17,
@@ -1344,7 +1341,7 @@ Atlanta GA 30342',
                 'created_at' => '2017-03-17 18:34:34',
                 'updated_at' => '2017-03-20 21:00:07',
             ),
-            33 => 
+            33 =>
             array (
                 'id' => 34,
                 'user_id' => 12,
@@ -1390,7 +1387,7 @@ PO #4500319517 – Tiffany Sanford – through December 2017 but please do not s
                 'created_at' => '2017-03-18 23:11:22',
                 'updated_at' => '2017-05-16 14:26:36',
             ),
-            34 => 
+            34 =>
             array (
                 'id' => 35,
                 'user_id' => 13,
@@ -1431,7 +1428,7 @@ Centennial, CO 80112',
                 'created_at' => '2017-03-20 15:48:32',
                 'updated_at' => '2017-03-20 20:01:16',
             ),
-            35 => 
+            35 =>
             array (
                 'id' => 36,
                 'user_id' => 13,
@@ -1471,7 +1468,7 @@ Lakewood, CO 80228',
                 'created_at' => '2017-03-20 18:05:33',
                 'updated_at' => '2017-03-21 17:18:32',
             ),
-            36 => 
+            36 =>
             array (
                 'id' => 37,
                 'user_id' => 17,
@@ -1510,7 +1507,7 @@ Lakewood, CO 80228',
                 'created_at' => '2017-03-21 23:14:25',
                 'updated_at' => '2018-02-26 21:06:12',
             ),
-            37 => 
+            37 =>
             array (
                 'id' => 38,
                 'user_id' => 17,
@@ -1549,7 +1546,7 @@ Lakewood, CO 80228',
                 'created_at' => '2017-03-22 00:38:11',
                 'updated_at' => '2017-08-24 12:56:28',
             ),
-            38 => 
+            38 =>
             array (
                 'id' => 39,
                 'user_id' => 11,
@@ -1590,7 +1587,7 @@ Chicago, IL 60605',
                 'created_at' => '2017-03-23 19:16:18',
                 'updated_at' => '2017-03-23 20:41:24',
             ),
-            39 => 
+            39 =>
             array (
                 'id' => 40,
                 'user_id' => 13,
@@ -1631,7 +1628,7 @@ Centennial, CO 80112',
                 'created_at' => '2017-03-23 21:17:00',
                 'updated_at' => '2017-03-23 21:19:57',
             ),
-            40 => 
+            40 =>
             array (
                 'id' => 41,
                 'user_id' => 17,
@@ -1671,7 +1668,7 @@ Peachtree Corners GA 30096',
                 'created_at' => '2017-03-28 22:26:48',
                 'updated_at' => '2017-08-24 12:56:06',
             ),
-            41 => 
+            41 =>
             array (
                 'id' => 42,
                 'user_id' => 17,
@@ -1713,7 +1710,7 @@ NOTE:  His address will change by his start date as he is moving to ATL',
                 'created_at' => '2017-03-30 20:21:35',
                 'updated_at' => '2017-08-24 12:55:41',
             ),
-            42 => 
+            42 =>
             array (
                 'id' => 43,
                 'user_id' => 15,
@@ -1752,7 +1749,7 @@ NOTE:  His address will change by his start date as he is moving to ATL',
                 'created_at' => '2017-04-07 18:29:24',
                 'updated_at' => '2017-04-07 18:49:11',
             ),
-            43 => 
+            43 =>
             array (
                 'id' => 44,
                 'user_id' => 15,
@@ -1791,7 +1788,7 @@ NOTE:  His address will change by his start date as he is moving to ATL',
                 'created_at' => '2017-04-07 19:19:42',
                 'updated_at' => '2017-04-07 19:48:18',
             ),
-            44 => 
+            44 =>
             array (
                 'id' => 45,
                 'user_id' => 12,
@@ -1833,7 +1830,7 @@ SOW will be finished Monday morning - please send Robert out his paperwork ASAP.
                 'created_at' => '2017-04-14 20:11:42',
                 'updated_at' => '2017-04-26 16:19:44',
             ),
-            45 => 
+            45 =>
             array (
                 'id' => 46,
                 'user_id' => 13,
@@ -1876,7 +1873,7 @@ Centennial, CO 80111',
                 'created_at' => '2017-04-17 04:43:48',
                 'updated_at' => '2017-04-17 14:12:01',
             ),
-            46 => 
+            46 =>
             array (
                 'id' => 47,
                 'user_id' => 13,
@@ -1917,7 +1914,7 @@ This is a PS deal and is to be billed via AutoTask. This is a part time need for
                 'created_at' => '2017-04-18 14:54:08',
                 'updated_at' => '2017-04-24 19:13:14',
             ),
-            47 => 
+            47 =>
             array (
                 'id' => 48,
                 'user_id' => 17,
@@ -1958,7 +1955,7 @@ No idea what his salary is so guessed that one.  Sarah Matthews will have to giv
                 'created_at' => '2017-04-18 16:14:52',
                 'updated_at' => '2017-04-18 18:37:26',
             ),
-            48 => 
+            48 =>
             array (
                 'id' => 49,
                 'user_id' => 17,
@@ -1998,7 +1995,7 @@ Norcross GA 30092',
                 'created_at' => '2017-04-18 16:19:25',
                 'updated_at' => '2017-04-18 18:37:20',
             ),
-            49 => 
+            49 =>
             array (
                 'id' => 50,
                 'user_id' => 12,
@@ -2038,7 +2035,7 @@ Roseville, CA 95678 ',
                 'created_at' => '2017-04-25 19:43:43',
                 'updated_at' => '2017-04-26 14:37:32',
             ),
-            50 => 
+            50 =>
             array (
                 'id' => 51,
                 'user_id' => 12,
@@ -2087,7 +2084,7 @@ Email: accountspayablechicago@here.com
                 'created_at' => '2017-04-26 13:53:03',
                 'updated_at' => '2017-04-27 17:58:06',
             ),
-            51 => 
+            51 =>
             array (
                 'id' => 52,
                 'user_id' => 17,
@@ -2127,7 +2124,7 @@ Buford GA 30518',
                 'created_at' => '2017-04-26 19:21:49',
                 'updated_at' => '2017-04-26 19:56:36',
             ),
-            52 => 
+            52 =>
             array (
                 'id' => 53,
                 'user_id' => 12,
@@ -2167,7 +2164,7 @@ Alpharetta, GA 30033',
                 'created_at' => '2017-04-27 17:59:25',
                 'updated_at' => '2017-04-27 18:21:47',
             ),
-            53 => 
+            53 =>
             array (
                 'id' => 54,
                 'user_id' => 17,
@@ -2210,7 +2207,7 @@ Baskin Data Entry Project/SOW',
                 'created_at' => '2017-05-01 18:35:01',
                 'updated_at' => '2017-11-14 16:19:22',
             ),
-            54 => 
+            54 =>
             array (
                 'id' => 55,
                 'user_id' => 17,
@@ -2252,7 +2249,7 @@ Dunkin/Baskin Data Entry SOW',
                 'created_at' => '2017-05-01 19:11:47',
                 'updated_at' => '2017-11-14 16:19:35',
             ),
-            55 => 
+            55 =>
             array (
                 'id' => 56,
                 'user_id' => 17,
@@ -2293,7 +2290,7 @@ Part of the Dunkin data entry SOW',
                 'created_at' => '2017-05-04 16:58:29',
                 'updated_at' => '2017-05-16 18:42:39',
             ),
-            56 => 
+            56 =>
             array (
                 'id' => 57,
                 'user_id' => 13,
@@ -2335,7 +2332,7 @@ Centennial, CO 80112',
                 'created_at' => '2017-05-05 17:42:27',
                 'updated_at' => '2017-05-05 21:23:48',
             ),
-            57 => 
+            57 =>
             array (
                 'id' => 58,
                 'user_id' => 3,
@@ -2374,7 +2371,7 @@ Centennial, CO 80112',
                 'created_at' => '2017-05-05 21:42:15',
                 'updated_at' => '2017-05-05 21:42:42',
             ),
-            58 => 
+            58 =>
             array (
                 'id' => 59,
                 'user_id' => 13,
@@ -2415,7 +2412,7 @@ Littleton, CO 80127
                 'created_at' => '2017-05-09 15:24:02',
                 'updated_at' => '2017-05-25 14:13:11',
             ),
-            59 => 
+            59 =>
             array (
                 'id' => 60,
                 'user_id' => 17,
@@ -2457,7 +2454,7 @@ Can Matt Taylor track the work via Paylocity info from Sarah/Karly? If not, I ca
                 'created_at' => '2017-05-12 19:27:28',
                 'updated_at' => '2017-05-12 20:13:43',
             ),
-            60 => 
+            60 =>
             array (
                 'id' => 61,
                 'user_id' => 8,
@@ -2499,7 +2496,7 @@ Drug screen**** Panel 5 - LC7 plus Oxy****
                 'created_at' => '2017-05-12 20:17:36',
                 'updated_at' => '2017-05-12 20:44:35',
             ),
-            61 => 
+            61 =>
             array (
                 'id' => 62,
                 'user_id' => 12,
@@ -2542,7 +2539,7 @@ Please invoice Wendy ',
                 'created_at' => '2017-05-15 15:13:54',
                 'updated_at' => '2017-05-15 18:24:28',
             ),
-            62 => 
+            62 =>
             array (
                 'id' => 63,
                 'user_id' => 13,
@@ -2585,7 +2582,7 @@ Please only send invoices to ap@open-techs.com.',
                 'created_at' => '2017-05-18 22:49:28',
                 'updated_at' => '2017-05-31 19:37:38',
             ),
-            63 => 
+            63 =>
             array (
                 'id' => 64,
                 'user_id' => 13,
@@ -2625,7 +2622,7 @@ Denver CO 80219',
                 'created_at' => '2017-05-22 16:45:52',
                 'updated_at' => '2017-05-22 18:36:46',
             ),
-            64 => 
+            64 =>
             array (
                 'id' => 65,
                 'user_id' => 13,
@@ -2665,7 +2662,7 @@ Denver, CO 80202',
                 'created_at' => '2017-05-22 19:38:10',
                 'updated_at' => '2017-05-22 19:41:06',
             ),
-            65 => 
+            65 =>
             array (
                 'id' => 66,
                 'user_id' => 17,
@@ -2705,7 +2702,7 @@ Peachtree Corners, GA 30092',
                 'created_at' => '2017-05-22 23:22:56',
                 'updated_at' => '2017-06-02 18:05:52',
             ),
-            66 => 
+            66 =>
             array (
                 'id' => 67,
                 'user_id' => 17,
@@ -2746,7 +2743,7 @@ Tallapoosa, Ga 30176
                 'created_at' => '2017-05-22 23:30:02',
                 'updated_at' => '2018-01-19 15:37:19',
             ),
-            67 => 
+            67 =>
             array (
                 'id' => 68,
                 'user_id' => 8,
@@ -2788,7 +2785,7 @@ Sanford, NC 27332',
                 'created_at' => '2017-05-23 15:19:42',
                 'updated_at' => '2017-05-23 16:07:03',
             ),
-            68 => 
+            68 =>
             array (
                 'id' => 69,
                 'user_id' => 20,
@@ -2829,7 +2826,7 @@ Kennesaw, GA  30144',
                 'created_at' => '2017-05-24 14:45:39',
                 'updated_at' => '2017-05-24 15:53:49',
             ),
-            69 => 
+            69 =>
             array (
                 'id' => 70,
                 'user_id' => 17,
@@ -2869,7 +2866,7 @@ Duluth GA 30096',
                 'created_at' => '2017-05-24 18:12:30',
                 'updated_at' => '2017-08-24 12:54:48',
             ),
-            70 => 
+            70 =>
             array (
                 'id' => 71,
                 'user_id' => 12,
@@ -2917,7 +2914,7 @@ Beeline Request: Analysis - Traffic Editor Beeline Request ID: 2885-1
                 'created_at' => '2017-05-26 19:20:06',
                 'updated_at' => '2017-06-05 19:38:35',
             ),
-            71 => 
+            71 =>
             array (
                 'id' => 72,
                 'user_id' => 8,
@@ -2959,7 +2956,7 @@ RTP NC 27709.',
                 'created_at' => '2017-05-30 15:17:34',
                 'updated_at' => '2017-06-01 19:29:13',
             ),
-            72 => 
+            72 =>
             array (
                 'id' => 73,
                 'user_id' => 12,
@@ -3001,7 +2998,7 @@ Fremont, CA 94539
                 'created_at' => '2017-06-01 22:35:22',
                 'updated_at' => '2017-06-02 18:11:05',
             ),
-            73 => 
+            73 =>
             array (
                 'id' => 74,
                 'user_id' => 12,
@@ -3044,7 +3041,7 @@ RAISE STARTS IN AUGUST
                 'created_at' => '2017-06-06 17:11:17',
                 'updated_at' => '2017-06-06 18:15:33',
             ),
-            74 => 
+            74 =>
             array (
                 'id' => 75,
                 'user_id' => 17,
@@ -3083,7 +3080,7 @@ RAISE STARTS IN AUGUST
                 'created_at' => '2017-06-08 21:47:38',
                 'updated_at' => '2017-06-09 13:51:20',
             ),
-            75 => 
+            75 =>
             array (
                 'id' => 76,
                 'user_id' => 12,
@@ -3126,7 +3123,7 @@ Chicago ',
                 'created_at' => '2017-06-13 21:32:12',
                 'updated_at' => '2017-06-14 18:28:23',
             ),
-            76 => 
+            76 =>
             array (
                 'id' => 77,
                 'user_id' => 17,
@@ -3167,7 +3164,7 @@ Atlanta, GA 30342
                 'created_at' => '2017-06-14 14:38:19',
                 'updated_at' => '2017-06-14 17:51:40',
             ),
-            77 => 
+            77 =>
             array (
                 'id' => 78,
                 'user_id' => 11,
@@ -3210,7 +3207,7 @@ START DATE CHANGED TO 6/26',
                 'created_at' => '2017-06-16 14:43:02',
                 'updated_at' => '2017-06-28 16:17:38',
             ),
-            78 => 
+            78 =>
             array (
                 'id' => 79,
                 'user_id' => 11,
@@ -3252,7 +3249,7 @@ Aquitaine, France',
                 'created_at' => '2017-06-20 15:40:15',
                 'updated_at' => '2017-06-20 15:56:07',
             ),
-            79 => 
+            79 =>
             array (
                 'id' => 80,
                 'user_id' => 17,
@@ -3297,7 +3294,7 @@ Carrollton Ga 30119',
                 'created_at' => '2017-06-22 16:24:19',
                 'updated_at' => '2017-06-28 18:39:35',
             ),
-            80 => 
+            80 =>
             array (
                 'id' => 81,
                 'user_id' => 13,
@@ -3336,7 +3333,7 @@ Carrollton Ga 30119',
                 'created_at' => '2017-06-23 20:28:53',
                 'updated_at' => '2017-06-23 20:48:31',
             ),
-            81 => 
+            81 =>
             array (
                 'id' => 82,
                 'user_id' => 4,
@@ -3376,7 +3373,7 @@ Marietta, GA 30067',
                 'created_at' => '2017-06-26 12:57:28',
                 'updated_at' => '2017-06-26 14:35:19',
             ),
-            82 => 
+            82 =>
             array (
                 'id' => 83,
                 'user_id' => 3,
@@ -3416,7 +3413,7 @@ Oakley, CA 94561',
                 'created_at' => '2017-06-26 16:56:11',
                 'updated_at' => '2017-06-26 17:02:43',
             ),
-            83 => 
+            83 =>
             array (
                 'id' => 84,
                 'user_id' => 3,
@@ -3456,7 +3453,7 @@ Temple, GA 30179',
                 'created_at' => '2017-06-28 19:43:44',
                 'updated_at' => '2017-06-29 18:02:44',
             ),
-            84 => 
+            84 =>
             array (
                 'id' => 85,
                 'user_id' => 4,
@@ -3501,7 +3498,7 @@ After that:
                 'created_at' => '2017-06-28 20:34:12',
                 'updated_at' => '2017-08-23 19:42:06',
             ),
-            85 => 
+            85 =>
             array (
                 'id' => 86,
                 'user_id' => 8,
@@ -3544,7 +3541,7 @@ Split 25% Brian Hale ',
                 'created_at' => '2017-07-06 17:57:08',
                 'updated_at' => '2017-07-11 19:30:24',
             ),
-            86 => 
+            86 =>
             array (
                 'id' => 87,
                 'user_id' => 8,
@@ -3590,7 +3587,7 @@ bankruptcies and unlimited lookback for convictions.
                 'created_at' => '2017-07-10 17:35:56',
                 'updated_at' => '2017-07-11 20:01:18',
             ),
-            87 => 
+            87 =>
             array (
                 'id' => 88,
                 'user_id' => 17,
@@ -3635,7 +3632,7 @@ Split:
                 'created_at' => '2017-07-11 19:43:50',
                 'updated_at' => '2017-07-26 17:55:10',
             ),
-            88 => 
+            88 =>
             array (
                 'id' => 89,
                 'user_id' => 13,
@@ -3677,7 +3674,7 @@ Louis, MO 63102
                 'created_at' => '2017-07-12 16:16:15',
                 'updated_at' => '2017-07-13 14:02:24',
             ),
-            89 => 
+            89 =>
             array (
                 'id' => 90,
                 'user_id' => 21,
@@ -3719,7 +3716,7 @@ Charlotte, NC, 29269
             'created_at' => '2017-07-13 15:23:51',
             'updated_at' => '2017-07-13 15:25:51',
         ),
-        90 => 
+        90 =>
         array (
             'id' => 91,
             'user_id' => 3,
@@ -3760,7 +3757,7 @@ Chicago, IL 60661',
             'created_at' => '2017-07-19 18:17:58',
             'updated_at' => '2017-07-19 19:43:42',
         ),
-        91 => 
+        91 =>
         array (
             'id' => 92,
             'user_id' => 15,
@@ -3799,7 +3796,7 @@ Chicago, IL 60661',
             'created_at' => '2017-07-20 17:37:31',
             'updated_at' => '2017-07-21 12:36:37',
         ),
-        92 => 
+        92 =>
         array (
             'id' => 93,
             'user_id' => 14,
@@ -3844,7 +3841,7 @@ UPDATE: NEW START DATE
             'created_at' => '2017-07-20 19:26:24',
             'updated_at' => '2017-07-24 12:35:41',
         ),
-        93 => 
+        93 =>
         array (
             'id' => 94,
             'user_id' => 17,
@@ -3885,7 +3882,7 @@ Alpharetta GA ',
             'created_at' => '2017-07-20 19:27:00',
             'updated_at' => '2017-07-21 12:46:52',
         ),
-        94 => 
+        94 =>
         array (
             'id' => 95,
             'user_id' => 20,
@@ -3927,7 +3924,7 @@ Virgina Beach ,VA 23452
             'created_at' => '2017-07-20 19:27:17',
             'updated_at' => '2017-07-20 20:41:48',
         ),
-        95 => 
+        95 =>
         array (
             'id' => 96,
             'user_id' => 17,
@@ -3967,7 +3964,7 @@ Alpharetta, GA 30004',
             'created_at' => '2017-07-21 02:43:34',
             'updated_at' => '2017-08-03 20:37:30',
         ),
-        96 => 
+        96 =>
         array (
             'id' => 97,
             'user_id' => 4,
@@ -4006,7 +4003,7 @@ Alpharetta, GA 30004',
             'created_at' => '2017-07-25 13:43:01',
             'updated_at' => '2018-02-13 21:14:30',
         ),
-        97 => 
+        97 =>
         array (
             'id' => 98,
             'user_id' => 8,
@@ -4050,7 +4047,7 @@ split 25% Brian Hale',
             'created_at' => '2017-07-25 18:04:22',
             'updated_at' => '2017-07-31 14:06:20',
         ),
-        98 => 
+        98 =>
         array (
             'id' => 99,
             'user_id' => 14,
@@ -4092,7 +4089,7 @@ Aurora, CO 80012
             'created_at' => '2017-07-28 14:42:21',
             'updated_at' => '2017-07-28 14:52:11',
         ),
-        99 => 
+        99 =>
         array (
             'id' => 100,
             'user_id' => 13,
@@ -4134,7 +4131,7 @@ Centennial, CO 80112',
             'created_at' => '2017-07-28 16:45:56',
             'updated_at' => '2017-07-28 17:31:43',
         ),
-        100 => 
+        100 =>
         array (
             'id' => 101,
             'user_id' => 13,
@@ -4176,7 +4173,7 @@ Centennial, CO 80112',
             'created_at' => '2017-07-28 17:17:51',
             'updated_at' => '2017-07-28 17:37:37',
         ),
-        101 => 
+        101 =>
         array (
             'id' => 102,
             'user_id' => 14,
@@ -4217,7 +4214,7 @@ Cerritos, CA 90703.',
             'created_at' => '2017-07-28 19:44:53',
             'updated_at' => '2017-08-14 20:09:55',
         ),
-        102 => 
+        102 =>
         array (
             'id' => 103,
             'user_id' => 17,
@@ -4257,7 +4254,7 @@ Marietta, GA  30006-0056 ',
             'created_at' => '2017-07-31 17:21:42',
             'updated_at' => '2017-07-31 19:25:34',
         ),
-        103 => 
+        103 =>
         array (
             'id' => 104,
             'user_id' => 17,
@@ -4299,7 +4296,7 @@ Data Entry Project/ Baskin',
             'created_at' => '2017-07-31 17:24:21',
             'updated_at' => '2017-11-14 16:16:34',
         ),
-        104 => 
+        104 =>
         array (
             'id' => 105,
             'user_id' => 12,
@@ -4343,7 +4340,7 @@ California
             'created_at' => '2017-08-01 18:55:19',
             'updated_at' => '2017-08-03 13:52:44',
         ),
-        105 => 
+        105 =>
         array (
             'id' => 106,
             'user_id' => 13,
@@ -4384,7 +4381,7 @@ Highlands Ranch, Co 80130
             'created_at' => '2017-08-02 21:18:30',
             'updated_at' => '2017-08-03 15:53:55',
         ),
-        106 => 
+        106 =>
         array (
             'id' => 107,
             'user_id' => 14,
@@ -4425,7 +4422,7 @@ Centennial, CO 80111-4318
             'created_at' => '2017-08-03 17:32:56',
             'updated_at' => '2017-08-03 17:34:21',
         ),
-        107 => 
+        107 =>
         array (
             'id' => 108,
             'user_id' => 13,
@@ -4465,7 +4462,7 @@ Loveland, CO 80538',
             'created_at' => '2017-08-03 21:00:40',
             'updated_at' => '2017-08-04 13:00:59',
         ),
-        108 => 
+        108 =>
         array (
             'id' => 109,
             'user_id' => 17,
@@ -4509,7 +4506,7 @@ Georgia
             'created_at' => '2017-08-04 17:54:22',
             'updated_at' => '2017-08-07 13:47:22',
         ),
-        109 => 
+        109 =>
         array (
             'id' => 110,
             'user_id' => 14,
@@ -4548,7 +4545,7 @@ Georgia
             'created_at' => '2017-08-04 17:59:44',
             'updated_at' => '2017-08-04 18:36:56',
         ),
-        110 => 
+        110 =>
         array (
             'id' => 111,
             'user_id' => 20,
@@ -4587,7 +4584,7 @@ Georgia
             'created_at' => '2017-08-10 19:12:35',
             'updated_at' => '2017-08-10 19:19:08',
         ),
-        111 => 
+        111 =>
         array (
             'id' => 112,
             'user_id' => 17,
@@ -4627,7 +4624,7 @@ Atlanta GA 30335',
             'created_at' => '2017-08-11 01:17:45',
             'updated_at' => '2017-08-11 14:19:07',
         ),
-        112 => 
+        112 =>
         array (
             'id' => 113,
             'user_id' => 18,
@@ -4668,7 +4665,7 @@ Rutherford, NJ  07070
             'created_at' => '2017-08-11 15:11:34',
             'updated_at' => '2017-08-14 13:37:09',
         ),
-        113 => 
+        113 =>
         array (
             'id' => 114,
             'user_id' => 12,
@@ -4722,7 +4719,7 @@ Scheduled Start/End Dates: 9/5/2017 - 3/4/2018
             'created_at' => '2017-08-12 12:38:20',
             'updated_at' => '2018-03-01 15:04:29',
         ),
-        114 => 
+        114 =>
         array (
             'id' => 115,
             'user_id' => 12,
@@ -4777,7 +4774,7 @@ UPDATE: REQUEST FOR RAISE--   9/18/2017.
             'created_at' => '2017-08-12 12:54:45',
             'updated_at' => '2017-09-19 13:29:25',
         ),
-        115 => 
+        115 =>
         array (
             'id' => 116,
             'user_id' => 17,
@@ -4819,7 +4816,7 @@ UPDATE: REQUEST FOR RAISE--   9/18/2017.
             'created_at' => '2017-08-14 19:00:13',
             'updated_at' => '2017-08-15 19:32:34',
         ),
-        116 => 
+        116 =>
         array (
             'id' => 117,
             'user_id' => 13,
@@ -4858,7 +4855,7 @@ UPDATE: REQUEST FOR RAISE--   9/18/2017.
             'created_at' => '2017-08-14 20:45:11',
             'updated_at' => '2017-08-15 13:46:00',
         ),
-        117 => 
+        117 =>
         array (
             'id' => 118,
             'user_id' => 17,
@@ -4898,7 +4895,7 @@ Marietta GA 30067',
             'created_at' => '2017-08-15 19:12:57',
             'updated_at' => '2017-08-15 19:40:49',
         ),
-        118 => 
+        118 =>
         array (
             'id' => 119,
             'user_id' => 17,
@@ -4938,7 +4935,7 @@ Sugar Hill GA  30518 ',
             'created_at' => '2017-08-15 19:28:47',
             'updated_at' => '2017-08-24 12:54:17',
         ),
-        119 => 
+        119 =>
         array (
             'id' => 120,
             'user_id' => 17,
@@ -4980,7 +4977,7 @@ NEW PAY RATE EFFECTIVE 12/03/2017',
             'created_at' => '2017-08-15 20:56:36',
             'updated_at' => '2017-11-28 15:20:55',
         ),
-        120 => 
+        120 =>
         array (
             'id' => 121,
             'user_id' => 13,
@@ -5023,7 +5020,7 @@ Greenwood Village, CO 80111
             'created_at' => '2017-08-16 18:09:27',
             'updated_at' => '2017-08-16 20:48:39',
         ),
-        121 => 
+        121 =>
         array (
             'id' => 122,
             'user_id' => 13,
@@ -5065,7 +5062,7 @@ Greenwood Village, CO 80111
             'created_at' => '2017-08-16 18:55:24',
             'updated_at' => '2017-08-16 20:49:21',
         ),
-        122 => 
+        122 =>
         array (
             'id' => 123,
             'user_id' => 14,
@@ -5105,7 +5102,7 @@ Alpharetta, GA 30022',
             'created_at' => '2017-08-23 13:47:02',
             'updated_at' => '2017-08-23 19:40:35',
         ),
-        123 => 
+        123 =>
         array (
             'id' => 124,
             'user_id' => 13,
@@ -5146,7 +5143,7 @@ Denver, Co 80237
             'created_at' => '2017-08-24 16:56:14',
             'updated_at' => '2017-08-24 18:00:59',
         ),
-        124 => 
+        124 =>
         array (
             'id' => 125,
             'user_id' => 17,
@@ -5187,7 +5184,7 @@ Dunkin/Baskin data entry project ',
             'created_at' => '2017-08-24 18:59:47',
             'updated_at' => '2017-08-30 13:37:10',
         ),
-        125 => 
+        125 =>
         array (
             'id' => 126,
             'user_id' => 17,
@@ -5232,7 +5229,7 @@ Atlanta GA
             'created_at' => '2017-08-25 15:48:05',
             'updated_at' => '2017-08-25 18:23:11',
         ),
-        126 => 
+        126 =>
         array (
             'id' => 127,
             'user_id' => 17,
@@ -5272,7 +5269,7 @@ St. Ann, MO 63074',
             'created_at' => '2017-08-25 18:22:35',
             'updated_at' => '2017-09-26 12:21:43',
         ),
-        127 => 
+        127 =>
         array (
             'id' => 128,
             'user_id' => 4,
@@ -5317,7 +5314,7 @@ Starting the 7th month:
             'created_at' => '2017-08-25 20:19:12',
             'updated_at' => '2017-08-28 13:54:38',
         ),
-        128 => 
+        128 =>
         array (
             'id' => 129,
             'user_id' => 4,
@@ -5357,7 +5354,7 @@ Alpharetta, GA 30009',
             'created_at' => '2017-08-28 15:44:18',
             'updated_at' => '2017-08-28 16:41:59',
         ),
-        129 => 
+        129 =>
         array (
             'id' => 130,
             'user_id' => 4,
@@ -5397,7 +5394,7 @@ Snellville, GA 30039',
             'created_at' => '2017-08-28 17:01:00',
             'updated_at' => '2017-09-01 18:27:21',
         ),
-        130 => 
+        130 =>
         array (
             'id' => 131,
             'user_id' => 4,
@@ -5438,7 +5435,7 @@ Grayson,GA 30017
             'created_at' => '2017-08-28 17:12:31',
             'updated_at' => '2017-08-28 20:23:06',
         ),
-        131 => 
+        131 =>
         array (
             'id' => 132,
             'user_id' => 4,
@@ -5478,7 +5475,7 @@ Doraville, Ga 30340',
             'created_at' => '2017-08-28 18:04:02',
             'updated_at' => '2017-08-28 20:25:10',
         ),
-        132 => 
+        132 =>
         array (
             'id' => 133,
             'user_id' => 4,
@@ -5518,7 +5515,7 @@ Snellville, GA 30078',
             'created_at' => '2017-08-28 19:10:08',
             'updated_at' => '2017-08-29 13:34:19',
         ),
-        133 => 
+        133 =>
         array (
             'id' => 134,
             'user_id' => 4,
@@ -5557,7 +5554,7 @@ Snellville, GA 30078',
             'created_at' => '2017-08-28 19:26:22',
             'updated_at' => '2017-09-27 18:52:10',
         ),
-        134 => 
+        134 =>
         array (
             'id' => 135,
             'user_id' => 20,
@@ -5599,7 +5596,7 @@ Kennasaw, GA
             'created_at' => '2017-08-29 18:34:01',
             'updated_at' => '2017-08-29 20:05:08',
         ),
-        135 => 
+        135 =>
         array (
             'id' => 136,
             'user_id' => 4,
@@ -5640,7 +5637,7 @@ Stone Mountain 30088
             'created_at' => '2017-08-29 18:50:58',
             'updated_at' => '2017-09-01 18:48:49',
         ),
-        136 => 
+        136 =>
         array (
             'id' => 137,
             'user_id' => 17,
@@ -5682,7 +5679,7 @@ Dunkin project ',
             'created_at' => '2017-08-29 21:23:49',
             'updated_at' => '2017-11-30 16:36:02',
         ),
-        137 => 
+        137 =>
         array (
             'id' => 138,
             'user_id' => 12,
@@ -5736,7 +5733,7 @@ Supplier Number 446354
             'created_at' => '2017-08-29 23:37:08',
             'updated_at' => '2018-07-05 19:03:26',
         ),
-        138 => 
+        138 =>
         array (
             'id' => 139,
             'user_id' => 13,
@@ -5775,7 +5772,7 @@ Supplier Number 446354
             'created_at' => '2017-08-31 20:31:19',
             'updated_at' => '2018-06-13 19:10:40',
         ),
-        139 => 
+        139 =>
         array (
             'id' => 140,
             'user_id' => 17,
@@ -5816,7 +5813,7 @@ Lawrenceville, GA 30043
             'created_at' => '2017-09-02 01:51:32',
             'updated_at' => '2017-09-05 14:52:35',
         ),
-        140 => 
+        140 =>
         array (
             'id' => 141,
             'user_id' => 4,
@@ -5855,7 +5852,7 @@ Lawrenceville, GA 30043
             'created_at' => '2017-09-05 13:11:30',
             'updated_at' => '2017-09-06 13:39:20',
         ),
-        141 => 
+        141 =>
         array (
             'id' => 142,
             'user_id' => 8,
@@ -5895,7 +5892,7 @@ Gilberts, IL 60136',
             'created_at' => '2017-09-05 21:12:33',
             'updated_at' => '2018-10-12 15:01:42',
         ),
-        142 => 
+        142 =>
         array (
             'id' => 143,
             'user_id' => 17,
@@ -5935,7 +5932,7 @@ Woodstock GA 30188',
             'created_at' => '2017-09-06 14:07:56',
             'updated_at' => '2017-09-06 16:59:25',
         ),
-        143 => 
+        143 =>
         array (
             'id' => 144,
             'user_id' => 13,
@@ -5975,7 +5972,7 @@ Fayetteville, AK 72704',
             'created_at' => '2017-09-06 15:44:49',
             'updated_at' => '2018-08-01 15:44:20',
         ),
-        144 => 
+        144 =>
         array (
             'id' => 145,
             'user_id' => 7,
@@ -6015,7 +6012,7 @@ Fort Collins, CO 80524',
             'created_at' => '2017-09-06 20:55:32',
             'updated_at' => '2017-09-12 20:54:20',
         ),
-        145 => 
+        145 =>
         array (
             'id' => 146,
             'user_id' => 4,
@@ -6056,7 +6053,7 @@ Cumming, GA 30040
             'created_at' => '2017-09-11 12:51:40',
             'updated_at' => '2018-02-13 21:13:42',
         ),
-        146 => 
+        146 =>
         array (
             'id' => 147,
             'user_id' => 12,
@@ -6099,7 +6096,7 @@ Irvine ,CA
             'created_at' => '2017-09-11 19:14:17',
             'updated_at' => '2017-09-12 19:54:31',
         ),
-        147 => 
+        147 =>
         array (
             'id' => 148,
             'user_id' => 8,
@@ -6140,7 +6137,7 @@ split 25% Todd Cannady ',
             'created_at' => '2017-09-13 13:27:27',
             'updated_at' => '2017-09-13 18:18:14',
         ),
-        148 => 
+        148 =>
         array (
             'id' => 149,
             'user_id' => 13,
@@ -6181,7 +6178,7 @@ Englewood, Co 80155
             'created_at' => '2017-09-15 21:26:52',
             'updated_at' => '2017-09-18 13:20:47',
         ),
-        149 => 
+        149 =>
         array (
             'id' => 150,
             'user_id' => 17,
@@ -6223,7 +6220,7 @@ new rate and pay to start 03/05/18',
             'created_at' => '2017-09-19 14:21:39',
             'updated_at' => '2018-02-26 21:04:29',
         ),
-        150 => 
+        150 =>
         array (
             'id' => 151,
             'user_id' => 12,
@@ -6268,7 +6265,7 @@ Beth
             'created_at' => '2017-09-19 16:44:44',
             'updated_at' => '2017-09-19 17:16:45',
         ),
-        151 => 
+        151 =>
         array (
             'id' => 152,
             'user_id' => 17,
@@ -6309,7 +6306,7 @@ Dunkin Team
             'created_at' => '2017-09-20 19:11:31',
             'updated_at' => '2018-09-11 19:55:58',
         ),
-        152 => 
+        152 =>
         array (
             'id' => 153,
             'user_id' => 14,
@@ -6350,7 +6347,7 @@ Lakewood, CO
             'created_at' => '2017-09-20 21:03:07',
             'updated_at' => '2017-09-21 14:02:02',
         ),
-        153 => 
+        153 =>
         array (
             'id' => 154,
             'user_id' => 14,
@@ -6391,7 +6388,7 @@ Highlands Ranch, CO 80130
             'created_at' => '2017-09-22 17:00:50',
             'updated_at' => '2017-09-22 17:58:54',
         ),
-        154 => 
+        154 =>
         array (
             'id' => 155,
             'user_id' => 17,
@@ -6432,7 +6429,7 @@ Mableton , GA 30126
             'created_at' => '2017-09-26 17:56:18',
             'updated_at' => '2017-10-02 13:20:16',
         ),
-        155 => 
+        155 =>
         array (
             'id' => 156,
             'user_id' => 17,
@@ -6473,7 +6470,7 @@ alpharetta GA ',
             'created_at' => '2017-09-29 21:35:11',
             'updated_at' => '2017-10-02 14:40:12',
         ),
-        156 => 
+        156 =>
         array (
             'id' => 157,
             'user_id' => 12,
@@ -6518,7 +6515,7 @@ May need to be on site- stand by - if that happens billing would be $150/ hour.
             'created_at' => '2017-10-04 16:28:33',
             'updated_at' => '2017-10-16 15:04:17',
         ),
-        157 => 
+        157 =>
         array (
             'id' => 158,
             'user_id' => 17,
@@ -6559,7 +6556,7 @@ NEW PAY RATE EFFECTIVE 07/09/2018',
             'created_at' => '2017-10-05 19:48:34',
             'updated_at' => '2018-06-29 19:03:16',
         ),
-        158 => 
+        158 =>
         array (
             'id' => 159,
             'user_id' => 17,
@@ -6601,7 +6598,7 @@ Billed to the server support project/activation team ',
             'created_at' => '2017-10-05 23:51:16',
             'updated_at' => '2017-10-24 15:17:09',
         ),
-        159 => 
+        159 =>
         array (
             'id' => 160,
             'user_id' => 17,
@@ -6641,7 +6638,7 @@ Atlanta GA 30305',
             'created_at' => '2017-10-09 18:19:35',
             'updated_at' => '2017-10-09 18:20:18',
         ),
-        160 => 
+        160 =>
         array (
             'id' => 161,
             'user_id' => 4,
@@ -6681,7 +6678,7 @@ Marietta, Ga',
             'created_at' => '2017-10-13 17:51:35',
             'updated_at' => '2017-10-16 15:01:29',
         ),
-        161 => 
+        161 =>
         array (
             'id' => 162,
             'user_id' => 7,
@@ -6723,7 +6720,7 @@ Savannah, GA 31408
             'created_at' => '2017-10-13 19:12:00',
             'updated_at' => '2017-10-16 12:32:53',
         ),
-        162 => 
+        162 =>
         array (
             'id' => 163,
             'user_id' => 14,
@@ -6764,7 +6761,7 @@ Waterbury CT 06709',
             'created_at' => '2017-10-16 19:51:55',
             'updated_at' => '2017-10-16 19:55:46',
         ),
-        163 => 
+        163 =>
         array (
             'id' => 164,
             'user_id' => 17,
@@ -6807,7 +6804,7 @@ Bill rate staying the same',
             'created_at' => '2017-10-17 19:25:55',
             'updated_at' => '2018-04-18 19:55:44',
         ),
-        164 => 
+        164 =>
         array (
             'id' => 165,
             'user_id' => 11,
@@ -6848,7 +6845,7 @@ Atlanta, GA 30318',
             'created_at' => '2017-10-18 14:36:45',
             'updated_at' => '2017-10-18 14:59:54',
         ),
-        165 => 
+        165 =>
         array (
             'id' => 166,
             'user_id' => 17,
@@ -6888,7 +6885,7 @@ Smyrna GA',
             'created_at' => '2017-10-19 20:54:16',
             'updated_at' => '2017-10-23 15:08:29',
         ),
-        166 => 
+        166 =>
         array (
             'id' => 167,
             'user_id' => 14,
@@ -6927,7 +6924,7 @@ Smyrna GA',
             'created_at' => '2017-10-20 17:12:31',
             'updated_at' => '2017-12-19 18:39:13',
         ),
-        167 => 
+        167 =>
         array (
             'id' => 168,
             'user_id' => 13,
@@ -6968,7 +6965,7 @@ Centennial, CO',
             'created_at' => '2017-10-23 03:22:33',
             'updated_at' => '2018-10-23 12:26:29',
         ),
-        168 => 
+        168 =>
         array (
             'id' => 169,
             'user_id' => 13,
@@ -7009,7 +7006,7 @@ Castle Rock, CO 80104
             'created_at' => '2017-10-24 20:49:43',
             'updated_at' => '2017-10-25 14:21:34',
         ),
-        169 => 
+        169 =>
         array (
             'id' => 170,
             'user_id' => 17,
@@ -7051,7 +7048,7 @@ Sandy.steinberg@ncr.com ',
             'created_at' => '2017-10-26 19:46:19',
             'updated_at' => '2017-10-26 20:44:37',
         ),
-        170 => 
+        170 =>
         array (
             'id' => 171,
             'user_id' => 14,
@@ -7095,7 +7092,7 @@ Starting the 7th month:
             'created_at' => '2017-10-27 18:21:18',
             'updated_at' => '2017-10-27 18:33:20',
         ),
-        171 => 
+        171 =>
         array (
             'id' => 172,
             'user_id' => 14,
@@ -7139,7 +7136,7 @@ Atlatna, GA 30328
             'created_at' => '2017-10-27 18:28:24',
             'updated_at' => '2017-10-31 17:50:10',
         ),
-        172 => 
+        172 =>
         array (
             'id' => 173,
             'user_id' => 7,
@@ -7180,7 +7177,7 @@ Macon, GA 31210',
             'created_at' => '2017-10-27 18:53:23',
             'updated_at' => '2018-02-13 21:12:46',
         ),
-        173 => 
+        173 =>
         array (
             'id' => 174,
             'user_id' => 17,
@@ -7220,7 +7217,7 @@ Sugar HIll GA 30518',
             'created_at' => '2017-10-30 15:35:23',
             'updated_at' => '2017-10-30 15:54:21',
         ),
-        174 => 
+        174 =>
         array (
             'id' => 175,
             'user_id' => 12,
@@ -7262,7 +7259,7 @@ Alpharetta, GA 30039',
             'created_at' => '2017-11-02 13:11:03',
             'updated_at' => '2017-11-02 14:14:17',
         ),
-        175 => 
+        175 =>
         array (
             'id' => 176,
             'user_id' => 20,
@@ -7303,7 +7300,7 @@ Tempe, AZ 85281',
             'created_at' => '2017-11-02 18:02:15',
             'updated_at' => '2017-11-02 20:20:29',
         ),
-        176 => 
+        176 =>
         array (
             'id' => 177,
             'user_id' => 20,
@@ -7344,7 +7341,7 @@ Tempe, AZ 85281',
             'created_at' => '2017-11-02 18:11:45',
             'updated_at' => '2017-11-02 20:14:26',
         ),
-        177 => 
+        177 =>
         array (
             'id' => 178,
             'user_id' => 20,
@@ -7386,7 +7383,7 @@ Tempe, AZ 85281
             'created_at' => '2017-11-03 15:26:14',
             'updated_at' => '2018-01-09 20:57:28',
         ),
-        178 => 
+        178 =>
         array (
             'id' => 179,
             'user_id' => 12,
@@ -7428,7 +7425,7 @@ Thanks!',
             'created_at' => '2017-11-05 22:22:30',
             'updated_at' => '2017-11-06 18:14:33',
         ),
-        179 => 
+        179 =>
         array (
             'id' => 180,
             'user_id' => 20,
@@ -7469,7 +7466,7 @@ Lawrenceville, GA  30043',
             'created_at' => '2017-11-06 15:09:12',
             'updated_at' => '2018-01-10 16:24:51',
         ),
-        180 => 
+        180 =>
         array (
             'id' => 181,
             'user_id' => 20,
@@ -7511,7 +7508,7 @@ Phoenix, Arizona 85048
             'created_at' => '2017-11-06 16:15:22',
             'updated_at' => '2018-01-09 20:50:48',
         ),
-        181 => 
+        181 =>
         array (
             'id' => 182,
             'user_id' => 13,
@@ -7553,7 +7550,7 @@ Castle Rock, CO 80104',
             'created_at' => '2017-11-06 19:33:12',
             'updated_at' => '2017-11-06 20:38:21',
         ),
-        182 => 
+        182 =>
         array (
             'id' => 183,
             'user_id' => 14,
@@ -7592,7 +7589,7 @@ Castle Rock, CO 80104',
             'created_at' => '2017-11-06 19:47:04',
             'updated_at' => '2017-12-15 15:09:33',
         ),
-        183 => 
+        183 =>
         array (
             'id' => 184,
             'user_id' => 13,
@@ -7633,7 +7630,7 @@ San Jose, CA 95131',
             'created_at' => '2017-11-06 20:46:46',
             'updated_at' => '2017-11-07 13:46:08',
         ),
-        184 => 
+        184 =>
         array (
             'id' => 185,
             'user_id' => 20,
@@ -7674,7 +7671,7 @@ Lawrenceville, GA  30043',
             'created_at' => '2017-11-08 18:35:56',
             'updated_at' => '2018-01-09 20:53:32',
         ),
-        185 => 
+        185 =>
         array (
             'id' => 186,
             'user_id' => 11,
@@ -7717,7 +7714,7 @@ No PO needed. Bill G&D ',
             'created_at' => '2017-11-08 20:36:18',
             'updated_at' => '2017-11-14 19:12:43',
         ),
-        186 => 
+        186 =>
         array (
             'id' => 187,
             'user_id' => 17,
@@ -7758,7 +7755,7 @@ Atlanta GA ',
             'created_at' => '2017-11-10 15:04:41',
             'updated_at' => '2017-11-27 21:26:01',
         ),
-        187 => 
+        187 =>
         array (
             'id' => 188,
             'user_id' => 21,
@@ -7803,7 +7800,7 @@ Not a new hire- He is a W2 that is transferring to 1099',
             'created_at' => '2017-11-10 19:59:51',
             'updated_at' => '2017-12-21 15:34:25',
         ),
-        188 => 
+        188 =>
         array (
             'id' => 189,
             'user_id' => 14,
@@ -7843,7 +7840,7 @@ Smyrna GA 30082',
             'created_at' => '2017-11-10 20:20:46',
             'updated_at' => '2017-11-27 21:27:45',
         ),
-        189 => 
+        189 =>
         array (
             'id' => 190,
             'user_id' => 18,
@@ -7884,7 +7881,7 @@ Colorado Springs, CO 80920
             'created_at' => '2017-11-13 16:40:38',
             'updated_at' => '2017-11-27 21:28:48',
         ),
-        190 => 
+        190 =>
         array (
             'id' => 191,
             'user_id' => 12,
@@ -7949,7 +7946,7 @@ Total								        5850
             'created_at' => '2017-11-15 16:08:51',
             'updated_at' => '2017-11-27 21:29:52',
         ),
-        191 => 
+        191 =>
         array (
             'id' => 192,
             'user_id' => 12,
@@ -7995,7 +7992,7 @@ This grid is for the QA hours- pay Venkat and he will pay the Zychos team- total
             'created_at' => '2017-11-15 16:14:59',
             'updated_at' => '2017-11-27 21:31:52',
         ),
-        192 => 
+        192 =>
         array (
             'id' => 193,
             'user_id' => 12,
@@ -8042,7 +8039,7 @@ NOTE that HERE is closed Dec 19- EOY .  James knows this is two weeks of no pay/
             'created_at' => '2017-11-18 01:29:12',
             'updated_at' => '2017-11-27 21:32:37',
         ),
-        193 => 
+        193 =>
         array (
             'id' => 194,
             'user_id' => 13,
@@ -8082,7 +8079,7 @@ Highlands Ranch CO 80129.',
             'created_at' => '2017-11-21 23:21:18',
             'updated_at' => '2017-11-27 21:35:05',
         ),
-        194 => 
+        194 =>
         array (
             'id' => 195,
             'user_id' => 12,
@@ -8124,7 +8121,7 @@ Let me know if you have any questions.  Thanks!
             'created_at' => '2017-11-27 20:12:06',
             'updated_at' => '2017-12-04 17:11:49',
         ),
-        195 => 
+        195 =>
         array (
             'id' => 196,
             'user_id' => 4,
@@ -8164,7 +8161,7 @@ Don Barwick - 25%',
             'created_at' => '2017-12-01 02:35:16',
             'updated_at' => '2017-12-01 19:34:07',
         ),
-        196 => 
+        196 =>
         array (
             'id' => 197,
             'user_id' => 19,
@@ -8211,7 +8208,7 @@ Corus does not need to do either the drug test or background check for this cand
             'created_at' => '2017-12-04 20:48:04',
             'updated_at' => '2017-12-06 19:55:53',
         ),
-        197 => 
+        197 =>
         array (
             'id' => 198,
             'user_id' => 19,
@@ -8258,7 +8255,7 @@ Corus does not need to do either the drug test.
             'created_at' => '2017-12-04 20:54:07',
             'updated_at' => '2017-12-12 15:19:18',
         ),
-        198 => 
+        198 =>
         array (
             'id' => 199,
             'user_id' => 12,
@@ -8298,7 +8295,7 @@ Chicago , Il 60647',
             'created_at' => '2017-12-07 16:57:43',
             'updated_at' => '2017-12-11 21:23:24',
         ),
-        199 => 
+        199 =>
         array (
             'id' => 200,
             'user_id' => 4,
@@ -8343,7 +8340,7 @@ Update 12/13: Contract Length Changed.
             'created_at' => '2017-12-11 21:36:55',
             'updated_at' => '2018-01-25 15:13:05',
         ),
-        200 => 
+        200 =>
         array (
             'id' => 201,
             'user_id' => 20,
@@ -8384,7 +8381,7 @@ Lexington, KY 40515
             'created_at' => '2017-12-11 21:49:40',
             'updated_at' => '2017-12-12 15:44:30',
         ),
-        201 => 
+        201 =>
         array (
             'id' => 202,
             'user_id' => 20,
@@ -8425,7 +8422,7 @@ Lexington KY 40514
             'created_at' => '2017-12-11 21:54:23',
             'updated_at' => '2017-12-12 15:53:40',
         ),
-        202 => 
+        202 =>
         array (
             'id' => 203,
             'user_id' => 20,
@@ -8466,7 +8463,7 @@ Lexington, KY 40514
             'created_at' => '2017-12-11 21:58:15',
             'updated_at' => '2017-12-12 16:00:47',
         ),
-        203 => 
+        203 =>
         array (
             'id' => 204,
             'user_id' => 20,
@@ -8505,7 +8502,7 @@ Lexington, KY 40514
             'created_at' => '2017-12-11 22:01:48',
             'updated_at' => '2017-12-12 16:14:02',
         ),
-        204 => 
+        204 =>
         array (
             'id' => 205,
             'user_id' => 20,
@@ -8544,7 +8541,7 @@ Lexington, KY 40514
             'created_at' => '2017-12-11 22:05:11',
             'updated_at' => '2017-12-12 16:25:21',
         ),
-        205 => 
+        205 =>
         array (
             'id' => 206,
             'user_id' => 20,
@@ -8586,7 +8583,7 @@ Mount Sterling KY 40353
             'created_at' => '2017-12-11 22:08:45',
             'updated_at' => '2017-12-12 16:30:50',
         ),
-        206 => 
+        206 =>
         array (
             'id' => 207,
             'user_id' => 20,
@@ -8625,7 +8622,7 @@ Mount Sterling KY 40353
             'created_at' => '2017-12-11 22:13:13',
             'updated_at' => '2017-12-12 16:35:08',
         ),
-        207 => 
+        207 =>
         array (
             'id' => 208,
             'user_id' => 4,
@@ -8669,7 +8666,7 @@ Update: Contractor coming back to placement.
             'created_at' => '2017-12-12 18:31:34',
             'updated_at' => '2018-01-25 15:11:40',
         ),
-        208 => 
+        208 =>
         array (
             'id' => 209,
             'user_id' => 8,
@@ -8713,7 +8710,7 @@ Split 25% Jim Bannon / 75% Meghan. ',
             'created_at' => '2017-12-12 20:20:19',
             'updated_at' => '2017-12-12 21:01:11',
         ),
-        209 => 
+        209 =>
         array (
             'id' => 210,
             'user_id' => 17,
@@ -8755,7 +8752,7 @@ Alpharetta GA ',
             'created_at' => '2017-12-13 19:02:50',
             'updated_at' => '2017-12-13 20:55:45',
         ),
-        210 => 
+        210 =>
         array (
             'id' => 211,
             'user_id' => 20,
@@ -8795,7 +8792,7 @@ Lawrenceville, GA 30092',
             'created_at' => '2017-12-13 20:17:47',
             'updated_at' => '2017-12-15 16:15:41',
         ),
-        211 => 
+        211 =>
         array (
             'id' => 212,
             'user_id' => 13,
@@ -8835,7 +8832,7 @@ Denver, CO 80223',
             'created_at' => '2017-12-14 21:45:33',
             'updated_at' => '2017-12-15 13:41:21',
         ),
-        212 => 
+        212 =>
         array (
             'id' => 213,
             'user_id' => 17,
@@ -8876,7 +8873,7 @@ Buford, GA 30518',
             'created_at' => '2017-12-15 19:51:36',
             'updated_at' => '2017-12-15 21:27:25',
         ),
-        213 => 
+        213 =>
         array (
             'id' => 214,
             'user_id' => 4,
@@ -8922,7 +8919,7 @@ Brandon Price (25%)',
             'created_at' => '2017-12-20 14:41:02',
             'updated_at' => '2018-01-25 15:10:35',
         ),
-        214 => 
+        214 =>
         array (
             'id' => 215,
             'user_id' => 21,
@@ -8963,7 +8960,7 @@ Denver, CO
             'created_at' => '2017-12-29 13:46:58',
             'updated_at' => '2017-12-29 13:48:01',
         ),
-        215 => 
+        215 =>
         array (
             'id' => 216,
             'user_id' => 17,
@@ -9004,7 +9001,7 @@ NEW BILL RATE - Effective March Billing Cycle',
             'created_at' => '2017-12-29 15:19:26',
             'updated_at' => '2018-02-08 21:34:33',
         ),
-        216 => 
+        216 =>
         array (
             'id' => 217,
             'user_id' => 20,
@@ -9049,7 +9046,7 @@ Mark Fowler
             'created_at' => '2017-12-29 15:21:49',
             'updated_at' => '2018-06-25 14:10:52',
         ),
-        217 => 
+        217 =>
         array (
             'id' => 218,
             'user_id' => 17,
@@ -9092,7 +9089,7 @@ McDonalds team',
             'created_at' => '2017-12-29 15:24:40',
             'updated_at' => '2018-01-29 19:32:49',
         ),
-        218 => 
+        218 =>
         array (
             'id' => 219,
             'user_id' => 20,
@@ -9137,7 +9134,7 @@ GALLOWAY, OH
             'created_at' => '2017-12-29 18:12:51',
             'updated_at' => '2017-12-29 19:10:14',
         ),
-        219 => 
+        219 =>
         array (
             'id' => 220,
             'user_id' => 18,
@@ -9177,7 +9174,7 @@ Do not send invoice until a PO is issued',
             'created_at' => '2017-12-29 18:33:03',
             'updated_at' => '2018-01-04 20:48:34',
         ),
-        220 => 
+        220 =>
         array (
             'id' => 221,
             'user_id' => 21,
@@ -9221,7 +9218,7 @@ Houston, Texas 77077
             'created_at' => '2018-01-02 20:15:58',
             'updated_at' => '2018-01-02 20:17:49',
         ),
-        221 => 
+        221 =>
         array (
             'id' => 222,
             'user_id' => 11,
@@ -9262,7 +9259,7 @@ McDonald\'s Team',
             'created_at' => '2018-01-02 20:16:36',
             'updated_at' => '2018-02-26 21:10:02',
         ),
-        222 => 
+        222 =>
         array (
             'id' => 223,
             'user_id' => 4,
@@ -9306,7 +9303,7 @@ Brandon Price - 25%',
             'created_at' => '2018-01-03 14:21:21',
             'updated_at' => '2018-01-25 15:09:35',
         ),
-        223 => 
+        223 =>
         array (
             'id' => 224,
             'user_id' => 17,
@@ -9348,7 +9345,7 @@ McDonalds team ',
             'created_at' => '2018-01-04 01:21:00',
             'updated_at' => '2018-01-08 13:06:30',
         ),
-        224 => 
+        224 =>
         array (
             'id' => 225,
             'user_id' => 17,
@@ -9387,7 +9384,7 @@ McDonalds team ',
             'created_at' => '2018-01-04 01:26:25',
             'updated_at' => '2018-01-04 14:05:52',
         ),
-        225 => 
+        225 =>
         array (
             'id' => 226,
             'user_id' => 17,
@@ -9428,7 +9425,7 @@ changed start date',
             'created_at' => '2018-01-04 01:31:19',
             'updated_at' => '2018-01-08 13:11:13',
         ),
-        226 => 
+        226 =>
         array (
             'id' => 227,
             'user_id' => 12,
@@ -9468,7 +9465,7 @@ Fairburn, GA 30213',
             'created_at' => '2018-01-09 21:16:10',
             'updated_at' => '2018-01-12 14:09:13',
         ),
-        227 => 
+        227 =>
         array (
             'id' => 228,
             'user_id' => 20,
@@ -9509,7 +9506,7 @@ Buford, GA 30519
             'created_at' => '2018-01-10 16:21:22',
             'updated_at' => '2018-01-10 16:30:14',
         ),
-        228 => 
+        228 =>
         array (
             'id' => 229,
             'user_id' => 20,
@@ -9552,7 +9549,7 @@ Update 1/18: Updated Start Date',
             'created_at' => '2018-01-10 16:37:49',
             'updated_at' => '2018-01-18 14:39:50',
         ),
-        229 => 
+        229 =>
         array (
             'id' => 230,
             'user_id' => 20,
@@ -9595,7 +9592,7 @@ Update 1/18: Start Date Change',
             'created_at' => '2018-01-10 17:13:56',
             'updated_at' => '2018-01-18 14:38:46',
         ),
-        230 => 
+        230 =>
         array (
             'id' => 231,
             'user_id' => 17,
@@ -9634,7 +9631,7 @@ Update 1/18: Start Date Change',
             'created_at' => '2018-01-11 01:42:56',
             'updated_at' => '2018-01-11 14:20:01',
         ),
-        231 => 
+        231 =>
         array (
             'id' => 232,
             'user_id' => 12,
@@ -9677,7 +9674,7 @@ This is a twitter contractor that will be billed through Twitter\'s VMS- ProWand
             'created_at' => '2018-01-12 21:19:13',
             'updated_at' => '2018-07-19 15:40:58',
         ),
-        232 => 
+        232 =>
         array (
             'id' => 233,
             'user_id' => 12,
@@ -9717,7 +9714,7 @@ Alpharetta, GA ',
             'created_at' => '2018-01-12 21:30:46',
             'updated_at' => '2018-01-19 15:40:39',
         ),
-        233 => 
+        233 =>
         array (
             'id' => 234,
             'user_id' => 17,
@@ -9758,7 +9755,7 @@ Austell,  Georgia 30168
             'created_at' => '2018-01-16 22:08:48',
             'updated_at' => '2018-01-17 17:45:09',
         ),
-        234 => 
+        234 =>
         array (
             'id' => 235,
             'user_id' => 20,
@@ -9802,7 +9799,7 @@ United States
             'created_at' => '2018-01-17 22:10:59',
             'updated_at' => '2018-01-18 14:14:02',
         ),
-        235 => 
+        235 =>
         array (
             'id' => 236,
             'user_id' => 20,
@@ -9844,7 +9841,7 @@ Westminster, CO 80234
             'created_at' => '2018-01-17 22:16:34',
             'updated_at' => '2018-01-18 13:55:06',
         ),
-        236 => 
+        236 =>
         array (
             'id' => 237,
             'user_id' => 18,
@@ -9883,7 +9880,7 @@ Westminster, CO 80234
             'created_at' => '2018-01-18 02:12:05',
             'updated_at' => '2018-01-18 13:40:08',
         ),
-        237 => 
+        237 =>
         array (
             'id' => 238,
             'user_id' => 12,
@@ -9925,7 +9922,7 @@ Alpharetta, GA ',
             'created_at' => '2018-01-18 19:17:32',
             'updated_at' => '2018-01-19 20:04:44',
         ),
-        238 => 
+        238 =>
         array (
             'id' => 239,
             'user_id' => 17,
@@ -9965,7 +9962,7 @@ Atlanta GA ',
             'created_at' => '2018-01-24 21:09:26',
             'updated_at' => '2018-01-24 21:20:31',
         ),
-        239 => 
+        239 =>
         array (
             'id' => 240,
             'user_id' => 18,
@@ -10006,7 +10003,7 @@ Lakewood, CO  80227
             'created_at' => '2018-01-26 03:22:29',
             'updated_at' => '2018-01-26 15:17:01',
         ),
-        240 => 
+        240 =>
         array (
             'id' => 241,
             'user_id' => 12,
@@ -10052,7 +10049,7 @@ This is a SOW-
             'created_at' => '2018-01-29 02:50:19',
             'updated_at' => '2018-01-30 14:13:10',
         ),
-        241 => 
+        241 =>
         array (
             'id' => 242,
             'user_id' => 20,
@@ -10092,7 +10089,7 @@ Atlanta, GA 30411',
             'created_at' => '2018-02-02 13:43:03',
             'updated_at' => '2018-02-02 15:32:20',
         ),
-        242 => 
+        242 =>
         array (
             'id' => 243,
             'user_id' => 20,
@@ -10132,7 +10129,7 @@ Chicago, IL 60604',
             'created_at' => '2018-02-02 15:29:02',
             'updated_at' => '2018-02-28 16:06:33',
         ),
-        243 => 
+        243 =>
         array (
             'id' => 244,
             'user_id' => 20,
@@ -10172,7 +10169,7 @@ Chicago, IL 60604',
             'created_at' => '2018-02-02 15:33:43',
             'updated_at' => '2018-02-28 16:07:00',
         ),
-        244 => 
+        244 =>
         array (
             'id' => 245,
             'user_id' => 17,
@@ -10213,7 +10210,7 @@ Fuquay-Varina, NC 27526
             'created_at' => '2018-02-05 20:28:23',
             'updated_at' => '2018-02-06 13:21:55',
         ),
-        245 => 
+        245 =>
         array (
             'id' => 246,
             'user_id' => 12,
@@ -10257,7 +10254,7 @@ Please don\'t forget all the special twitter COF forms and stuff.
             'created_at' => '2018-02-07 21:53:45',
             'updated_at' => '2018-02-08 15:23:14',
         ),
-        246 => 
+        246 =>
         array (
             'id' => 247,
             'user_id' => 22,
@@ -10298,7 +10295,7 @@ Atlanta, GA',
             'created_at' => '2018-02-14 20:55:28',
             'updated_at' => '2018-02-14 21:33:29',
         ),
-        247 => 
+        247 =>
         array (
             'id' => 248,
             'user_id' => 8,
@@ -10344,7 +10341,7 @@ PO Box 27427, Raleigh, NC 27611
             'created_at' => '2018-02-23 02:07:10',
             'updated_at' => '2018-02-26 15:28:04',
         ),
-        248 => 
+        248 =>
         array (
             'id' => 249,
             'user_id' => 20,
@@ -10386,7 +10383,7 @@ L4W 5M3
             'created_at' => '2018-02-23 18:09:46',
             'updated_at' => '2018-02-27 18:55:43',
         ),
-        249 => 
+        249 =>
         array (
             'id' => 250,
             'user_id' => 3,
@@ -10428,7 +10425,7 @@ Will is being moved to an inside sales role with the McD’s team.  Effective 3/
             'created_at' => '2018-02-26 20:01:20',
             'updated_at' => '2018-02-26 20:54:44',
         ),
-        250 => 
+        250 =>
         array (
             'id' => 251,
             'user_id' => 28,
@@ -10469,7 +10466,7 @@ Lexington, KY 40504
             'created_at' => '2018-02-28 22:16:56',
             'updated_at' => '2018-03-01 13:39:49',
         ),
-        251 => 
+        251 =>
         array (
             'id' => 252,
             'user_id' => 28,
@@ -10510,7 +10507,7 @@ Lexington, KY 40504
             'created_at' => '2018-02-28 22:21:36',
             'updated_at' => '2018-03-01 13:47:57',
         ),
-        252 => 
+        252 =>
         array (
             'id' => 253,
             'user_id' => 28,
@@ -10551,7 +10548,7 @@ Des Moines, IA 50413
             'created_at' => '2018-02-28 22:27:24',
             'updated_at' => '2018-03-01 13:56:24',
         ),
-        253 => 
+        253 =>
         array (
             'id' => 254,
             'user_id' => 28,
@@ -10593,7 +10590,7 @@ Tacoma, WA 98405
             'created_at' => '2018-02-28 22:30:59',
             'updated_at' => '2018-03-01 21:51:39',
         ),
-        254 => 
+        254 =>
         array (
             'id' => 255,
             'user_id' => 28,
@@ -10635,7 +10632,7 @@ Tacoma, WA 98405
             'created_at' => '2018-02-28 22:36:32',
             'updated_at' => '2018-03-05 16:32:57',
         ),
-        255 => 
+        255 =>
         array (
             'id' => 256,
             'user_id' => 28,
@@ -10677,7 +10674,7 @@ Lexington, KY 40504
             'created_at' => '2018-03-01 19:05:06',
             'updated_at' => '2018-03-01 19:52:51',
         ),
-        256 => 
+        256 =>
         array (
             'id' => 257,
             'user_id' => 28,
@@ -10719,7 +10716,7 @@ Tacoma, WA 98405
             'created_at' => '2018-03-01 19:08:37',
             'updated_at' => '2018-03-28 13:36:32',
         ),
-        257 => 
+        257 =>
         array (
             'id' => 258,
             'user_id' => 28,
@@ -10762,7 +10759,7 @@ Louisville, KY 40202
             'created_at' => '2018-03-02 18:22:36',
             'updated_at' => '2018-03-02 19:48:12',
         ),
-        258 => 
+        258 =>
         array (
             'id' => 259,
             'user_id' => 28,
@@ -10806,7 +10803,7 @@ Thanks Sammy!!! Sorry about that!!!',
         'created_at' => '2018-03-02 18:27:48',
         'updated_at' => '2018-03-08 19:53:43',
     ),
-    259 => 
+    259 =>
     array (
         'id' => 260,
         'user_id' => 28,
@@ -10848,7 +10845,7 @@ Des Moines, IA 50413
         'created_at' => '2018-03-02 18:30:42',
         'updated_at' => '2018-03-02 20:05:21',
     ),
-    260 => 
+    260 =>
     array (
         'id' => 261,
         'user_id' => 28,
@@ -10890,7 +10887,7 @@ Tacoma, WA 98405
         'created_at' => '2018-03-02 20:28:51',
         'updated_at' => '2018-03-09 22:03:22',
     ),
-    261 => 
+    261 =>
     array (
         'id' => 262,
         'user_id' => 28,
@@ -10930,7 +10927,7 @@ Lexington, KY 40511',
         'created_at' => '2018-03-02 22:27:17',
         'updated_at' => '2018-03-05 16:39:48',
     ),
-    262 => 
+    262 =>
     array (
         'id' => 263,
         'user_id' => 17,
@@ -10972,7 +10969,7 @@ split 50/50 between Sharon and Jon Ford/Shawn McNeely team  (50 for Sharon, 50 s
         'created_at' => '2018-03-05 16:25:29',
         'updated_at' => '2018-03-05 20:26:30',
     ),
-    263 => 
+    263 =>
     array (
         'id' => 264,
         'user_id' => 28,
@@ -11014,7 +11011,7 @@ Lexington, KY 40504
         'created_at' => '2018-03-05 22:40:05',
         'updated_at' => '2018-03-06 13:52:13',
     ),
-    264 => 
+    264 =>
     array (
         'id' => 265,
         'user_id' => 12,
@@ -11067,7 +11064,7 @@ Backfill for Audley-- please on board for a Monday start
         'created_at' => '2018-03-05 22:42:16',
         'updated_at' => '2018-03-13 14:25:57',
     ),
-    265 => 
+    265 =>
     array (
         'id' => 266,
         'user_id' => 28,
@@ -11109,7 +11106,7 @@ Louisville, KY 40202
         'created_at' => '2018-03-05 22:47:29',
         'updated_at' => '2018-03-06 14:39:28',
     ),
-    266 => 
+    266 =>
     array (
         'id' => 267,
         'user_id' => 28,
@@ -11153,7 +11150,7 @@ Needs to send over proof of TB and Flu shot to brandy as soon as possible',
         'created_at' => '2018-03-05 22:50:41',
         'updated_at' => '2018-03-06 19:26:18',
     ),
-    267 => 
+    267 =>
     array (
         'id' => 268,
         'user_id' => 28,
@@ -11195,7 +11192,7 @@ Louisville, KY 40202
         'created_at' => '2018-03-06 22:11:56',
         'updated_at' => '2018-03-06 22:30:18',
     ),
-    268 => 
+    268 =>
     array (
         'id' => 269,
         'user_id' => 28,
@@ -11236,7 +11233,7 @@ LEXINGTON KY 40515
         'created_at' => '2018-03-07 16:49:22',
         'updated_at' => '2018-03-07 17:40:21',
     ),
-    269 => 
+    269 =>
     array (
         'id' => 270,
         'user_id' => 29,
@@ -11277,7 +11274,7 @@ Lawrenceville, GA 30043 ',
         'created_at' => '2018-03-07 16:57:31',
         'updated_at' => '2018-03-07 21:13:22',
     ),
-    270 => 
+    270 =>
     array (
         'id' => 271,
         'user_id' => 17,
@@ -11319,7 +11316,7 @@ Lawrenceville GA',
         'created_at' => '2018-03-07 18:21:13',
         'updated_at' => '2018-04-03 18:18:38',
     ),
-    271 => 
+    271 =>
     array (
         'id' => 272,
         'user_id' => 28,
@@ -11361,7 +11358,7 @@ Lexington, KY 40504
         'created_at' => '2018-03-07 21:58:39',
         'updated_at' => '2018-03-08 13:25:35',
     ),
-    272 => 
+    272 =>
     array (
         'id' => 273,
         'user_id' => 28,
@@ -11403,7 +11400,7 @@ Tacoma, WA 98405
         'created_at' => '2018-03-08 21:34:47',
         'updated_at' => '2018-03-09 22:08:22',
     ),
-    273 => 
+    273 =>
     array (
         'id' => 274,
         'user_id' => 28,
@@ -11445,7 +11442,7 @@ Louisville, KY 40202
         'created_at' => '2018-03-12 21:53:18',
         'updated_at' => '2018-03-14 15:25:50',
     ),
-    274 => 
+    274 =>
     array (
         'id' => 275,
         'user_id' => 28,
@@ -11488,7 +11485,7 @@ Des Moines, IA 50413
         'created_at' => '2018-03-14 15:08:29',
         'updated_at' => '2018-03-19 15:38:07',
     ),
-    275 => 
+    275 =>
     array (
         'id' => 276,
         'user_id' => 12,
@@ -11537,7 +11534,7 @@ I put through an offer for LaChrisa – THU-MON PM shift, beginning 3/26. Just w
         'created_at' => '2018-03-15 00:18:15',
         'updated_at' => '2018-03-15 13:52:26',
     ),
-    276 => 
+    276 =>
     array (
         'id' => 277,
         'user_id' => 28,
@@ -11579,7 +11576,7 @@ Lakewood, WA 98499
         'created_at' => '2018-03-15 22:12:11',
         'updated_at' => '2018-03-19 12:55:40',
     ),
-    277 => 
+    277 =>
     array (
         'id' => 278,
         'user_id' => 28,
@@ -11622,7 +11619,7 @@ Burien, WA
         'created_at' => '2018-03-20 20:02:02',
         'updated_at' => '2018-03-29 14:25:31',
     ),
-    278 => 
+    278 =>
     array (
         'id' => 279,
         'user_id' => 12,
@@ -11664,7 +11661,7 @@ TJ is a corp to corp guy - his company will be invoicing us instead of paylocity
         'created_at' => '2018-03-21 18:38:13',
         'updated_at' => '2018-04-02 15:12:56',
     ),
-    279 => 
+    279 =>
     array (
         'id' => 280,
         'user_id' => 18,
@@ -11710,7 +11707,7 @@ f. Social Security Number Use Verification
         'created_at' => '2018-03-27 17:29:13',
         'updated_at' => '2018-03-27 19:28:04',
     ),
-    280 => 
+    280 =>
     array (
         'id' => 281,
         'user_id' => 12,
@@ -11753,7 +11750,7 @@ Thanks!',
         'created_at' => '2018-03-29 13:09:13',
         'updated_at' => '2018-03-30 12:08:40',
     ),
-    281 => 
+    281 =>
     array (
         'id' => 282,
         'user_id' => 12,
@@ -11797,7 +11794,7 @@ Correction- Nettracer wants David to start on the 11th- due to travel. ',
         'created_at' => '2018-03-30 17:14:32',
         'updated_at' => '2018-07-09 13:19:37',
     ),
-    282 => 
+    282 =>
     array (
         'id' => 283,
         'user_id' => 12,
@@ -11836,7 +11833,7 @@ Correction- Nettracer wants David to start on the 11th- due to travel. ',
         'created_at' => '2018-03-30 17:53:22',
         'updated_at' => '2018-03-30 18:55:47',
     ),
-    283 => 
+    283 =>
     array (
         'id' => 284,
         'user_id' => 23,
@@ -11876,7 +11873,7 @@ Englewood, CO 80112',
         'created_at' => '2018-04-02 16:01:01',
         'updated_at' => '2018-04-02 16:19:13',
     ),
-    284 => 
+    284 =>
     array (
         'id' => 285,
         'user_id' => 23,
@@ -11915,7 +11912,7 @@ Englewood, CO 80112',
         'created_at' => '2018-04-10 16:59:48',
         'updated_at' => '2018-04-10 17:46:36',
     ),
-    285 => 
+    285 =>
     array (
         'id' => 286,
         'user_id' => 23,
@@ -11954,7 +11951,7 @@ Englewood, CO 80112',
         'created_at' => '2018-04-10 17:04:52',
         'updated_at' => '2018-04-10 17:46:55',
     ),
-    286 => 
+    286 =>
     array (
         'id' => 287,
         'user_id' => 12,
@@ -11994,7 +11991,7 @@ Cumming, GA 30040',
         'created_at' => '2018-04-11 16:43:34',
         'updated_at' => '2018-04-11 17:25:26',
     ),
-    287 => 
+    287 =>
     array (
         'id' => 288,
         'user_id' => 20,
@@ -12038,7 +12035,7 @@ Roswell, GA 30075
         'created_at' => '2018-04-13 20:03:42',
         'updated_at' => '2018-04-16 13:24:12',
     ),
-    288 => 
+    288 =>
     array (
         'id' => 289,
         'user_id' => 19,
@@ -12079,7 +12076,7 @@ DULUTH, GA  30097',
         'created_at' => '2018-04-15 20:34:18',
         'updated_at' => '2018-04-16 12:37:10',
     ),
-    289 => 
+    289 =>
     array (
         'id' => 290,
         'user_id' => 12,
@@ -12126,7 +12123,7 @@ www.NetTracer.aero
         'created_at' => '2018-04-16 19:16:00',
         'updated_at' => '2018-04-16 19:27:36',
     ),
-    290 => 
+    290 =>
     array (
         'id' => 291,
         'user_id' => 12,
@@ -12168,7 +12165,7 @@ The offshore team’s invoicing will be tied into NetTracer’s daily SCRUM duti
         'created_at' => '2018-04-19 18:23:46',
         'updated_at' => '2018-04-19 18:42:10',
     ),
-    291 => 
+    291 =>
     array (
         'id' => 292,
         'user_id' => 8,
@@ -12213,7 +12210,7 @@ Updated 5/22: New Bill Rate- ',
         'created_at' => '2018-04-23 15:33:59',
         'updated_at' => '2018-05-22 15:30:08',
     ),
-    292 => 
+    292 =>
     array (
         'id' => 293,
         'user_id' => 12,
@@ -12260,7 +12257,7 @@ please follow Twitter on boarding background stuff and complete a COF form for B
         'created_at' => '2018-04-25 20:56:31',
         'updated_at' => '2018-04-26 12:39:28',
     ),
-    293 => 
+    293 =>
     array (
         'id' => 294,
         'user_id' => 28,
@@ -12302,7 +12299,7 @@ Williston, ND 58801
         'created_at' => '2018-04-25 22:01:21',
         'updated_at' => '2018-05-22 14:43:32',
     ),
-    294 => 
+    294 =>
     array (
         'id' => 295,
         'user_id' => 28,
@@ -12342,7 +12339,7 @@ Louisville, KY 40229',
         'created_at' => '2018-04-30 20:54:40',
         'updated_at' => '2018-04-30 21:04:01',
     ),
-    295 => 
+    295 =>
     array (
         'id' => 296,
         'user_id' => 19,
@@ -12385,7 +12382,7 @@ Suite 400, 4th floor
         'created_at' => '2018-04-30 21:44:51',
         'updated_at' => '2018-05-01 18:21:13',
     ),
-    296 => 
+    296 =>
     array (
         'id' => 297,
         'user_id' => 12,
@@ -12435,7 +12432,7 @@ Georgia
         'created_at' => '2018-05-01 18:18:44',
         'updated_at' => '2018-05-01 18:40:22',
     ),
-    297 => 
+    297 =>
     array (
         'id' => 298,
         'user_id' => 28,
@@ -12475,7 +12472,7 @@ Dickinson, ND 58601',
         'created_at' => '2018-05-02 15:53:46',
         'updated_at' => '2018-05-02 16:08:18',
     ),
-    298 => 
+    298 =>
     array (
         'id' => 299,
         'user_id' => 14,
@@ -12516,7 +12513,7 @@ Dahlonega, GA 30533',
         'created_at' => '2018-05-02 18:49:09',
         'updated_at' => '2018-05-02 20:13:34',
     ),
-    299 => 
+    299 =>
     array (
         'id' => 300,
         'user_id' => 28,
@@ -12556,7 +12553,7 @@ Radcliff, KY 40160',
         'created_at' => '2018-05-02 18:52:35',
         'updated_at' => '2018-05-02 19:51:31',
     ),
-    300 => 
+    300 =>
     array (
         'id' => 301,
         'user_id' => 28,
@@ -12596,7 +12593,7 @@ Unionville, MO 63565',
         'created_at' => '2018-05-03 16:47:49',
         'updated_at' => '2018-05-03 18:36:19',
     ),
-    301 => 
+    301 =>
     array (
         'id' => 302,
         'user_id' => 28,
@@ -12636,7 +12633,7 @@ Albia, IA 52531',
         'created_at' => '2018-05-04 15:03:23',
         'updated_at' => '2018-05-04 15:12:27',
     ),
-    302 => 
+    302 =>
     array (
         'id' => 303,
         'user_id' => 23,
@@ -12676,7 +12673,7 @@ East Bonney Lake, Wa 98391',
         'created_at' => '2018-05-04 15:25:14',
         'updated_at' => '2018-05-04 15:28:04',
     ),
-    303 => 
+    303 =>
     array (
         'id' => 304,
         'user_id' => 23,
@@ -12717,7 +12714,7 @@ Greenwood Village, CO 80112',
         'created_at' => '2018-05-07 18:54:34',
         'updated_at' => '2018-05-07 18:55:32',
     ),
-    304 => 
+    304 =>
     array (
         'id' => 305,
         'user_id' => 13,
@@ -12756,7 +12753,7 @@ Greenwood Village, CO 80112',
         'created_at' => '2018-05-10 15:10:22',
         'updated_at' => '2018-05-10 20:50:20',
     ),
-    305 => 
+    305 =>
     array (
         'id' => 306,
         'user_id' => 12,
@@ -12799,7 +12796,7 @@ San Jose ,California
         'created_at' => '2018-05-10 18:24:40',
         'updated_at' => '2018-05-10 19:09:13',
     ),
-    306 => 
+    306 =>
     array (
         'id' => 307,
         'user_id' => 17,
@@ -12841,7 +12838,7 @@ Atlanta, GA 30308',
         'created_at' => '2018-05-15 14:34:12',
         'updated_at' => '2018-05-15 16:11:03',
     ),
-    307 => 
+    307 =>
     array (
         'id' => 308,
         'user_id' => 19,
@@ -12882,7 +12879,7 @@ DULUTH, GA  30097',
         'created_at' => '2018-05-18 15:55:56',
         'updated_at' => '2018-05-18 18:09:34',
     ),
-    308 => 
+    308 =>
     array (
         'id' => 309,
         'user_id' => 17,
@@ -12923,7 +12920,7 @@ Atlanta GA ',
         'created_at' => '2018-05-24 14:39:39',
         'updated_at' => '2018-05-24 15:05:17',
     ),
-    309 => 
+    309 =>
     array (
         'id' => 310,
         'user_id' => 12,
@@ -12966,7 +12963,7 @@ Georgia
         'created_at' => '2018-05-24 18:21:22',
         'updated_at' => '2018-05-24 18:35:12',
     ),
-    310 => 
+    310 =>
     array (
         'id' => 311,
         'user_id' => 18,
@@ -13005,7 +13002,7 @@ Georgia
         'created_at' => '2018-05-25 22:46:12',
         'updated_at' => '2018-05-29 13:36:33',
     ),
-    311 => 
+    311 =>
     array (
         'id' => 312,
         'user_id' => 13,
@@ -13046,7 +13043,7 @@ Littleton, CO 80128
         'created_at' => '2018-06-07 17:29:26',
         'updated_at' => '2018-06-07 19:00:24',
     ),
-    312 => 
+    312 =>
     array (
         'id' => 313,
         'user_id' => 21,
@@ -13090,7 +13087,7 @@ Client is going to complete BGC. - Jason Stone is the contractor. ',
         'created_at' => '2018-06-08 15:27:51',
         'updated_at' => '2018-06-08 17:37:56',
     ),
-    313 => 
+    313 =>
     array (
         'id' => 314,
         'user_id' => 21,
@@ -13137,7 +13134,7 @@ Please bill beeline accordingly.',
         'created_at' => '2018-06-08 15:46:32',
         'updated_at' => '2018-06-13 15:54:25',
     ),
-    314 => 
+    314 =>
     array (
         'id' => 315,
         'user_id' => 8,
@@ -13184,7 +13181,7 @@ Split 25% Brian Hale ',
         'created_at' => '2018-06-11 21:17:26',
         'updated_at' => '2018-06-18 16:18:15',
     ),
-    315 => 
+    315 =>
     array (
         'id' => 316,
         'user_id' => 21,
@@ -13226,7 +13223,7 @@ invoice through Beeline',
         'created_at' => '2018-06-12 23:51:18',
         'updated_at' => '2018-06-13 13:22:03',
     ),
-    316 => 
+    316 =>
     array (
         'id' => 317,
         'user_id' => 21,
@@ -13271,7 +13268,7 @@ invoice through Beeline
         'created_at' => '2018-06-15 13:06:41',
         'updated_at' => '2018-06-15 13:08:10',
     ),
-    317 => 
+    317 =>
     array (
         'id' => 318,
         'user_id' => 21,
@@ -13315,7 +13312,7 @@ Beth is going to work on the SOW when she returns. ',
         'created_at' => '2018-06-18 15:52:40',
         'updated_at' => '2018-06-18 16:13:23',
     ),
-    318 => 
+    318 =>
     array (
         'id' => 319,
         'user_id' => 18,
@@ -13354,7 +13351,7 @@ Beth is going to work on the SOW when she returns. ',
         'created_at' => '2018-06-19 17:59:24',
         'updated_at' => '2018-06-19 18:14:32',
     ),
-    319 => 
+    319 =>
     array (
         'id' => 320,
         'user_id' => 18,
@@ -13395,7 +13392,7 @@ Los Angeles, CA 90043
         'created_at' => '2018-06-19 20:40:15',
         'updated_at' => '2018-06-19 21:16:41',
     ),
-    320 => 
+    320 =>
     array (
         'id' => 321,
         'user_id' => 13,
@@ -13438,7 +13435,7 @@ Start date is pending.  May be earlier',
         'created_at' => '2018-06-19 21:17:41',
         'updated_at' => '2018-06-28 20:23:07',
     ),
-    321 => 
+    321 =>
     array (
         'id' => 322,
         'user_id' => 21,
@@ -13477,7 +13474,7 @@ Start date is pending.  May be earlier',
         'created_at' => '2018-06-20 20:21:03',
         'updated_at' => '2018-08-06 19:11:17',
     ),
-    322 => 
+    322 =>
     array (
         'id' => 323,
         'user_id' => 8,
@@ -13521,7 +13518,7 @@ Split 50% with Rick Lummert ',
         'created_at' => '2018-06-20 20:49:25',
         'updated_at' => '2018-06-29 14:26:46',
     ),
-    323 => 
+    323 =>
     array (
         'id' => 324,
         'user_id' => 21,
@@ -13564,7 +13561,7 @@ Seattle, WA 98101',
         'created_at' => '2018-06-21 14:57:18',
         'updated_at' => '2018-08-09 14:51:17',
     ),
-    324 => 
+    324 =>
     array (
         'id' => 325,
         'user_id' => 8,
@@ -13607,7 +13604,7 @@ Winston-Salem NC 27103',
         'created_at' => '2018-06-22 21:47:21',
         'updated_at' => '2018-06-25 13:13:23',
     ),
-    325 => 
+    325 =>
     array (
         'id' => 326,
         'user_id' => 17,
@@ -13649,7 +13646,7 @@ raed.suddah@ncr.com',
         'created_at' => '2018-06-26 01:35:41',
         'updated_at' => '2018-06-26 12:47:13',
     ),
-    326 => 
+    326 =>
     array (
         'id' => 327,
         'user_id' => 12,
@@ -13693,7 +13690,7 @@ We would like to offer Rebecca Steenstrup a spot on our AM TEAM, SUN-WED.  Start
         'created_at' => '2018-07-05 13:46:19',
         'updated_at' => '2018-07-05 18:49:30',
     ),
-    327 => 
+    327 =>
     array (
         'id' => 328,
         'user_id' => 21,
@@ -13736,7 +13733,7 @@ Chicago, IL ',
         'created_at' => '2018-07-05 16:32:31',
         'updated_at' => '2018-08-14 14:09:56',
     ),
-    328 => 
+    328 =>
     array (
         'id' => 329,
         'user_id' => 8,
@@ -13779,7 +13776,7 @@ Need document stating the candidate has passed their pre-employment drug screen 
         'created_at' => '2018-07-09 14:18:39',
         'updated_at' => '2018-07-09 19:09:04',
     ),
-    329 => 
+    329 =>
     array (
         'id' => 330,
         'user_id' => 13,
@@ -13819,7 +13816,7 @@ Centennial, CO 80122',
         'created_at' => '2018-07-09 21:55:36',
         'updated_at' => '2018-07-10 13:01:33',
     ),
-    330 => 
+    330 =>
     array (
         'id' => 331,
         'user_id' => 12,
@@ -13862,7 +13859,7 @@ Chicago, Il 60606',
         'created_at' => '2018-07-10 18:21:58',
         'updated_at' => '2018-07-11 18:19:12',
     ),
-    331 => 
+    331 =>
     array (
         'id' => 332,
         'user_id' => 12,
@@ -13907,7 +13904,7 @@ Chicago , Il 60606',
         'created_at' => '2018-07-12 18:37:33',
         'updated_at' => '2018-07-12 19:00:39',
     ),
-    332 => 
+    332 =>
     array (
         'id' => 333,
         'user_id' => 12,
@@ -13953,7 +13950,7 @@ This is a beeline/ HERE placement',
         'created_at' => '2018-07-12 18:46:53',
         'updated_at' => '2018-07-13 12:59:19',
     ),
-    333 => 
+    333 =>
     array (
         'id' => 334,
         'user_id' => 12,
@@ -13995,7 +13992,7 @@ Venkat G can help approve timesheets and transition this to corus from zilib if 
         'created_at' => '2018-07-13 11:37:37',
         'updated_at' => '2018-08-31 15:19:04',
     ),
-    334 => 
+    334 =>
     array (
         'id' => 335,
         'user_id' => 18,
@@ -14034,7 +14031,7 @@ Venkat G can help approve timesheets and transition this to corus from zilib if 
         'created_at' => '2018-07-13 20:17:57',
         'updated_at' => '2018-07-20 19:03:53',
     ),
-    335 => 
+    335 =>
     array (
         'id' => 336,
         'user_id' => 12,
@@ -14078,7 +14075,7 @@ Thanks,',
         'created_at' => '2018-07-16 21:00:31',
         'updated_at' => '2018-07-17 14:35:18',
     ),
-    336 => 
+    336 =>
     array (
         'id' => 337,
         'user_id' => 12,
@@ -14121,7 +14118,7 @@ This is a straight contract- she puts hours in Paycomm, we will client. easy!',
         'created_at' => '2018-07-18 18:15:17',
         'updated_at' => '2018-07-19 18:45:01',
     ),
-    337 => 
+    337 =>
     array (
         'id' => 338,
         'user_id' => 18,
@@ -14160,7 +14157,7 @@ This is a straight contract- she puts hours in Paycomm, we will client. easy!',
         'created_at' => '2018-07-18 19:57:04',
         'updated_at' => '2018-07-18 20:36:03',
     ),
-    338 => 
+    338 =>
     array (
         'id' => 339,
         'user_id' => 13,
@@ -14200,7 +14197,7 @@ Littleton, CO 80120',
         'created_at' => '2018-07-23 15:10:18',
         'updated_at' => '2018-07-23 17:29:39',
     ),
-    339 => 
+    339 =>
     array (
         'id' => 340,
         'user_id' => 29,
@@ -14240,7 +14237,7 @@ Dublin, CA 94568',
         'created_at' => '2018-07-23 19:50:35',
         'updated_at' => '2018-07-23 19:56:52',
     ),
-    340 => 
+    340 =>
     array (
         'id' => 341,
         'user_id' => 29,
@@ -14282,7 +14279,7 @@ Carrollton, Georgia 30119 ',
         'created_at' => '2018-07-25 13:56:59',
         'updated_at' => '2018-07-25 14:28:59',
     ),
-    341 => 
+    341 =>
     array (
         'id' => 342,
         'user_id' => 13,
@@ -14323,7 +14320,7 @@ Aurora, CO 80015
         'created_at' => '2018-07-25 20:06:53',
         'updated_at' => '2018-07-25 20:40:16',
     ),
-    342 => 
+    342 =>
     array (
         'id' => 343,
         'user_id' => 18,
@@ -14362,7 +14359,7 @@ Aurora, CO 80015
         'created_at' => '2018-07-26 15:52:50',
         'updated_at' => '2018-07-26 17:23:03',
     ),
-    343 => 
+    343 =>
     array (
         'id' => 344,
         'user_id' => 19,
@@ -14408,7 +14405,7 @@ Thank you!',
         'created_at' => '2018-07-27 19:06:51',
         'updated_at' => '2018-07-27 19:22:56',
     ),
-    344 => 
+    344 =>
     array (
         'id' => 345,
         'user_id' => 17,
@@ -14449,7 +14446,7 @@ Marietta, GA 30066
         'created_at' => '2018-07-30 19:42:17',
         'updated_at' => '2018-07-30 19:53:38',
     ),
-    345 => 
+    345 =>
     array (
         'id' => 346,
         'user_id' => 13,
@@ -14491,7 +14488,7 @@ Denver, CO 80206
         'created_at' => '2018-08-02 21:48:52',
         'updated_at' => '2018-08-03 13:19:55',
     ),
-    346 => 
+    346 =>
     array (
         'id' => 347,
         'user_id' => 20,
@@ -14532,7 +14529,7 @@ Lawrenceville, GA  30043',
         'created_at' => '2018-08-03 13:36:12',
         'updated_at' => '2018-08-03 14:20:35',
     ),
-    347 => 
+    347 =>
     array (
         'id' => 348,
         'user_id' => 17,
@@ -14574,7 +14571,7 @@ Atlanta, GA ',
         'created_at' => '2018-08-06 14:00:20',
         'updated_at' => '2018-08-06 14:06:31',
     ),
-    348 => 
+    348 =>
     array (
         'id' => 349,
         'user_id' => 17,
@@ -14613,7 +14610,7 @@ Atlanta, GA ',
         'created_at' => '2018-08-07 19:11:00',
         'updated_at' => '2018-08-07 21:01:17',
     ),
-    349 => 
+    349 =>
     array (
         'id' => 350,
         'user_id' => 12,
@@ -14652,7 +14649,7 @@ Atlanta, GA ',
         'created_at' => '2018-08-07 19:37:08',
         'updated_at' => '2018-08-07 20:33:48',
     ),
-    350 => 
+    350 =>
     array (
         'id' => 351,
         'user_id' => 13,
@@ -14693,7 +14690,7 @@ Denver, CO 80205
         'created_at' => '2018-08-07 23:30:25',
         'updated_at' => '2018-08-09 16:44:30',
     ),
-    351 => 
+    351 =>
     array (
         'id' => 352,
         'user_id' => 18,
@@ -14737,7 +14734,7 @@ Contract Rate updated ',
         'created_at' => '2018-08-09 16:30:02',
         'updated_at' => '2018-08-13 12:42:48',
     ),
-    352 => 
+    352 =>
     array (
         'id' => 353,
         'user_id' => 12,
@@ -14779,7 +14776,7 @@ Burlington, MAss ',
         'created_at' => '2018-08-09 19:20:43',
         'updated_at' => '2018-08-09 20:41:57',
     ),
-    353 => 
+    353 =>
     array (
         'id' => 354,
         'user_id' => 17,
@@ -14820,7 +14817,7 @@ Dacula, GA 30019
         'created_at' => '2018-08-10 13:58:00',
         'updated_at' => '2018-08-22 14:43:18',
     ),
-    354 => 
+    354 =>
     array (
         'id' => 355,
         'user_id' => 21,
@@ -14862,7 +14859,7 @@ He has been working for us before the grid portal was used. ',
         'created_at' => '2018-08-15 18:33:49',
         'updated_at' => '2018-08-15 18:35:09',
     ),
-    355 => 
+    355 =>
     array (
         'id' => 356,
         'user_id' => 12,
@@ -14904,7 +14901,7 @@ will work from:
         'created_at' => '2018-08-15 20:05:28',
         'updated_at' => '2018-08-15 20:17:43',
     ),
-    356 => 
+    356 =>
     array (
         'id' => 357,
         'user_id' => 20,
@@ -14943,7 +14940,7 @@ will work from:
         'created_at' => '2018-08-17 13:04:38',
         'updated_at' => '2018-08-22 14:33:03',
     ),
-    357 => 
+    357 =>
     array (
         'id' => 358,
         'user_id' => 19,
@@ -14984,7 +14981,7 @@ Duluth, GA  30097',
         'created_at' => '2018-08-17 20:48:22',
         'updated_at' => '2018-08-18 20:49:56',
     ),
-    358 => 
+    358 =>
     array (
         'id' => 359,
         'user_id' => 21,
@@ -15024,7 +15021,7 @@ Suwanee, GA 30024',
     'created_at' => '2018-08-21 18:11:55',
     'updated_at' => '2018-08-21 18:45:07',
 ),
-359 => 
+359 =>
 array (
     'id' => 360,
     'user_id' => 17,
@@ -15064,7 +15061,7 @@ Tuscaloosa, AL  35401',
     'created_at' => '2018-08-24 15:12:40',
     'updated_at' => '2018-08-24 15:43:04',
 ),
-360 => 
+360 =>
 array (
     'id' => 361,
     'user_id' => 12,
@@ -15111,7 +15108,7 @@ Thanks- sorry!',
     'created_at' => '2018-08-28 01:36:22',
     'updated_at' => '2018-08-28 17:32:40',
 ),
-361 => 
+361 =>
 array (
     'id' => 362,
     'user_id' => 17,
@@ -15152,7 +15149,7 @@ array (
     'created_at' => '2018-08-28 14:06:30',
     'updated_at' => '2018-08-28 20:19:51',
 ),
-362 => 
+362 =>
 array (
     'id' => 363,
     'user_id' => 23,
@@ -15191,7 +15188,7 @@ array (
     'created_at' => '2018-08-30 17:07:29',
     'updated_at' => '2018-09-20 19:58:48',
 ),
-363 => 
+363 =>
 array (
     'id' => 364,
     'user_id' => 12,
@@ -15234,7 +15231,7 @@ Chicago, IL 60615
     'created_at' => '2018-08-30 18:27:35',
     'updated_at' => '2018-08-30 18:50:28',
 ),
-364 => 
+364 =>
 array (
     'id' => 365,
     'user_id' => 12,
@@ -15277,7 +15274,7 @@ Pay is updated to $70/ hour w2',
     'created_at' => '2018-08-30 18:54:31',
     'updated_at' => '2018-09-19 18:39:27',
 ),
-365 => 
+365 =>
 array (
     'id' => 366,
     'user_id' => 23,
@@ -15316,7 +15313,7 @@ array (
     'created_at' => '2018-08-30 20:02:52',
     'updated_at' => '2018-08-30 20:12:30',
 ),
-366 => 
+366 =>
 array (
     'id' => 367,
     'user_id' => 20,
@@ -15358,7 +15355,7 @@ Missisuaga, CA',
     'created_at' => '2018-09-03 16:45:54',
     'updated_at' => '2018-09-05 19:25:32',
 ),
-367 => 
+367 =>
 array (
     'id' => 368,
     'user_id' => 20,
@@ -15400,7 +15397,7 @@ L\'vill GA 30043',
     'created_at' => '2018-09-03 16:52:35',
     'updated_at' => '2018-09-04 14:36:06',
 ),
-368 => 
+368 =>
 array (
     'id' => 369,
     'user_id' => 23,
@@ -15441,7 +15438,7 @@ Carrollton, TX  75007
     'created_at' => '2018-09-04 11:26:47',
     'updated_at' => '2018-09-20 19:59:15',
 ),
-369 => 
+369 =>
 array (
     'id' => 370,
     'user_id' => 23,
@@ -15480,7 +15477,7 @@ array (
     'created_at' => '2018-09-04 11:31:10',
     'updated_at' => '2018-09-20 19:59:52',
 ),
-370 => 
+370 =>
 array (
     'id' => 371,
     'user_id' => 23,
@@ -15521,7 +15518,7 @@ Grand Prairie, TX 75052
     'created_at' => '2018-09-04 11:33:48',
     'updated_at' => '2018-09-20 20:00:24',
 ),
-371 => 
+371 =>
 array (
     'id' => 372,
     'user_id' => 12,
@@ -15563,7 +15560,7 @@ Alpharetta, GA ',
     'created_at' => '2018-09-04 17:15:13',
     'updated_at' => '2018-09-04 18:29:55',
 ),
-372 => 
+372 =>
 array (
     'id' => 373,
     'user_id' => 17,
@@ -15606,7 +15603,7 @@ Activations SOW ',
     'created_at' => '2018-09-04 17:55:07',
     'updated_at' => '2018-09-11 14:30:16',
 ),
-373 => 
+373 =>
 array (
     'id' => 374,
     'user_id' => 19,
@@ -15646,7 +15643,7 @@ DULUTH, GA  30097',
     'created_at' => '2018-09-07 15:56:20',
     'updated_at' => '2018-09-07 17:27:25',
 ),
-374 => 
+374 =>
 array (
     'id' => 375,
     'user_id' => 13,
@@ -15686,7 +15683,7 @@ Parker CO 80134',
     'created_at' => '2018-09-07 20:00:32',
     'updated_at' => '2018-09-07 20:27:00',
 ),
-375 => 
+375 =>
 array (
     'id' => 376,
     'user_id' => 17,
@@ -15726,7 +15723,7 @@ Atlanta GA ',
     'created_at' => '2018-09-10 02:00:40',
     'updated_at' => '2018-09-26 15:33:15',
 ),
-376 => 
+376 =>
 array (
     'id' => 377,
     'user_id' => 13,
@@ -15767,7 +15764,7 @@ Arvada, CO 80007
     'created_at' => '2018-09-12 06:02:31',
     'updated_at' => '2018-09-12 20:19:39',
 ),
-377 => 
+377 =>
 array (
     'id' => 378,
     'user_id' => 19,
@@ -15808,7 +15805,7 @@ DULUTH, GA  30097',
     'created_at' => '2018-09-12 13:52:04',
     'updated_at' => '2018-09-17 14:17:54',
 ),
-378 => 
+378 =>
 array (
     'id' => 379,
     'user_id' => 17,
@@ -15850,7 +15847,7 @@ Atlanta GA ',
     'created_at' => '2018-09-12 20:15:39',
     'updated_at' => '2018-09-13 13:48:55',
 ),
-379 => 
+379 =>
 array (
     'id' => 380,
     'user_id' => 17,
@@ -15889,7 +15886,7 @@ array (
 'created_at' => '2018-09-12 20:19:09',
 'updated_at' => '2018-09-13 14:05:06',
 ),
-380 => 
+380 =>
 array (
 'id' => 381,
 'user_id' => 17,
@@ -15928,7 +15925,7 @@ array (
 'created_at' => '2018-09-12 20:22:01',
 'updated_at' => '2018-09-13 12:34:35',
 ),
-381 => 
+381 =>
 array (
 'id' => 382,
 'user_id' => 17,
@@ -15967,7 +15964,7 @@ array (
 'created_at' => '2018-09-13 15:06:50',
 'updated_at' => '2018-09-13 17:54:53',
 ),
-382 => 
+382 =>
 array (
 'id' => 383,
 'user_id' => 18,
@@ -16006,7 +16003,7 @@ array (
 'created_at' => '2018-09-13 15:29:12',
 'updated_at' => '2018-09-13 16:13:31',
 ),
-383 => 
+383 =>
 array (
 'id' => 384,
 'user_id' => 17,
@@ -16048,7 +16045,7 @@ Snellville GA
 'created_at' => '2018-09-13 17:31:16',
 'updated_at' => '2018-09-13 17:42:37',
 ),
-384 => 
+384 =>
 array (
 'id' => 385,
 'user_id' => 18,
@@ -16087,7 +16084,7 @@ array (
 'created_at' => '2018-09-13 18:52:00',
 'updated_at' => '2018-09-13 18:56:59',
 ),
-385 => 
+385 =>
 array (
 'id' => 386,
 'user_id' => 12,
@@ -16130,7 +16127,7 @@ Beth
 'created_at' => '2018-09-18 00:12:15',
 'updated_at' => '2018-09-18 15:18:37',
 ),
-386 => 
+386 =>
 array (
 'id' => 387,
 'user_id' => 17,
@@ -16169,7 +16166,7 @@ array (
 'created_at' => '2018-09-18 14:51:31',
 'updated_at' => '2018-09-18 15:30:35',
 ),
-387 => 
+387 =>
 array (
 'id' => 388,
 'user_id' => 17,
@@ -16208,7 +16205,7 @@ array (
 'created_at' => '2018-09-19 17:43:27',
 'updated_at' => '2018-09-19 20:08:00',
 ),
-388 => 
+388 =>
 array (
 'id' => 389,
 'user_id' => 21,
@@ -16250,7 +16247,7 @@ HERE. As with all Beeline VMS',
 'created_at' => '2018-09-20 19:58:06',
 'updated_at' => '2018-09-20 20:37:28',
 ),
-389 => 
+389 =>
 array (
 'id' => 390,
 'user_id' => 12,
@@ -16294,7 +16291,7 @@ thanks.
 'created_at' => '2018-09-21 13:37:01',
 'updated_at' => '2018-09-24 15:26:12',
 ),
-390 => 
+390 =>
 array (
 'id' => 391,
 'user_id' => 20,
@@ -16336,7 +16333,7 @@ L/vill GA  30076',
 'created_at' => '2018-09-23 20:19:44',
 'updated_at' => '2018-09-24 15:26:17',
 ),
-391 => 
+391 =>
 array (
 'id' => 392,
 'user_id' => 17,
@@ -16378,7 +16375,7 @@ Atlanta GA ',
 'created_at' => '2018-09-25 16:31:23',
 'updated_at' => '2018-09-26 19:33:30',
 ),
-392 => 
+392 =>
 array (
 'id' => 393,
 'user_id' => 17,
@@ -16420,7 +16417,7 @@ array (
 'created_at' => '2018-09-25 16:38:34',
 'updated_at' => '2018-09-25 22:10:12',
 ),
-393 => 
+393 =>
 array (
 'id' => 394,
 'user_id' => 12,
@@ -16467,7 +16464,7 @@ Please bill through Beeline.  Thank you. ',
 'created_at' => '2018-09-25 20:31:57',
 'updated_at' => '2018-09-28 16:23:44',
 ),
-394 => 
+394 =>
 array (
 'id' => 395,
 'user_id' => 19,
@@ -16510,7 +16507,7 @@ on-site full time at Quikrete Duluth.  Will have option to go from contract to p
 'created_at' => '2018-09-26 19:50:49',
 'updated_at' => '2018-09-28 18:17:32',
 ),
-395 => 
+395 =>
 array (
 'id' => 396,
 'user_id' => 14,
@@ -16553,7 +16550,7 @@ Atlanta, GA
 'created_at' => '2018-09-27 15:31:17',
 'updated_at' => '2018-10-11 17:58:38',
 ),
-396 => 
+396 =>
 array (
 'id' => 397,
 'user_id' => 17,
@@ -16595,7 +16592,7 @@ Atlanta GA ',
 'created_at' => '2018-09-27 20:39:10',
 'updated_at' => '2018-09-28 13:38:08',
 ),
-397 => 
+397 =>
 array (
 'id' => 398,
 'user_id' => 12,
@@ -16648,7 +16645,7 @@ Also please ensure Paycomm matches what his compay bills us- thank you!',
 'created_at' => '2018-09-29 01:02:52',
 'updated_at' => '2018-10-01 19:20:45',
 ),
-398 => 
+398 =>
 array (
 'id' => 399,
 'user_id' => 12,
@@ -16698,7 +16695,7 @@ Beth
 'created_at' => '2018-10-02 20:31:36',
 'updated_at' => '2018-10-15 12:30:25',
 ),
-399 => 
+399 =>
 array (
 'id' => 400,
 'user_id' => 12,
@@ -16750,7 +16747,7 @@ Beth
 'created_at' => '2018-10-03 14:26:02',
 'updated_at' => '2018-10-15 12:31:26',
 ),
-400 => 
+400 =>
 array (
 'id' => 401,
 'user_id' => 12,
@@ -16801,7 +16798,7 @@ Beth
 'created_at' => '2018-10-03 14:29:07',
 'updated_at' => '2018-10-15 12:31:31',
 ),
-401 => 
+401 =>
 array (
 'id' => 402,
 'user_id' => 12,
@@ -16853,7 +16850,7 @@ Beth
 'created_at' => '2018-10-03 14:46:28',
 'updated_at' => '2018-10-15 12:31:51',
 ),
-402 => 
+402 =>
 array (
 'id' => 403,
 'user_id' => 20,
@@ -16894,7 +16891,7 @@ Lawrenceville, GA 30043',
 'created_at' => '2018-10-10 13:26:30',
 'updated_at' => '2018-10-10 17:50:43',
 ),
-403 => 
+403 =>
 array (
 'id' => 404,
 'user_id' => 12,
@@ -16937,7 +16934,7 @@ Thank you ',
 'created_at' => '2018-10-10 14:57:42',
 'updated_at' => '2018-10-10 17:57:50',
 ),
-404 => 
+404 =>
 array (
 'id' => 405,
 'user_id' => 17,
@@ -16979,7 +16976,7 @@ Atlanta GA',
 'created_at' => '2018-10-10 21:25:15',
 'updated_at' => '2018-10-11 15:23:27',
 ),
-405 => 
+405 =>
 array (
 'id' => 406,
 'user_id' => 17,
@@ -17021,7 +17018,7 @@ Atlanta GA ',
 'created_at' => '2018-10-10 21:29:22',
 'updated_at' => '2018-10-11 15:33:14',
 ),
-406 => 
+406 =>
 array (
 'id' => 407,
 'user_id' => 17,
@@ -17062,7 +17059,7 @@ Stone Mountain Ga 30088
 'created_at' => '2018-10-10 21:31:33',
 'updated_at' => '2018-10-11 18:22:25',
 ),
-407 => 
+407 =>
 array (
 'id' => 408,
 'user_id' => 8,
@@ -17116,7 +17113,7 @@ PROPOXYPHENE
 'created_at' => '2018-10-11 22:42:04',
 'updated_at' => '2018-10-15 15:17:38',
 ),
-408 => 
+408 =>
 array (
 'id' => 409,
 'user_id' => 18,
@@ -17155,7 +17152,7 @@ array (
 'created_at' => '2018-10-13 01:53:48',
 'updated_at' => '2018-10-15 15:17:16',
 ),
-409 => 
+409 =>
 array (
 'id' => 410,
 'user_id' => 12,
@@ -17195,7 +17192,7 @@ Lawrenceville, GA ',
 'created_at' => '2018-10-16 15:48:49',
 'updated_at' => '2018-10-18 15:41:29',
 ),
-410 => 
+410 =>
 array (
 'id' => 411,
 'user_id' => 12,
@@ -17238,7 +17235,7 @@ Hawthorn Woods, IL 60047
 'created_at' => '2018-10-17 20:25:13',
 'updated_at' => '2018-10-18 12:57:33',
 ),
-411 => 
+411 =>
 array (
 'id' => 412,
 'user_id' => 12,
@@ -17283,7 +17280,7 @@ Burlington, Mass ',
 'created_at' => '2018-10-22 13:15:20',
 'updated_at' => '2018-10-22 15:56:25',
 ),
-412 => 
+412 =>
 array (
 'id' => 413,
 'user_id' => 29,
@@ -17324,7 +17321,7 @@ East Point, GA 30344
 'created_at' => '2018-10-24 18:33:17',
 'updated_at' => '2018-10-24 18:43:21',
 ),
-413 => 
+413 =>
 array (
 'id' => 414,
 'user_id' => 29,
@@ -17365,7 +17362,7 @@ Alpharetta GA 30004
 'created_at' => '2018-10-24 18:35:30',
 'updated_at' => '2018-10-24 18:47:01',
 ),
-414 => 
+414 =>
 array (
 'id' => 415,
 'user_id' => 29,
@@ -17406,7 +17403,7 @@ Souderton, PA 18964
 'created_at' => '2018-10-24 18:37:56',
 'updated_at' => '2018-10-24 18:51:48',
 ),
-415 => 
+415 =>
 array (
 'id' => 416,
 'user_id' => 29,
@@ -17447,7 +17444,7 @@ Jamaica, New York, 11423
 'created_at' => '2018-10-24 18:39:31',
 'updated_at' => '2018-10-24 18:55:33',
 ),
-416 => 
+416 =>
 array (
 'id' => 417,
 'user_id' => 29,
@@ -17488,7 +17485,7 @@ Atlanta, GA  30324
 'created_at' => '2018-10-24 18:42:26',
 'updated_at' => '2018-10-24 18:59:21',
 ),
-417 => 
+417 =>
 array (
 'id' => 418,
 'user_id' => 29,
@@ -17529,7 +17526,7 @@ Stone Mountain GA. 30083
 'created_at' => '2018-10-24 18:44:48',
 'updated_at' => '2018-10-24 19:02:20',
 ),
-418 => 
+418 =>
 array (
 'id' => 419,
 'user_id' => 29,
@@ -17570,7 +17567,7 @@ Severna Park, Maryland 21146
 'created_at' => '2018-10-24 18:46:49',
 'updated_at' => '2018-10-24 19:12:21',
 ),
-419 => 
+419 =>
 array (
 'id' => 420,
 'user_id' => 29,
@@ -17611,7 +17608,7 @@ Duluth, GA 30097
 'created_at' => '2018-10-24 18:51:49',
 'updated_at' => '2018-10-24 19:15:29',
 ),
-420 => 
+420 =>
 array (
 'id' => 421,
 'user_id' => 29,
@@ -17652,7 +17649,7 @@ Hackensack, NJ 07601
 'created_at' => '2018-10-24 18:55:20',
 'updated_at' => '2018-10-24 19:18:17',
 ),
-421 => 
+421 =>
 array (
 'id' => 422,
 'user_id' => 29,
@@ -17693,7 +17690,7 @@ Suwanee, GA 30024
 'created_at' => '2018-10-24 18:56:50',
 'updated_at' => '2018-10-24 19:21:24',
 ),
-422 => 
+422 =>
 array (
 'id' => 423,
 'user_id' => 29,
@@ -17734,7 +17731,7 @@ Uniondale NY, 11553
 'created_at' => '2018-10-24 18:58:28',
 'updated_at' => '2018-10-24 19:24:15',
 ),
-423 => 
+423 =>
 array (
 'id' => 424,
 'user_id' => 29,
@@ -17775,7 +17772,7 @@ Johns Creek, Georgia 30097
 'created_at' => '2018-10-24 19:02:38',
 'updated_at' => '2018-10-24 19:26:43',
 ),
-424 => 
+424 =>
 array (
 'id' => 425,
 'user_id' => 29,
@@ -17816,7 +17813,7 @@ Corpus Christi, TX  78411
 'created_at' => '2018-10-24 19:07:54',
 'updated_at' => '2018-10-24 19:29:52',
 ),
-425 => 
+425 =>
 array (
 'id' => 426,
 'user_id' => 29,
@@ -17857,7 +17854,7 @@ Atlanta GA 30350
 'created_at' => '2018-10-24 19:13:13',
 'updated_at' => '2018-10-24 19:33:01',
 ),
-426 => 
+426 =>
 array (
 'id' => 427,
 'user_id' => 29,
@@ -17898,7 +17895,7 @@ Duluth, GA  30096
 'created_at' => '2018-10-24 19:45:29',
 'updated_at' => '2018-10-24 19:54:31',
 ),
-427 => 
+427 =>
 array (
 'id' => 428,
 'user_id' => 29,
@@ -17940,7 +17937,7 @@ Fort Worth, TX 76140
 'updated_at' => '2018-10-24 19:57:37',
 ),
 ));
-        
-        
+
+
     }
 }

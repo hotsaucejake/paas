@@ -105,7 +105,9 @@ class RoleController extends Controller
             'name' => 'required|alpha_dash',
         ]);
 
-        $updated = $role->save($validatedRole);
+        $role->name = $validatedRole['name'];
+        
+        $updated = $role->save();
 
         $role->syncPermissions($request->permissions); // if null it will remove all permissions
 
@@ -132,7 +134,7 @@ class RoleController extends Controller
     public function destroy(Role $role)
     {
         $deleted = $role->delete();
-        
+
         if($deleted)
         {
             return redirect()->route('role.index')

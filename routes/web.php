@@ -15,10 +15,22 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Auth::routes();
+Auth::routes(['verify' => true]);
 
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::middleware('verified')->prefix('dashboard')->group(function () {
+
     Route::get('/', 'DashboardController@index')->name('dashboard.index');
+
+    Route::resource('user', 'UserController');
+
+    Route::resource('role', 'RoleController');
+
+    Route::resource('permission', 'PermissionController');
+
 });
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

@@ -152,6 +152,18 @@ class PermanentPlacementController extends Controller
      */
     public function destroy(PermanentPlacement $permanentPlacement)
     {
-        //
+        $deleted = $permanentPlacement->delete();
+        if($deleted)
+        {
+            return redirect()->route('permanent_placement.index')
+                ->with('toastr', 'success')
+                ->with('title', 'Success!')
+                ->with('message', 'Permanent Placement deleted.');
+        } else {
+            return redirect()->route('permanent_placement.index')
+                ->with('toastr', 'error')
+                ->with('title', 'Error!')
+                ->with('message', 'Hmmm... there was some type of error with this.');
+        }
     }
 }

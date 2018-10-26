@@ -22,9 +22,25 @@ class RolesPermissionsTableSeeder extends Seeder
             'view_users', 'add_users', 'edit_users', 'delete_users',
             'view_roles', 'add_roles', 'edit_roles', 'delete_roles',
             'view_permissions', 'add_permissions', 'edit_permissions', 'delete_permissions',
-            'view_permanent_placements', 'add_permanent_placements', 'edit_permanent_placements', 'delete_permanent_placements',
-            'view_contract_billings', 'add_contract_billings', 'edit_contract_billings', 'delete_contract_billings',
+            'view_permanent_placements', 'add_permanent_placements', 'edit_permanent_placements', 'delete_permanent_placements', 'approve_permanent_placements',
+            'view_contract_billings', 'add_contract_billings', 'edit_contract_billings', 'delete_contract_billings', 'approve_contract_billings',
         ];
+
+        $admin_permissions = [
+            'view_users', 'add_users', 'edit_users',
+            'view_roles', 'add_roles', 'edit_roles',
+            'view_permissions',
+            'view_permanent_placements', 'add_permanent_placements', 'edit_permanent_placements', 'delete_permanent_placements', 'approve_permanent_placements',
+            'view_contract_billings', 'add_contract_billings', 'edit_contract_billings', 'delete_contract_billings', 'approve_contract_billings',
+        ];
+
+        $active_permissions = [
+            'view_permanent_placements', 'add_permanent_placements',
+            'view_contract_billings', 'add_contract_billings',
+        ];
+
+        $active_users = [5,6,8,12,13,16,17,18,19,20,22,23,24,25,27,28,29,30,31,32,35,36];
+        $admins = [3,14,21,26,33,34];
 
         foreach($permissions as $permission)
         {
@@ -38,6 +54,14 @@ class RolesPermissionsTableSeeder extends Seeder
             {
                 $newRole->syncPermissions($permissions);
             }
+            if($role == 'admin')
+            {
+                $newRole->syncPermissions($admin_permissions);
+            }
+            if($role == 'active')
+            {
+                $newRole->syncPermissions($active_permissions);
+            }
         }
 
         $users = User::all();
@@ -46,7 +70,19 @@ class RolesPermissionsTableSeeder extends Seeder
             $user->assignRole('inactive');
         }
 
+        foreach($active_users as $active)
+        {
+            $user = User::find($active);
+            $user->syncRoles('active');
+        }
+
+        foreach($admins as $admin)
+        {
+            $user = User::find($admin);
+            $user->syncRoles('admin');
+        }
+
         $super = User::find(1);
-        $super->assignRole('super-admin');
+        $super->syncRoles('super-admin');
     }
 }

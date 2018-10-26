@@ -48,7 +48,7 @@ Users: Index
                         <td>{{ isset($user->email_verified_at) ? 'Yes' : 'No' }}</td>
                         <td>
                             @foreach ($user->getRoleNames() as $role)
-                                <span class="label label-rounded {{ ($role == 'inactive') ? 'label-danger' : 'label-primary' }}">{{ $role }}</span>
+                                <span class="label label-rounded {{ ($role == 'inactive') ? 'label-danger' : (($role == 'active') ? 'label-success' : 'label-primary') }}">{{ $role }}</span>
                             @endforeach
                         </td>
                         <td>

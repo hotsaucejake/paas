@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\PermanentPlacement;
 use Illuminate\Http\Request;
+use Illuminate\Support\Carbon;
 
 class PermanentPlacementController extends Controller
 {
@@ -39,7 +40,7 @@ class PermanentPlacementController extends Controller
      */
     public function create()
     {
-        //
+        return view('monster.permanent_placement.create');
     }
 
     /**
@@ -50,7 +51,63 @@ class PermanentPlacementController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $validated = $request->validate([
+            'customer_name' => 'required|string',
+            'ap_contact' => 'required|string',
+            'ap_email' => 'required|email',
+            'ap_phone' => 'required|string',
+            'customer_po' => 'nullable|string',
+            'customer_status' => 'required|in:new,existing',
+            'bill_address' => 'required|string',
+            'placement_name' => 'required|string',
+            'placement_phone' => 'required|string',
+            'placement_email' => 'required|email',
+            'position' => 'required|string',
+            'salary' => 'required|string',
+            'perm_fee' => 'required|string',
+            'total_fee' => 'required|string',
+            'start_date' => 'required|date',
+            'recruiter' => 'required|string',
+            'sales_rep' => 'required|string',
+            'special_notes' => 'nullable|string',
+        ]);
+
+        $placement = new PermanentPlacement([
+            'user_id' => auth()->user()->id,
+            'customer_name' => $validated['customer_name'],
+            'ap_contact' => $validated['ap_contact'],
+            'ap_email' => $validated['ap_email'],
+            'ap_phone' => $validated['ap_phone'],
+            'customer_po' => $validated['customer_po'],
+            'customer_status' => $validated['customer_status'],
+            'bill_address' => $validated['bill_address'],
+            'placement_name' => $validated['placement_name'],
+            'placement_email' => $validated['placement_email'],
+            'placement_phone' => $validated['placement_phone'],
+            'position' => $validated['position'],
+            'salary' => $validated['salary'],
+            'perm_fee' => $validated['perm_fee'],
+            'total_fee' => $validated['total_fee'],
+            'start_date' => Carbon::parse($validated['start_date'])->toDateString(),
+            'recruiter' => $validated['recruiter'],
+            'sales_rep' => $validated['sales_rep'],
+            'special_notes' => $validated['special_notes'],
+        ]);
+
+        $saved = $placement->save();
+
+        if($saved)
+        {
+            return redirect()->route('permanent_placement.index')
+                ->with('toastr', 'success')
+                ->with('title', 'Success!')
+                ->with('message', 'New Permanent Placement Form Submitted.');
+        } else {
+            return back()
+                ->with('toastr', 'error')
+                ->with('title', 'Error!')
+                ->with('message', 'Hmmm... there was some type of error with this.');
+        }
     }
 
     /**

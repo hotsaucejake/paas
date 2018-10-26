@@ -118,7 +118,7 @@ class PermanentPlacementController extends Controller
      */
     public function show(PermanentPlacement $permanentPlacement)
     {
-        //
+        return view('monster.permanent_placement.show', compact('permanentPlacement'));
     }
 
     /**

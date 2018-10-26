@@ -12,7 +12,7 @@ class ContractBillingController extends Controller
         $this->middleware('auth');
         $this->middleware('permission:view_contract_billings')->only(['index', 'show']);
         $this->middleware('permission:add_contract_billings')->only(['create', 'store']);
-        $this->middleware('permission:edit_contract_billings')->only(['edit', 'update']);
+        $this->middleware('owner')->only(['edit', 'update']);
         $this->middleware('permission:delete_contract_billings')->only('delete');
     }
 
@@ -24,7 +24,12 @@ class ContractBillingController extends Controller
      */
     public function index()
     {
+        $contractBillings = ContractBilling::latest()->with('user')
+                    ->select('id', 'user_id', 'first_name', 'last_name', 'client_name', 'job_title', 'recruiter', 'created_at', 'approved')
+                    ->limit(1000)
+                    ->get();
 
+        return view('monster.contract_billing.index', compact('contractBillings'));
     }
 
     /**

@@ -12,7 +12,7 @@ class PermanentPlacementController extends Controller
         $this->middleware('auth');
         $this->middleware('permission:view_permanent_placements')->only(['index', 'show']);
         $this->middleware('permission:add_permanent_placements')->only(['create', 'store']);
-        $this->middleware('permission:edit_permanent_placements')->only(['edit', 'update']);
+        $this->middleware('owner')->only(['edit', 'update']);
         $this->middleware('permission:delete_permanent_placements')->only('delete');
     }
 
@@ -24,7 +24,12 @@ class PermanentPlacementController extends Controller
      */
     public function index()
     {
+        $permanentPlacements = PermanentPlacement::latest()->with('user')
+                    ->select('id', 'user_id', 'customer_name', 'customer_po', 'placement_name', 'position', 'recruiter', 'created_at', 'approved')
+                    ->limit(1000)
+                    ->get();
 
+        return view('monster.permanent_placement.index', compact('permanentPlacements'));
     }
 
     /**

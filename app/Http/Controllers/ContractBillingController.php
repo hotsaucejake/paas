@@ -155,7 +155,7 @@ class ContractBillingController extends Controller
      */
     public function edit(ContractBilling $contractBilling)
     {
-        //
+        return view('monster.contract_billing.edit', compact('contractBilling'));
     }
 
     /**
@@ -167,7 +167,86 @@ class ContractBillingController extends Controller
      */
     public function update(Request $request, ContractBilling $contractBilling)
     {
-        //
+        $validated = $request->validate([
+            'first_name' => 'required|string',
+            'mi' => 'nullable|string',
+            'last_name' => 'required|string',
+            'consultant_company' => 'nullable|string',
+            'phone' => 'required|string',
+            'email' => 'required|email',
+            'address' => 'required|string',
+            'client_name' => 'required|string',
+            'job_title' => 'required|string',
+            'job_location' => 'required|string',
+            'environment' => 'required|in:onsite,remote,both',
+            'hire_type' => 'required|in:w2,1099,corp to corp',
+            'contract_rate' => 'required|string',
+            'bill_rate' => 'required|string',
+            'base_salary' => 'nullable|string',
+            'project_type' => 'required|in:aug,sow',
+            'issued_hardware' => 'required|in:corus360,client,none',
+            'corus_email' => 'required|boolean',
+            'background_check' => 'required|in:yes,no,completed',
+            'travel_reporting' => 'required|boolean',
+            'start_date' => 'required|date',
+            'contract_period' => 'required|string',
+            'drug_test' => 'required|in:no,p5,p9,p10,p11,other',
+            'benefits' => 'required|boolean',
+            'client_contact' => 'required|string',
+            'manager' => 'required|string',
+            'manager_email' => 'required|email',
+            'manager_phone' => 'nullable|string',
+            'recruiter' => 'required|string',
+            'account_manager' => 'required|string',
+            'notes' => 'nullable|string',
+        ]);
+
+        $contractBilling->first_name = $validated['first_name'];
+        $contractBilling->mi = $validated['mi'];
+        $contractBilling->last_name = $validated['last_name'];
+        $contractBilling->consultant_company = $validated['consultant_company'];
+        $contractBilling->phone = $validated['phone'];
+        $contractBilling->email = $validated['email'];
+        $contractBilling->address = $validated['address'];
+        $contractBilling->client_name = $validated['client_name'];
+        $contractBilling->job_title = $validated['job_title'];
+        $contractBilling->job_location = $validated['job_location'];
+        $contractBilling->environment = $validated['environment'];
+        $contractBilling->hire_type = $validated['hire_type'];
+        $contractBilling->contract_rate = $validated['contract_rate'];
+        $contractBilling->bill_rate = $validated['bill_rate'];
+        $contractBilling->base_salary = $validated['base_salary'];
+        $contractBilling->project_type = $validated['project_type'];
+        $contractBilling->issued_hardware = $validated['issued_hardware'];
+        $contractBilling->corus_email = $validated['corus_email'];
+        $contractBilling->background_check = $validated['background_check'];
+        $contractBilling->travel_reporting = $validated['travel_reporting'];
+        $contractBilling->start_date = Carbon::parse($validated['start_date'])->toDateString();
+        $contractBilling->contract_period = $validated['contract_period'];
+        $contractBilling->drug_test = $validated['drug_test'];
+        $contractBilling->benefits = $validated['benefits'];
+        $contractBilling->client_contact = $validated['client_contact'];
+        $contractBilling->manager = $validated['manager'];
+        $contractBilling->manager_email = $validated['manager_email'];
+        $contractBilling->manager_phone = $validated['manager_phone'];
+        $contractBilling->recruiter = $validated['recruiter'];
+        $contractBilling->account_manager = $validated['account_manager'];
+        $contractBilling->notes = $validated['notes'];
+
+        $updated = $contractBilling->save();
+
+        if($updated)
+        {
+            return redirect()->route('contract_billing.index')
+                ->with('toastr', 'success')
+                ->with('title', 'Success!')
+                ->with('message', 'Contract Billing updated.');
+        } else {
+            return back()
+                ->with('toastr', 'error')
+                ->with('title', 'Error!')
+                ->with('message', 'Hmmm... there was some type of error with this.');
+        }
     }
 
     /**

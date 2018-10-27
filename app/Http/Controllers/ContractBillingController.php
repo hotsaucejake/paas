@@ -95,6 +95,18 @@ class ContractBillingController extends Controller
      */
     public function destroy(ContractBilling $contractBilling)
     {
-        //
+        $deleted = $contractBilling->delete();
+        if($deleted)
+        {
+            return redirect()->route('contract_billing.index')
+                ->with('toastr', 'success')
+                ->with('title', 'Success!')
+                ->with('message', 'Contract Billing deleted.');
+        } else {
+            return redirect()->route('contract_billing.index')
+                ->with('toastr', 'error')
+                ->with('title', 'Error!')
+                ->with('message', 'Hmmm... there was some type of error with this.');
+        }
     }
 }

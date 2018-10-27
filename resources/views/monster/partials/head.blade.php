@@ -10,7 +10,10 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <!-- Favicon icon -->
-    <link rel="icon" href="/favicon.ico">
+    <link rel="icon" href="/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" href="/favicon-192x192.png" sizes="192x192">
+    <link rel="apple-touch-icon-precomposed" href="/favicon-180x180.png">
+    <meta name="msapplication-TileImage" content="/favicon-270x270.png">
 
     <title>@yield('page-title')</title>
 

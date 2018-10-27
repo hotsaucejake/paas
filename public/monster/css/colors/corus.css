@@ -36,13 +36,13 @@ File: scss
 /*Top bar
 *******************/
 .topbar {
-  background: #b5121b;
+  background: #21386e;
   /* Old browsers */
-  background: -moz-linear-gradient(left, #b5121b 0%, #000000 100%);
+  background: -moz-linear-gradient(left, #21386e 0%, #799ed4 100%);
   /* FF3.6-15 */
-  background: -webkit-linear-gradient(left, #b5121b 0%, #000000 100%);
+  background: -webkit-linear-gradient(left, #21386e 0%, #799ed4 100%);
   /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(to right, #b5121b 0%, #000000 100%);
+  background: linear-gradient(to right, #21386e 0%, #799ed4 100%);
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 }
 
@@ -67,15 +67,15 @@ File: scss
 /*General Elements
 *******************/
 a {
-  color: #b5121b;
+  color: #21386e;
 }
 
 a.link:hover, a.link:focus {
-  color: #b5121b !important;
+  color: #21386e !important;
 }
 
 .bg-theme {
-  background-color: #b5121b !important;
+  background-color: #21386e !important;
 }
 
 .pagination > .active > a,
@@ -84,31 +84,31 @@ a.link:hover, a.link:focus {
 .pagination > .active > span:hover,
 .pagination > .active > a:focus,
 .pagination > .active > span:focus {
-  background-color: #b5121b;
-  border-color: #b5121b;
+  background-color: #21386e;
+  border-color: #21386e;
 }
 
 .right-sidebar .rpanel-title {
-  background: #b5121b;
+  background: #21386e;
 }
 
 .stylish-table tbody tr:hover, .stylish-table tbody tr.active {
-  border-left: 4px solid #b5121b;
+  border-left: 4px solid #21386e;
 }
 
 .text-themecolor {
-  color: #b5121b !important;
+  color: #21386e !important;
 }
 
 .profile-tab li a.nav-link.active,
 .customtab li a.nav-link.active {
-  border-bottom: 2px solid #b5121b;
-  color: #b5121b;
+  border-bottom: 2px solid #21386e;
+  color: #21386e;
 }
 
 .profile-tab li a.nav-link:hover,
 .customtab li a.nav-link:hover {
-  color: #b5121b;
+  color: #21386e;
 }
 
 /*******************
@@ -116,16 +116,16 @@ a.link:hover, a.link:focus {
 *******************/
 .btn-themecolor,
 .btn-themecolor.disabled {
-  background: #b5121b;
+  background: #21386e;
   color: #ffffff;
-  border: 1px solid #b5121b;
+  border: 1px solid #21386e;
 }
 
 .btn-themecolor:hover,
 .btn-themecolor.disabled:hover {
-  background: #b5121b;
+  background: #21386e;
   opacity: 0.7;
-  border: 1px solid #b5121b;
+  border: 1px solid #21386e;
 }
 
 .btn-themecolor.active, .btn-themecolor:focus,
@@ -146,7 +146,7 @@ a.link:hover, a.link:focus {
 }
 
 .sidebar-nav ul li a.active, .sidebar-nav ul li a:hover {
-  color: #b5121b;
+  color: #21386e;
 }
 
 .sidebar-nav ul li a.active {
@@ -158,15 +158,15 @@ a.link:hover, a.link:focus {
 }
 
 .sidebar-nav > ul > li.active > a, .sidebar-nav > ul > li:hover > a {
-  color: #b5121b;
+  color: #21386e;
 }
 
 .sidebar-nav > ul > li.active > a i, .sidebar-nav > ul > li:hover > a i {
-  color: #b5121b;
+  color: #21386e;
 }
 
 .sidebar-nav > ul > li > a.active i, .sidebar-nav > ul > li > a:hover i {
-  color: #b5121b;
+  color: #21386e;
 }
 
 .sidebar-nav > ul > li > a i {
@@ -176,5 +176,5 @@ a.link:hover, a.link:focus {
 .sidebar-nav > ul > li > a.active {
   font-weight: 400;
   background: #ffffff;
-  color: #b5121b;
+  color: #21386e;
 }

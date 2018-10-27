@@ -24,6 +24,8 @@ class RolesPermissionsTableSeeder extends Seeder
             'view_permissions', 'add_permissions', 'edit_permissions', 'delete_permissions',
             'view_permanent_placements', 'add_permanent_placements', 'edit_permanent_placements', 'delete_permanent_placements', 'approve_permanent_placements',
             'view_contract_billings', 'add_contract_billings', 'edit_contract_billings', 'delete_contract_billings', 'approve_contract_billings',
+            'view_distribution_emails', 'add_distribution_emails', 'edit_distribution_emails', 'delete_distribution_emails',
+            'view_distribution_lists', 'add_distribution_lists', 'edit_distribution_lists', 'delete_distribution_lists',
         ];
 
         $admin_permissions = [
@@ -32,6 +34,8 @@ class RolesPermissionsTableSeeder extends Seeder
             'view_permissions',
             'view_permanent_placements', 'add_permanent_placements', 'edit_permanent_placements', 'delete_permanent_placements', 'approve_permanent_placements',
             'view_contract_billings', 'add_contract_billings', 'edit_contract_billings', 'delete_contract_billings', 'approve_contract_billings',
+            'view_distribution_emails', 'add_distribution_emails', 'edit_distribution_emails', 'delete_distribution_emails',
+            'view_distribution_lists', 'add_distribution_lists', 'edit_distribution_lists', 'delete_distribution_lists',
         ];
 
         $active_permissions = [

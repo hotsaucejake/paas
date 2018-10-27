@@ -40,7 +40,7 @@
 
         <div class="login-box card">
             <div class="card-body">
-                <img src="/CORUS360-CONVERGE.png" alt="Home" width="100%" height="auto" />
+                <img src="/ConvergeTP-Logo-Flat3Color.png" alt="Home" width="100%" height="auto" />
 
                 @if (count($errors) > 0)
                     <div class="alert alert-danger m-t-40">

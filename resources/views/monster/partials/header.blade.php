@@ -13,7 +13,7 @@
                 <!-- Logo text -->
                 <span>
                  <!-- Light Logo text -->
-                 <img src="/CORUS360-CONVERGE-white.png" height="45" class="light-logo" alt="homepage" /></span> </a>
+                 <img src="/ConvergeTP-Logo-white.png" height="60" class="light-logo" alt="homepage" /></span> </a>
         </div>
         <!-- ============================================================== -->
         <!-- End Logo -->

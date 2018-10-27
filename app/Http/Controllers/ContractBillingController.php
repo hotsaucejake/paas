@@ -144,7 +144,7 @@ class ContractBillingController extends Controller
      */
     public function show(ContractBilling $contractBilling)
     {
-        //
+        return view('monster.contract_billing.show', compact('contractBilling'));
     }
 
     /**

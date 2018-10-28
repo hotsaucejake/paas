@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\DistributionEmail;
+use App\DistributionList;
 use Illuminate\Http\Request;
 
 class DistributionEmailController extends Controller
@@ -14,7 +15,9 @@ class DistributionEmailController extends Controller
      */
     public function index()
     {
-        //
+        $emails = DistributionEmail::all();
+
+        return view('monster.distribution_email.index', compact('emails'));
     }
 
     /**
@@ -24,7 +27,9 @@ class DistributionEmailController extends Controller
      */
     public function create()
     {
-        //
+        $lists = DistributionList::all();
+        
+        return view('monster.distribution_email.create', compact('lists'));
     }
 
     /**
@@ -35,7 +40,21 @@ class DistributionEmailController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $validated = $request->validate([
+            'email' => 'required|email',
+        ]);
+
+        $email = DistributionEmail::create($validated);
+
+        if(isset($request->distribution_lists))
+        {
+            $email->distributionLists()->sync($request->distribution_lists);
+        }
+
+        return redirect()->route('distribution_email.index')
+                ->with('toastr', 'success')
+                ->with('title', 'Success!')
+                ->with('message', 'New email created.');
     }
 
     /**

@@ -33,6 +33,10 @@ Route::middleware('verified')->prefix('dashboard')->group(function () {
 
     Route::resource('contract_billing', 'ContractBillingController');
 
+    Route::resource('distribution_email', 'DistributionEmailController');
+
+    Route::resource('distribution_list', 'DistributionListController');
+
 });
 
 Auth::routes();

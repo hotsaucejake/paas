@@ -16,9 +16,9 @@ class CreateDistributionEmailDistributionListTable extends Migration
         Schema::create('distribution_email_distribution_list', function (Blueprint $table) {
             $table->integer('distribution_email_id')->unsigned();
             $table->integer('distribution_list_id')->unsigned();
-            
-            $table->foreign('distribution_email_id', 'dist_email_id')->references('id')->on('distribution_emails');
-            $table->foreign('distribution_list_id', 'dist_list_id')->references('id')->on('distribution_lists');
+
+            $table->foreign('distribution_email_id', 'dist_email_id')->references('id')->on('distribution_emails')->onDelete('cascade');
+            $table->foreign('distribution_list_id', 'dist_list_id')->references('id')->on('distribution_lists')->onDelete('cascade');
         });
     }
 

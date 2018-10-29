@@ -109,6 +109,19 @@ class DistributionEmailController extends Controller
      */
     public function destroy(DistributionEmail $distributionEmail)
     {
-        //
+        $deleted = $distributionEmail->delete();
+
+        if($deleted)
+        {
+            return redirect()->route('distribution_email.index')
+                ->with('toastr', 'success')
+                ->with('title', 'Success!')
+                ->with('message', 'Email deleted.');
+        } else {
+            return redirect()->route('distribution_email.index')
+                ->with('toastr', 'error')
+                ->with('title', 'Error!')
+                ->with('message', 'Hmmm... there was some type of error with this.');
+        }
     }
 }

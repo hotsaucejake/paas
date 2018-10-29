@@ -27,12 +27,12 @@
                 @if (Route::has('login'))
                     <div class="top-right links">
                         @auth
-                            <a href="{{ url('/dashboard') }}">Dashboard</a>
+                            <p><a href="{{ route('dashboard.index') }}" class="btn btn-primary btn-lg btn-block waves-effect waves-light">Dashboard</a></p>
                         @else
-                            <p><a href="{{ route('login') }}" class="btn btn-primary btn-block waves-effect waves-light">Login With Password</a></p>
-                            <p><a href="{{ route('passwordless') }}" class="btn btn-info btn-block waves-effect waves-light">Passwordless Login</a></p>
-                            <p><a href="{{ route('password.request') }}" class="btn btn-warning btn-block waves-effect waves-light">Reset Password</a></p>
-                            <p><a href="{{ route('register') }}" class="btn btn-danger btn-block waves-effect waves-light">Register</a></p>
+                            <p><a href="{{ route('login') }}" class="btn btn-primary btn-block btn-lg waves-effect waves-light">Login With Password</a></p>
+                            <p><a href="{{ route('passwordless') }}" class="btn btn-info btn-block btn-lg waves-effect waves-light">Passwordless Login</a></p>
+                            <p><a href="{{ route('password.request') }}" class="btn btn-warning btn-lg btn-block waves-effect waves-light">Reset Password</a></p>
+                            <p><a href="{{ route('register') }}" class="btn btn-danger btn-block btn-lg waves-effect waves-light">Register</a></p>
                         @endauth
                     </div>
                 @endif

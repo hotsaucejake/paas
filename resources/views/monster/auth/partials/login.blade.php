@@ -62,8 +62,8 @@
                 <div class="col-sm-12 text-center p-t-30">
                 <p class="p-t-30">Forgot your password?  Rather login without a password?  Don't have an account?</p>
                 <p><a href="{{ route('password.request') }}" class="btn btn-warning btn-block waves-effect waves-light">Request Password Reset</a></p>
-                <p><a href="/passwordless/login" class="btn btn-info btn-block waves-effect waves-light">Passwordless Login</a></p>
-                <p><a href="/register" class="btn btn-danger btn-block waves-effect waves-light">Register</a></p>
+                <p><a href="{{ route('passwordless') }}" class="btn btn-info btn-block waves-effect waves-light">Passwordless Login</a></p>
+                <p><a href="{{ route('register') }}" class="btn btn-danger btn-block waves-effect waves-light">Register</a></p>
                 </div>
             </div>
 

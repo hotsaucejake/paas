@@ -50,8 +50,8 @@
             <div class="form-group m-t-30 p-t-30">
                 <div class="col-sm-12 text-center p-t-30">
                 <p class="p-t-30">Rather login with a password?  Don't have an account?</p>
-                <p><a href="/login" class="btn btn-info btn-block waves-effect waves-light">Login With Password</a></p>
-                <p><a href="/register" class="btn btn-danger btn-block waves-effect waves-light">Register</a></p>
+                <p><a href="{{ route('login') }}" class="btn btn-info btn-block waves-effect waves-light">Login With Password</a></p>
+                <p><a href="{{ route('register') }}" class="btn btn-danger btn-block waves-effect waves-light">Register</a></p>
                 </div>
             </div>
 

@@ -108,6 +108,19 @@ class DistributionListController extends Controller
      */
     public function destroy(DistributionList $distributionList)
     {
-        //
+        $deleted = $distributionList->delete();
+
+        if($deleted)
+        {
+            return redirect()->route('distribution_list.index')
+                ->with('toastr', 'success')
+                ->with('title', 'Success!')
+                ->with('message', 'Email deleted.');
+        } else {
+            return redirect()->route('distribution_list.index')
+                ->with('toastr', 'error')
+                ->with('title', 'Error!')
+                ->with('message', 'Hmmm... there was some type of error with this.');
+        }
     }
 }

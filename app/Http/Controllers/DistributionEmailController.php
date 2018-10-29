@@ -28,7 +28,7 @@ class DistributionEmailController extends Controller
     public function create()
     {
         $lists = DistributionList::all();
-        
+
         return view('monster.distribution_email.create', compact('lists'));
     }
 
@@ -76,7 +76,9 @@ class DistributionEmailController extends Controller
      */
     public function edit(DistributionEmail $distributionEmail)
     {
-        //
+        $lists = DistributionList::all();
+
+        return view('monster.distribution_email.edit', compact('distributionEmail', 'lists'));
     }
 
     /**
@@ -88,7 +90,15 @@ class DistributionEmailController extends Controller
      */
     public function update(Request $request, DistributionEmail $distributionEmail)
     {
-        //
+        // no need to validate because we're not updating the email
+        // only update the list it belongs to
+
+        $distributionEmail->distributionLists()->sync($request->distribution_lists);
+
+        return redirect()->route('distribution_email.index')
+                ->with('toastr', 'success')
+                ->with('title', 'Success!')
+                ->with('message', 'Email updated.');
     }
 
     /**

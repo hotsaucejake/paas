@@ -36,7 +36,7 @@ class EmailSettingController extends Controller
      */
     public function create()
     {
-        //
+        return view('monster.email_setting.create');
     }
 
     /**
@@ -47,7 +47,23 @@ class EmailSettingController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $validated = $request->validate([
+            'driver' => 'required|string',
+            'host' => 'required|string',
+            'port' => 'required|integer',
+            'encryption' => 'nullable|string',
+            'from_address' => 'required|email',
+            'from_name' => 'required|string',
+            'username' => 'required|string',
+            'password' => 'required|string',
+        ]);
+
+        $setting = EmailSetting::create($validated);
+
+        return redirect()->route('email_setting.index')
+                ->with('toastr', 'success')
+                ->with('title', 'Success!')
+                ->with('message', 'New email settings created.');
     }
 
     /**

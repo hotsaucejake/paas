@@ -76,7 +76,9 @@ class DistributionListController extends Controller
      */
     public function edit(DistributionList $distributionList)
     {
-        //
+        $emails = DistributionEmail::all();
+
+        return view('monster.distribution_list.edit', compact('distributionList', 'emails'));
     }
 
     /**
@@ -88,7 +90,14 @@ class DistributionListController extends Controller
      */
     public function update(Request $request, DistributionList $distributionList)
     {
-        //
+        // can't change the name, just make a new one
+
+        $distributionList->distributionEmails()->sync($request->distribution_emails);
+
+        return redirect()->route('distribution_list.index')
+                ->with('toastr', 'success')
+                ->with('title', 'Success!')
+                ->with('message', 'List updated.');
     }
 
     /**

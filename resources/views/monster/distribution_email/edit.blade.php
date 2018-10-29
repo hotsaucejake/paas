@@ -28,7 +28,7 @@ Distribution Email: Edit
     <div class="col-lg-12">
         <div class="card card-outline-primary">
             <div class="card-header">
-                <h4 class="m-b-0 text-white">Create New Distribution Email</h4>
+                <h4 class="m-b-0 text-white">Edit Distribution Email</h4>
             </div>
             <div class="card-body">
                 <form action="{{ route('distribution_email.update', ['distribution_email' => $distributionEmail->id]) }}" method="POST">

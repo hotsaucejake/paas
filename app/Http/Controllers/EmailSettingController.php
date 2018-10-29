@@ -85,7 +85,7 @@ class EmailSettingController extends Controller
      */
     public function edit(EmailSetting $emailSetting)
     {
-        //
+        return view('monster.email_setting.edit', compact('emailSetting'));
     }
 
     /**
@@ -97,7 +97,32 @@ class EmailSettingController extends Controller
      */
     public function update(Request $request, EmailSetting $emailSetting)
     {
-        //
+        $validated = $request->validate([
+            'driver' => 'required|string',
+            'host' => 'required|string',
+            'port' => 'required|integer',
+            'encryption' => 'nullable|string',
+            'from_address' => 'required|email',
+            'from_name' => 'required|string',
+            'username' => 'required|string',
+            'password' => 'required|string',
+        ]);
+
+        $emailSetting->driver = $validated['driver'];
+        $emailSetting->host = $validated['host'];
+        $emailSetting->port = $validated['port'];
+        $emailSetting->encryption = $validated['encryption'];
+        $emailSetting->from_address = $validated['from_address'];
+        $emailSetting->from_name = $validated['from_name'];
+        $emailSetting->username = $validated['username'];
+        $emailSetting->password = $validated['password'];
+
+        $updated = $emailSetting->save();
+
+        return redirect()->route('email_setting.index')
+                ->with('toastr', 'success')
+                ->with('title', 'Success!')
+                ->with('message', 'Email settings saved.');
     }
 
     /**

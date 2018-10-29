@@ -108,6 +108,19 @@ class EmailSettingController extends Controller
      */
     public function destroy(EmailSetting $emailSetting)
     {
-        //
+        $deleted = $emailSetting->delete();
+
+        if($deleted)
+        {
+            return redirect()->route('email_setting.index')
+                ->with('toastr', 'success')
+                ->with('title', 'Success!')
+                ->with('message', 'Settings deleted.');
+        } else {
+            return redirect()->route('email_setting.index')
+                ->with('toastr', 'error')
+                ->with('title', 'Error!')
+                ->with('message', 'Hmmm... there was some type of error with this.');
+        }
     }
 }

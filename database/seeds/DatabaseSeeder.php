@@ -16,5 +16,6 @@ class DatabaseSeeder extends Seeder
         $this->call(RolesPermissionsTableSeeder::class);
         $this->call(ContractBillingsTableSeeder::class);
         $this->call(PermanentPlacementsTableSeeder::class);
+        $this->call(DistributionListsTableSeeder::class);
     }
 }

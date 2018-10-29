@@ -37,6 +37,8 @@ Route::middleware('verified')->prefix('dashboard')->group(function () {
 
     Route::resource('distribution_list', 'DistributionListController');
 
+    Route::resource('email_setting', 'EmailSettingController');
+
 });
 
 Auth::routes();

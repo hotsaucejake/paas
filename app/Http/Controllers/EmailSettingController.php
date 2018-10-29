@@ -7,6 +7,16 @@ use Illuminate\Http\Request;
 
 class EmailSettingController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+        $this->middleware('permission:view_email_settings')->only(['index', 'show']);
+        $this->middleware('permission:add_email_settings')->only(['create', 'store']);
+        $this->middleware('permission:edit_email_settings')->only(['edit', 'update']);
+        $this->middleware('permission:delete_email_settings')->only('delete');
+    }
+
+
     /**
      * Display a listing of the resource.
      *
@@ -14,7 +24,9 @@ class EmailSettingController extends Controller
      */
     public function index()
     {
-        //
+        $settings = EmailSetting::latest()->get();
+
+        return view('monster.email_setting.index', compact('settings'));
     }
 
     /**

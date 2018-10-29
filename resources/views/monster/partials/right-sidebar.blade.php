@@ -15,6 +15,11 @@
                 @if(auth()->user()->hasPermissionTo('view_distribution_lists'))<a href="{{ route('distribution_list.index') }}" class="list-group-item {{ request()->is('dashboard/distribution_list*') ? 'active' : '' }}"><i class="fa fa-share"></i> Distribution Lists</a>@endif
                 @if(auth()->user()->hasPermissionTo('view_distribution_emails'))<a href="{{ route('distribution_email.index') }}" class="list-group-item {{ request()->is('dashboard/distribution_email*') ? 'active' : '' }}"><i class="fa fa-envelope-o"></i> Distribution Emails</a>@endif
             </div>
+            <hr>
+            @if(auth()->user()->hasPermissionTo('view_email_settings'))<h5>Email Settings</h5>@endif
+            <div class="list-group">
+                @if(auth()->user()->hasPermissionTo('view_email_settings'))<a href="{{ route('email_setting.index') }}" class="list-group-item {{ request()->is('dashboard/email_setting*') ? 'active' : '' }}"><i class="fa fa-share"></i> Email Settings</a>@endif
+            </div>
         </div>
     </div>
 </div>

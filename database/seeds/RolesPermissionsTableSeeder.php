@@ -26,6 +26,7 @@ class RolesPermissionsTableSeeder extends Seeder
             'view_contract_billings', 'add_contract_billings', 'edit_contract_billings', 'delete_contract_billings', 'approve_contract_billings',
             'view_distribution_emails', 'add_distribution_emails', 'edit_distribution_emails', 'delete_distribution_emails',
             'view_distribution_lists', 'add_distribution_lists', 'edit_distribution_lists', 'delete_distribution_lists',
+            'view_email_settings', 'add_email_settings', 'edit_email_settings', 'delete_email_settings',
         ];
 
         $admin_permissions = [
@@ -36,6 +37,7 @@ class RolesPermissionsTableSeeder extends Seeder
             'view_contract_billings', 'add_contract_billings', 'edit_contract_billings', 'delete_contract_billings', 'approve_contract_billings',
             'view_distribution_emails', 'add_distribution_emails', 'edit_distribution_emails', 'delete_distribution_emails',
             'view_distribution_lists', 'add_distribution_lists', 'edit_distribution_lists', 'delete_distribution_lists',
+            'view_email_settings', 'add_email_settings', 'edit_email_settings',
         ];
 
         $active_permissions = [

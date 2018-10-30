@@ -39,6 +39,9 @@ Route::middleware('verified')->prefix('dashboard')->group(function () {
 
     Route::resource('email_setting', 'EmailSettingController');
 
+    Route::get('mailable/contract_billing/{contract_billing}', 'MailableController@billing')->name('mailable.contract_billing');
+
+    Route::get('mailable/permanent_placement/{permanent_placement}', 'MailableController@placement')->name('mailable.permanent_placement');
 });
 
 Auth::routes();

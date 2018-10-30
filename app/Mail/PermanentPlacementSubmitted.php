@@ -6,13 +6,13 @@ use Illuminate\Bus\Queueable;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Contracts\Queue\ShouldQueue;
-use App\ContractBilling;
+use App\PermanentPlacement;
 
-class ContractBillingSubmitted extends Mailable implements ShouldQueue
+class PermanentPlacementSubmitted extends Mailable implements ShouldQueue
 {
     use Queueable, SerializesModels;
 
-    public $billing;
+    public $placement;
     public $message;
 
     /**
@@ -20,9 +20,9 @@ class ContractBillingSubmitted extends Mailable implements ShouldQueue
      *
      * @return void
      */
-    public function __construct(ContractBilling $billing, $subject, $message = '')
+    public function __construct(PermanentPlacement $placement, $subject, $message = '')
     {
-        $this->billing = $billing;
+        $this->placement = $placement;
         $this->subject = $subject;
         $this->message = $message;
     }
@@ -35,6 +35,6 @@ class ContractBillingSubmitted extends Mailable implements ShouldQueue
     public function build()
     {
         return $this->subject($this->subject)
-                    ->markdown('emails.contract_billing.submitted');
+                    ->markdown('emails.permanent_placement.submitted');
     }
 }

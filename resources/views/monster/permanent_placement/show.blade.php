@@ -130,7 +130,7 @@ Permanent Placement: View
             <div class="col-sm">
                 <div class="form-group">
                     <label for="special_notes">Special Notes</label>
-                    <p class="lead font-weight-bold">{!! nl2br($permanentPlacement->bill_address) !!}</p>
+                    <p class="lead font-weight-bold">{!! nl2br($permanentPlacement->special_notes) !!}</p>
                 </div>
             </div>
         </div>

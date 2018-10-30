@@ -78,6 +78,11 @@ Contract Billings: Index
                                     </button>
                                 </form>
                             @endif
+                            @if(auth()->user()->hasRole('super-admin'))
+                                <button type="button" class="btn btn-link">
+                                    <a href="{{ route('mailable.contract_billing', ['contract_billing' => $billing->id]) }}"><i class="fa fa-envelope fa-lg text-warning"></i></a>
+                                </button>
+                            @endif
                         </td>
                     </tr>
                 @endforeach

@@ -20,7 +20,7 @@ return [
     /*
      * Should user be automatically signed-up if email is not already used
      */
-    'sign_up' => true,
+    'sign_up' => false,
 
     /*
      * Default redirect to

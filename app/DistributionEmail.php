@@ -16,10 +16,4 @@ class DistributionEmail extends Model
     {
         return $this->belongsToMany('App\DistributionList');
     }
-
-
-    public function scopeApproved($query)
-    {
-        return $query->where('approved', 1);
-    }
 }

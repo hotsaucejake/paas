@@ -30,7 +30,7 @@
 
                 <div class="form-group m-t-40">
                     <div class="col-xs-12">
-                            <input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ $email ?? old('email') }}" required autofocus>
+                            <input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ $email ?? old('email') }}" placeholder="Email" required autofocus>
 
                         @if ($errors->has('email'))
                             <span class="invalid-feedback" role="alert">

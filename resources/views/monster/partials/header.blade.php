@@ -37,7 +37,7 @@
                         <ul class="dropdown-user">
                             <li>
                                 <div class="dw-user-box">
-                                    <div class="u-img"><img src="/CORUS360-CONVERGE.png" alt="user"></div>
+                                    <div class="u-img"><img src="/ConvergeTP-Logo-Flat3Color.png" alt="user"></div>
                                     <div class="u-text m-t-20">
                                         <h4>{{ Auth::user()->name }}</h4>
                                         <p class="text-muted">{{ Auth::user()->email }}</p>

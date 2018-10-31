@@ -32,6 +32,8 @@ Route::middleware('verified')->prefix('dashboard')->group(function () {
     Route::resource('permanent_placement', 'PermanentPlacementController');
 
     Route::resource('contract_billing', 'ContractBillingController');
+    Route::patch('contract_billing/{contract_billing}/approve', 'ContractBillingController@approve')->name('contract_billing.approve');
+    Route::patch('contract_billing/{contract_billing}/unapprove', 'ContractBillingController@unapprove')->name('contract_billing.unapprove');
 
     Route::resource('distribution_email', 'DistributionEmailController');
 

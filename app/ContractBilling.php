@@ -13,4 +13,10 @@ class ContractBilling extends Model
     {
         return $this->belongsTo('App\User');
     }
+
+
+    public function scopeApproved($query)
+    {
+        return $query->where('approved', 1);
+    }
 }

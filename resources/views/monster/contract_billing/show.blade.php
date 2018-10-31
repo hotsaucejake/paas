@@ -24,6 +24,7 @@ Contract Billing: Create
 
 @section('breadcrumb-buttons')
 @if(auth()->user()->hasPermissionTo('add_contract_billings'))<a class="btn pull-right btn-success" href="{{ route('contract_billing.create') }}"><i class="mdi mdi-plus-circle"></i> Create</a>@endif
+@if(auth()->user()->hasPermissionTo('edit_contract_billings') || auth()->user()->id == $contractBilling->user_id)<a class="btn pull-right btn-warning m-r-15" href="{{ route('contract_billing.edit', ['contract_billing' => $contractBilling->id]) }}"><i class="fa fa-edit"></i> Edit</a>@endif
 @endsection
 
 
@@ -279,6 +280,83 @@ Contract Billing: Create
             </div>
         </div>
     </div>
+
+    @if(!$contractBilling->approved && auth()->user()->hasPermissionTo('approve_contract_billings'))
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-success btn-block btn-lg" data-toggle="modal" data-target="#approveModal">
+            Approve
+        </button>
+        
+        <!-- Modal -->
+        <div class="modal fade" id="approveModal" tabindex="-1" role="dialog" aria-labelledby="approveModal" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title" id="approveModalLongTitle">Approve Contract Billing</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                </div>
+                <form method="POST" action="{{ route('contract_billing.approve', ['contract_billing' => $contractBilling->id]) }}">
+                    @csrf
+                    @method('PATCH')
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <label for="distribution_list">Distribution List<span class="text-danger">*</span></label>
+                            <select class="form-control" id="distribution_list" name="distribution_list" required>
+                                @foreach($lists as $list)
+                                    @if($list->id != 2 && $list->id != 4) <!-- omit approval lists -->
+                                        <option value="{{ $list->id }}">{{ $list->title }}</option>
+                                    @endif
+                                @endforeach
+                            </select>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-success" onclick="return confirm('Are you sure you wish to send to this distribution list?');">
+                            Approve
+                        </button>
+                    </div>
+                </form>
+            </div>
+            </div>
+        </div>
+    @endif
+
+    @if($contractBilling->approved && auth()->user()->hasPermissionTo('approve_contract_billings'))
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-danger btn-block btn-lg" data-toggle="modal" data-target="#unapproveModal">
+            Unapprove
+        </button>
+        
+        <!-- Modal -->
+        <div class="modal fade" id="unapproveModal" tabindex="-1" role="dialog" aria-labelledby="unapproveModal" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title" id="unapproveModalLongTitle">Unapprove Contract Billing</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                </div>
+                <form method="POST" action="{{ route('contract_billing.unapprove', ['contract_billing' => $contractBilling->id]) }}">
+                    @csrf
+                    @method('PATCH')
+                    <div class="modal-body">
+                        <p>This will unapprove this Contractor Request</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-danger" onclick="return confirm('Are you sure you wish to unapprove?');">
+                            Unapprove
+                        </button>
+                    </div>
+                </form>
+            </div>
+            </div>
+        </div>
+    @endif
 
 </div>
 

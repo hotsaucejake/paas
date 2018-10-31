@@ -5,6 +5,9 @@ namespace App\Http\Controllers;
 use App\ContractBilling;
 use Illuminate\Http\Request;
 use Illuminate\Support\Carbon;
+use App\Mail\ContractBillingSubmitted;
+use Illuminate\Support\Facades\Mail;
+use App\DistributionList;
 
 class ContractBillingController extends Controller
 {
@@ -121,7 +124,20 @@ class ContractBillingController extends Controller
         ]);
 
         $saved = $billing->save();
+        
+        $subject = 'Needs Approval: New Contract Billing Form Submitted';
+        $message = 'Contract Billing Form #' . $billing->id . ' has been submitted and is awaiting approval.';
+        
+        $list = DistributionList::find(2); // Corus360 Contract Billing Approval
+        $emails = $list->distributionEmails;
 
+        if($emails->isNotEmpty())  // make sure distribution list isn't empty
+        {
+            Mail::to($emails)
+                ->cc($billing->user) // also send to the user
+                ->send(new ContractBillingSubmitted($billing, $subject, $message));
+        }
+        
         if($saved)
         {
             return redirect()->route('contract_billing.index')
@@ -144,7 +160,8 @@ class ContractBillingController extends Controller
      */
     public function show(ContractBilling $contractBilling)
     {
-        return view('monster.contract_billing.show', compact('contractBilling'));
+        $lists = DistributionList::all();
+        return view('monster.contract_billing.show', compact('contractBilling', 'lists'));
     }
 
     /**
@@ -235,6 +252,22 @@ class ContractBillingController extends Controller
 
         $updated = $contractBilling->save();
 
+        if(!$contractBilling->approved)
+        {
+            $subject = 'Needs Approval: New Contract Billing Form Updated';
+            $message = 'Contract Billing Form #' . $contractBilling->id . ' has been updated and is awaiting approval.';
+            
+            $list = DistributionList::find(2); // Corus360 Contract Billing Approval
+            $emails = $list->distributionEmails;
+
+            if($emails->isNotEmpty())  // make sure distribution list isn't empty
+            {
+                Mail::to($emails)
+                    ->cc($contractBilling->user) // also send to the user
+                    ->send(new ContractBillingSubmitted($contractBilling, $subject, $message));
+            }
+        }
+
         if($updated)
         {
             return redirect()->route('contract_billing.index')
@@ -266,6 +299,75 @@ class ContractBillingController extends Controller
                 ->with('message', 'Contract Billing deleted.');
         } else {
             return redirect()->route('contract_billing.index')
+                ->with('toastr', 'error')
+                ->with('title', 'Error!')
+                ->with('message', 'Hmmm... there was some type of error with this.');
+        }
+    }
+
+
+    public function approve(Request $request, ContractBilling $contractBilling)
+    {
+        $validated = $request->validate([
+            'distribution_list' => 'required|exists:distribution_lists,id',
+        ]);
+
+        $contractBilling->approved = 1;
+
+        $approved = $contractBilling->save();
+
+        if($approved){
+
+            $subject = 'Approved: New Contract Billing Form';
+            $message = 'Contract Billing Form #' . $contractBilling->id . ' has been submitted and approved.';
+            
+            $list = DistributionList::find($validated['distribution_list']); // Corus360 Contract Billing Approval
+            $emails = $list->distributionEmails;
+
+            if($emails->isNotEmpty())  // make sure distribution list isn't empty
+            {
+                Mail::to($emails)
+                    ->cc($contractBilling->user) // also send to the user
+                    ->send(new ContractBillingSubmitted($contractBilling, $subject, $message));
+            }
+
+            return redirect()->route('contract_billing.index')
+                ->with('toastr', 'success')
+                ->with('title', 'Success!')
+                ->with('message', 'Contract Billing approved.');
+
+        } else {
+
+            return back()
+                ->with('toastr', 'error')
+                ->with('title', 'Error!')
+                ->with('message', 'Hmmm... there was some type of error with this.');
+        }
+    }
+
+
+    public function unapprove(Request $request, ContractBilling $contractBilling)
+    {
+        $contractBilling->approved = 0;
+
+        $unapproved = $contractBilling->save();
+
+        if($unapproved){
+
+            $subject = 'Unapproved: Contract Billing Form';
+            $message = 'Contract Billing Form #' . $contractBilling->id . ' has been unapproved.';
+            
+            Mail::to($contractBilling->user)
+                ->send(new ContractBillingSubmitted($contractBilling, $subject, $message));
+
+            return redirect()->route('contract_billing.index')
+                ->with('toastr', 'success')
+                ->with('title', 'Success!')
+                ->with('message', 'Contract Billing has been unapproved.');
+
+        } else {
+
+            return back()
                 ->with('toastr', 'error')
                 ->with('title', 'Error!')
                 ->with('message', 'Hmmm... there was some type of error with this.');

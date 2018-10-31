@@ -119,7 +119,7 @@ Contract Billings: Index
         $('#myTable').DataTable( {
             responsive: true,
             "pageLength": 50,
-            "order": [],
+            "order": ['desc'],
             dom: 'lfrtip',
             buttons: [
                 'copy', 'excel', 'pdf'

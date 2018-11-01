@@ -1,5 +1,6 @@
 @if ($paginator->hasPages())
-    <ul class="pagination" role="navigation">
+<p class="m-t-30 text-center">This page returns the past 250 results.  Use this to get the next 250 results.</p>
+    <ul class="pagination" role="navigation" style="justify-content: center;">
         {{-- Previous Page Link --}}
         @if ($paginator->onFirstPage())
             <li class="page-item disabled" aria-disabled="true" aria-label="@lang('pagination.previous')">

@@ -29,9 +29,9 @@ class PermanentPlacementController extends Controller
     public function index()
     {
         $permanentPlacements = PermanentPlacement::latest()->with('user')
+                    ->orderBy('id', 'desc')
                     ->select('id', 'user_id', 'customer_name', 'customer_po', 'placement_name', 'position', 'recruiter', 'created_at', 'approved')
-                    ->limit(1000)
-                    ->get();
+                    ->paginate(250);
 
         return view('monster.permanent_placement.index', compact('permanentPlacements'));
     }
@@ -101,7 +101,7 @@ class PermanentPlacementController extends Controller
 
         $subject = 'Needs Approval: New Permanent Placement Form Submitted';
         $message = 'Permanent Placement Form #' . $placement->id . ' has been submitted and is awaiting approval.';
-        
+
         $list = DistributionList::find(4); // Corus360 Permanent Placement Approval
         $emails = $list->distributionEmails;
 
@@ -111,7 +111,7 @@ class PermanentPlacementController extends Controller
                 ->cc($placement->user) // also send to the user
                 ->send(new PermanentPlacementSubmitted($placement, $subject, $message));
         }
-        
+
         if($saved)
         {
             return redirect()->route('permanent_placement.index')
@@ -205,7 +205,7 @@ class PermanentPlacementController extends Controller
         {
             $subject = 'Needs Approval: New Permanent Placement Form Updated';
             $message = 'Permanent Placement Form #' . $permanentPlacement->id . ' has been updated and is awaiting approval.';
-            
+
             $list = DistributionList::find(4); // Corus360 Permanent Placement Approval
             $emails = $list->distributionEmails;
 
@@ -269,8 +269,8 @@ class PermanentPlacementController extends Controller
 
             $subject = 'Approved: New Permanent Placement Form';
             $message = 'Permanent Placement Form #' . $permanentPlacement->id . ' has been submitted and approved.';
-            
-            $list = DistributionList::find($validated['distribution_list']); 
+
+            $list = DistributionList::find($validated['distribution_list']);
             $emails = $list->distributionEmails;
 
             if($emails->isNotEmpty())  // make sure distribution list isn't empty
@@ -305,7 +305,7 @@ class PermanentPlacementController extends Controller
 
             $subject = 'Unapproved: Permanent Placement Form';
             $message = 'Permanent Placement Form #' . $permanentPlacement->id . ' has been unapproved.';
-            
+
             Mail::to($permanentPlacement->user)
                 ->send(new PermanentPlacementSubmitted($permanentPlacement, $subject, $message));
 

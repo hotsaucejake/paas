@@ -103,6 +103,11 @@ Contract Billings: Index
             </tfoot>
         </table>
     </div>
+
+    <div class="col-12 m-t-30">
+        {{ $contractBillings->links() }}
+    </div>
+
 </div>
 
 
@@ -119,7 +124,7 @@ Contract Billings: Index
         $('#myTable').DataTable( {
             responsive: true,
             "pageLength": 50,
-            "order": ['desc'],
+            "order": [],
             dom: 'lfrtip',
             buttons: [
                 'copy', 'excel', 'pdf'

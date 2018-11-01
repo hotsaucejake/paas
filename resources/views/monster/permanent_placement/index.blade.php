@@ -116,7 +116,7 @@ Permanent Placements: Index
         $('#myTable').DataTable( {
             responsive: true,
             "pageLength": 50,
-            "order": ['desc'],
+            "order": [],
             dom: 'lfrtip',
             buttons: [
                 'copy', 'excel', 'pdf'

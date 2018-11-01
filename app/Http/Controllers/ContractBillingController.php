@@ -29,9 +29,9 @@ class ContractBillingController extends Controller
     public function index()
     {
         $contractBillings = ContractBilling::latest()->with('user')
+                    ->orderBy('id', 'desc')
                     ->select('id', 'user_id', 'first_name', 'last_name', 'client_name', 'job_title', 'recruiter', 'created_at', 'approved')
-                    ->limit(1000)
-                    ->get();
+                    ->paginate(250);
 
         return view('monster.contract_billing.index', compact('contractBillings'));
     }
@@ -124,10 +124,10 @@ class ContractBillingController extends Controller
         ]);
 
         $saved = $billing->save();
-        
+
         $subject = 'Needs Approval: New Contract Billing Form Submitted';
         $message = 'Contract Billing Form #' . $billing->id . ' has been submitted and is awaiting approval.';
-        
+
         $list = DistributionList::find(2); // Corus360 Contract Billing Approval
         $emails = $list->distributionEmails;
 
@@ -137,7 +137,7 @@ class ContractBillingController extends Controller
                 ->cc($billing->user) // also send to the user
                 ->send(new ContractBillingSubmitted($billing, $subject, $message));
         }
-        
+
         if($saved)
         {
             return redirect()->route('contract_billing.index')
@@ -256,7 +256,7 @@ class ContractBillingController extends Controller
         {
             $subject = 'Needs Approval: New Contract Billing Form Updated';
             $message = 'Contract Billing Form #' . $contractBilling->id . ' has been updated and is awaiting approval.';
-            
+
             $list = DistributionList::find(2); // Corus360 Contract Billing Approval
             $emails = $list->distributionEmails;
 
@@ -320,7 +320,7 @@ class ContractBillingController extends Controller
 
             $subject = 'Approved: New Contract Billing Form';
             $message = 'Contract Billing Form #' . $contractBilling->id . ' has been submitted and approved.';
-            
+
             $list = DistributionList::find($validated['distribution_list']); // Corus360 Contract Billing Approval
             $emails = $list->distributionEmails;
 
@@ -356,7 +356,7 @@ class ContractBillingController extends Controller
 
             $subject = 'Unapproved: Contract Billing Form';
             $message = 'Contract Billing Form #' . $contractBilling->id . ' has been unapproved.';
-            
+
             Mail::to($contractBilling->user)
                 ->send(new ContractBillingSubmitted($contractBilling, $subject, $message));
 

@@ -249,6 +249,7 @@ class ContractBillingController extends Controller
         $contractBilling->recruiter = $validated['recruiter'];
         $contractBilling->account_manager = $validated['account_manager'];
         $contractBilling->notes = $validated['notes'];
+        $contractBilling->approved = 0; // all updates should be unapproved
 
         $updated = $contractBilling->save();
 

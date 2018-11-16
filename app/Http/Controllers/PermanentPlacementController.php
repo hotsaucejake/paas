@@ -198,12 +198,13 @@ class PermanentPlacementController extends Controller
         $permanentPlacement->recruiter = $validated['recruiter'];
         $permanentPlacement->sales_rep = $validated['sales_rep'];
         $permanentPlacement->special_notes = $validated['special_notes'];
+        $permanentPlacement->approved = 0; // all updates should be unapproved
 
         $updated = $permanentPlacement->save();
 
         if(!$permanentPlacement->approved)
         {
-            $subject = 'Needs Approval: New Permanent Placement Form Updated';
+            $subject = 'Needs Approval: Permanent Placement Form Updated';
             $message = 'Permanent Placement Form #' . $permanentPlacement->id . ' has been updated and is awaiting approval.';
 
             $list = DistributionList::find(4); // Corus360 Permanent Placement Approval

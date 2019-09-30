@@ -124,6 +124,18 @@ Contract Billing: Create
                 </div>
 
                 <div class="form-group">
+                    <legend style="font-weight:400;font-size:1rem;">Overtime Eligible?<span class="text-danger">*</span></legend>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="overtime_eligible" id="overtime_eligible1" value="1" {{ old('overtime_eligible') == "1" ? 'checked' : '' }} required>
+                        <label class="form-check-label" for="overtime_eligible1">Yes</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="overtime_eligible" id="overtime_eligible2" value="0" {{ old('overtime_eligible') == "0" ? 'checked' : '' }} required>
+                        <label class="form-check-label" for="overtime_eligible2">No</label>
+                    </div>
+                </div>
+
+                <div class="form-group">
                     <label for="base_salary">Base Salary</label>
                     <input type="text" class="form-control" id="base_salary" name="base_salary" placeholder="$" value="{{ old('base_salary') }}">
                 </div>

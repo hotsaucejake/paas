@@ -72,6 +72,7 @@ class ContractBillingController extends Controller
             'hire_type' => 'required|in:w2,1099,corp to corp',
             'contract_rate' => 'required|string',
             'bill_rate' => 'required|string',
+            'overtime_eligible' => 'required|boolean',
             'base_salary' => 'nullable|string',
             'project_type' => 'required|in:aug,sow',
             'issued_hardware' => 'required|string',
@@ -107,6 +108,7 @@ class ContractBillingController extends Controller
             'hire_type' => $validated['hire_type'],
             'contract_rate' => $validated['contract_rate'],
             'bill_rate' => $validated['bill_rate'],
+            'overtime_eligible' => $validated['overtime_eligible'],
             'base_salary' => $validated['base_salary'],
             'project_type' => $validated['project_type'],
             'issued_hardware' => $validated['issued_hardware'],
@@ -202,9 +204,10 @@ class ContractBillingController extends Controller
             'hire_type' => 'required|in:w2,1099,corp to corp',
             'contract_rate' => 'required|string',
             'bill_rate' => 'required|string',
+            'overtime_eligible' => 'required|boolean',
             'base_salary' => 'nullable|string',
             'project_type' => 'required|in:aug,sow',
-            'issued_hardware' => 'required|in:corus360,client,none',
+            'issued_hardware' => 'required|string',
             'corus_email' => 'required|boolean',
             'background_check' => 'required|in:yes,no,completed',
             'travel_reporting' => 'required|boolean',
@@ -235,6 +238,7 @@ class ContractBillingController extends Controller
         $contractBilling->hire_type = $validated['hire_type'];
         $contractBilling->contract_rate = $validated['contract_rate'];
         $contractBilling->bill_rate = $validated['bill_rate'];
+        $contractBilling->overtime_eligible = $validated['overtime_eligible'];
         $contractBilling->base_salary = $validated['base_salary'];
         $contractBilling->project_type = $validated['project_type'];
         $contractBilling->issued_hardware = $validated['issued_hardware'];

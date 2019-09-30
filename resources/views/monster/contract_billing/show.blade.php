@@ -123,6 +123,17 @@ Contract Billing: Create
             </div>
 
             <div class="form-group">
+                <legend style="font-weight:400;font-size:1rem;">Overtime Eligible</legend>
+                <p class="lead font-weight-bold">
+                    @if($contractBilling->overtime_eligible)
+                        Yes
+                    @else 
+                        No
+                    @endif
+                </p>
+            </div>
+
+            <div class="form-group">
                 <label for="base_salary">Base Salary</label>
                 <p class="lead font-weight-bold">{{ $contractBilling->base_salary }}</p>
             </div>
@@ -162,13 +173,7 @@ Contract Billing: Create
 
             <div class="form-group">
                 <legend style="font-weight:400;font-size:1rem;">Issued Hardware</legend>
-                <p class="lead font-weight-bold">
-                    @if($contractBilling->issued_hardware)
-                        Yes
-                    @else 
-                        No
-                    @endif
-                </p>
+                <p class="lead font-weight-bold">{{ $contractBilling->issued_hardware }}</p>
             </div>
 
             <div class="form-group">

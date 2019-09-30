@@ -41,6 +41,8 @@ Position Details
 
 **Bill Rate:** {{ $billing->bill_rate }}
 
+**Overtime Eligible:** {{ $billing->overtime_eligible ? 'Yes' : 'No' }}
+
 **Base Salary:** {{ $billing->base_salary }}
 
 **Start Date:** {{ $billing->start_date }}
@@ -53,7 +55,11 @@ Position Details
 
 **Project Type:** {{ $billing->project_type == 'aug' ? 'Staff Augmentation' : 'SOW'}}
 
-**Issued Hardware:** {{ $billing->issued_hardware ? 'Yes' : 'No' }}
+@if ($billing->sow)
+**SOW:** {{ $billing->sow }}
+@endif
+
+**Issued Hardware:** {{ $billing->issued_hardware }}
 
 **We Provide Email?** {{ $billing->corus_email ? 'Yes' : 'No' }}
 

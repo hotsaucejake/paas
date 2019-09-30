@@ -166,7 +166,11 @@ Contract Billing: Create
                     @if($contractBilling->project_type == 'aug')
                         Staff Augmentation
                     @elseif($contractBilling->project_type == 'sow')
-                        SOW
+                        @if($contractBilling->sow)
+                            SOW: {{ $contractBilling->sow }}
+                        @else 
+                            SOW
+                        @endif
                     @endif
                 </p>
             </div>

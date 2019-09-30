@@ -197,6 +197,11 @@ Contract Billing: Create
                 </div>
 
                 <div class="form-group">
+                    <label for="client_name">SOW<span class="text-danger"></span></label>
+                    <input type="text" class="form-control" id="sow" name="sow" placeholder="(If Project Type is SOW)" value="{{ old('sow') }}">
+                </div>
+
+                <div class="form-group">
                     <legend style="font-weight:400;font-size:1rem;">Issued Hardware<span class="text-danger">*</span></legend>
                     <select class="custom-select" name="issued_hardware" style="max-width: 100%" required>
                         <option value="None">None</option>

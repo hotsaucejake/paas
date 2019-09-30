@@ -75,6 +75,7 @@ class ContractBillingController extends Controller
             'overtime_eligible' => 'required|boolean',
             'base_salary' => 'nullable|string',
             'project_type' => 'required|in:aug,sow',
+            'sow' => 'nullable|string',
             'issued_hardware' => 'required|string',
             'corus_email' => 'required|boolean',
             'background_check' => 'required|in:yes,no,completed',
@@ -111,6 +112,7 @@ class ContractBillingController extends Controller
             'overtime_eligible' => $validated['overtime_eligible'],
             'base_salary' => $validated['base_salary'],
             'project_type' => $validated['project_type'],
+            'sow' => $validated['sow'],
             'issued_hardware' => $validated['issued_hardware'],
             'corus_email' => $validated['corus_email'],
             'background_check' => $validated['background_check'],
@@ -207,6 +209,7 @@ class ContractBillingController extends Controller
             'overtime_eligible' => 'required|boolean',
             'base_salary' => 'nullable|string',
             'project_type' => 'required|in:aug,sow',
+            'sow' => 'nullable|string',
             'issued_hardware' => 'required|string',
             'corus_email' => 'required|boolean',
             'background_check' => 'required|in:yes,no,completed',
@@ -241,6 +244,7 @@ class ContractBillingController extends Controller
         $contractBilling->overtime_eligible = $validated['overtime_eligible'];
         $contractBilling->base_salary = $validated['base_salary'];
         $contractBilling->project_type = $validated['project_type'];
+        $contractBilling->sow = $validated['sow'];
         $contractBilling->issued_hardware = $validated['issued_hardware'];
         $contractBilling->corus_email = $validated['corus_email'];
         $contractBilling->background_check = $validated['background_check'];

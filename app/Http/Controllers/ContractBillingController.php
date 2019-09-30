@@ -179,7 +179,9 @@ class ContractBillingController extends Controller
      */
     public function edit(ContractBilling $contractBilling)
     {
-        return view('monster.contract_billing.edit', compact('contractBilling'));
+        $convergeCompanies = ConvergeCompany::orderBy('title', 'asc')->get();
+
+        return view('monster.contract_billing.edit', compact('contractBilling', 'convergeCompanies'));
     }
 
     /**

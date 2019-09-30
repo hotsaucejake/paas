@@ -186,18 +186,16 @@ Contract Billing: Create
 
                 <div class="form-group">
                     <legend style="font-weight:400;font-size:1rem;">Issued Hardware<span class="text-danger">*</span></legend>
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="issued_hardware" id="issued_hardware1" value="corus360" {{ old('issued_hardware') == 'corus360' ? 'checked' : '' }} required>
-                        <label class="form-check-label" for="issued_hardware1">Corus360</label>
-                    </div>
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="issued_hardware" id="issued_hardware2" value="client" {{ old('issued_hardware') == 'client' ? 'checked' : '' }} required>
-                        <label class="form-check-label" for="issued_hardware2">Client</label>
-                    </div>
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="issued_hardware" id="issued_hardware3" value="none" {{ old('issued_hardware') == 'none' ? 'checked' : '' }} required>
-                        <label class="form-check-label" for="issued_hardware3">None</label>
-                    </div>
+                    <select class="custom-select" name="issued_hardware" style="max-width: 100%" required>
+                        <option value="None">None</option>
+                        <option value="Client">Client</option>
+                        <optgroup label="Converge Companies">
+                            @foreach ($convergeCompanies as $convergeCompany)
+                                <option value="{{ $convergeCompany->title }}" {{ old('issued_hardware') == $convergeCompany->title ? 'selected' : '' }}>{{ $convergeCompany->title }}</option>
+                            @endforeach
+                        </optgroup>
+                        
+                    </select>
                 </div>
 
                 <div class="form-group">

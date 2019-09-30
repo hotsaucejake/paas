@@ -8,6 +8,7 @@ use Illuminate\Support\Carbon;
 use App\Mail\ContractBillingSubmitted;
 use Illuminate\Support\Facades\Mail;
 use App\DistributionList;
+use App\ConvergeCompany;
 
 class ContractBillingController extends Controller
 {
@@ -43,7 +44,9 @@ class ContractBillingController extends Controller
      */
     public function create()
     {
-        return view('monster.contract_billing.create');
+        $convergeCompanies = ConvergeCompany::orderBy('title', 'asc')->get();
+
+        return view('monster.contract_billing.create', compact('convergeCompanies'));
     }
 
     /**
@@ -71,7 +74,7 @@ class ContractBillingController extends Controller
             'bill_rate' => 'required|string',
             'base_salary' => 'nullable|string',
             'project_type' => 'required|in:aug,sow',
-            'issued_hardware' => 'required|in:corus360,client,none',
+            'issued_hardware' => 'required|string',
             'corus_email' => 'required|boolean',
             'background_check' => 'required|in:yes,no,completed',
             'travel_reporting' => 'required|boolean',

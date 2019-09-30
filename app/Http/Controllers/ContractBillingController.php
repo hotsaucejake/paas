@@ -8,6 +8,7 @@ use Illuminate\Support\Carbon;
 use App\Mail\ContractBillingSubmitted;
 use Illuminate\Support\Facades\Mail;
 use App\DistributionList;
+use App\ConvergeCompany;
 
 class ContractBillingController extends Controller
 {
@@ -43,7 +44,9 @@ class ContractBillingController extends Controller
      */
     public function create()
     {
-        return view('monster.contract_billing.create');
+        $convergeCompanies = ConvergeCompany::orderBy('title', 'asc')->get();
+
+        return view('monster.contract_billing.create', compact('convergeCompanies'));
     }
 
     /**
@@ -69,9 +72,11 @@ class ContractBillingController extends Controller
             'hire_type' => 'required|in:w2,1099,corp to corp',
             'contract_rate' => 'required|string',
             'bill_rate' => 'required|string',
+            'overtime_eligible' => 'required|boolean',
             'base_salary' => 'nullable|string',
             'project_type' => 'required|in:aug,sow',
-            'issued_hardware' => 'required|in:corus360,client,none',
+            'sow' => 'nullable|string',
+            'issued_hardware' => 'required|string',
             'corus_email' => 'required|boolean',
             'background_check' => 'required|in:yes,no,completed',
             'travel_reporting' => 'required|boolean',
@@ -104,8 +109,10 @@ class ContractBillingController extends Controller
             'hire_type' => $validated['hire_type'],
             'contract_rate' => $validated['contract_rate'],
             'bill_rate' => $validated['bill_rate'],
+            'overtime_eligible' => $validated['overtime_eligible'],
             'base_salary' => $validated['base_salary'],
             'project_type' => $validated['project_type'],
+            'sow' => $validated['sow'],
             'issued_hardware' => $validated['issued_hardware'],
             'corus_email' => $validated['corus_email'],
             'background_check' => $validated['background_check'],
@@ -172,7 +179,9 @@ class ContractBillingController extends Controller
      */
     public function edit(ContractBilling $contractBilling)
     {
-        return view('monster.contract_billing.edit', compact('contractBilling'));
+        $convergeCompanies = ConvergeCompany::orderBy('title', 'asc')->get();
+
+        return view('monster.contract_billing.edit', compact('contractBilling', 'convergeCompanies'));
     }
 
     /**
@@ -199,9 +208,11 @@ class ContractBillingController extends Controller
             'hire_type' => 'required|in:w2,1099,corp to corp',
             'contract_rate' => 'required|string',
             'bill_rate' => 'required|string',
+            'overtime_eligible' => 'required|boolean',
             'base_salary' => 'nullable|string',
             'project_type' => 'required|in:aug,sow',
-            'issued_hardware' => 'required|in:corus360,client,none',
+            'sow' => 'nullable|string',
+            'issued_hardware' => 'required|string',
             'corus_email' => 'required|boolean',
             'background_check' => 'required|in:yes,no,completed',
             'travel_reporting' => 'required|boolean',
@@ -232,8 +243,10 @@ class ContractBillingController extends Controller
         $contractBilling->hire_type = $validated['hire_type'];
         $contractBilling->contract_rate = $validated['contract_rate'];
         $contractBilling->bill_rate = $validated['bill_rate'];
+        $contractBilling->overtime_eligible = $validated['overtime_eligible'];
         $contractBilling->base_salary = $validated['base_salary'];
         $contractBilling->project_type = $validated['project_type'];
+        $contractBilling->sow = $validated['sow'];
         $contractBilling->issued_hardware = $validated['issued_hardware'];
         $contractBilling->corus_email = $validated['corus_email'];
         $contractBilling->background_check = $validated['background_check'];

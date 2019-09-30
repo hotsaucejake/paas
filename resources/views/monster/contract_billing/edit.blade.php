@@ -125,6 +125,18 @@ Contract Billing: Edit
                 </div>
 
                 <div class="form-group">
+                    <legend style="font-weight:400;font-size:1rem;">Overtime Eligible?<span class="text-danger">*</span></legend>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="overtime_eligible" id="overtime_eligible1" value="1" {{ $contractBilling->overtime_eligible == "1" ? 'checked' : '' }} required>
+                        <label class="form-check-label" for="overtime_eligible1">Yes</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="overtime_eligible" id="overtime_eligible2" value="0" {{ $contractBilling->overtime_eligible == "0" ? 'checked' : '' }} required>
+                        <label class="form-check-label" for="overtime_eligible2">No</label>
+                    </div>
+                </div>
+
+                <div class="form-group">
                     <label for="base_salary">Base Salary</label>
                     <input type="text" class="form-control" id="base_salary" name="base_salary" placeholder="$" value="{{ $contractBilling->base_salary }}">
                 </div>
@@ -186,19 +198,22 @@ Contract Billing: Edit
                 </div>
 
                 <div class="form-group">
+                    <label for="client_name">SOW<span class="text-danger"></span></label>
+                    <input type="text" class="form-control" id="sow" name="sow" placeholder="(If Project Type is SOW)" value="{{ $contractBilling->sow }}">
+                </div>
+
+                <div class="form-group">
                     <legend style="font-weight:400;font-size:1rem;">Issued Hardware<span class="text-danger">*</span></legend>
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="issued_hardware" id="issued_hardware1" value="corus360" {{ $contractBilling->issued_hardware == 'corus360' ? 'checked' : '' }} required>
-                        <label class="form-check-label" for="issued_hardware1">Corus360</label>
-                    </div>
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="issued_hardware" id="issued_hardware2" value="client" {{ $contractBilling->issued_hardware == 'client' ? 'checked' : '' }} required>
-                        <label class="form-check-label" for="issued_hardware2">Client</label>
-                    </div>
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="issued_hardware" id="issued_hardware3" value="none" {{ $contractBilling->issued_hardware == 'none' ? 'checked' : '' }} required>
-                        <label class="form-check-label" for="issued_hardware3">None</label>
-                    </div>
+                    <select class="custom-select" name="issued_hardware" style="max-width: 100%" required>
+                        <option value="None" {{ $contractBilling->issued_hardware == 'None' || $contractBilling->issued_hardware == 'none' ? 'selected' : '' }}>None</option>
+                        <option value="Client" {{ $contractBilling->issued_hardware == 'Client' || $contractBilling->issued_hardware == 'client' ? 'selected' : '' }}>Client</option>
+                        <optgroup label="Converge Companies">
+                            @foreach ($convergeCompanies as $convergeCompany)
+                                <option value="{{ $convergeCompany->title }}" {{ $contractBilling->issued_hardware == $convergeCompany->title ? 'selected' : '' }}>{{ $convergeCompany->title }}</option>
+                            @endforeach
+                        </optgroup>
+                        
+                    </select>
                 </div>
 
                 <div class="form-group">

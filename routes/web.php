@@ -19,6 +19,8 @@ Auth::routes(['verify' => true]);
 
 Route::get('/home', 'HomeController@index')->name('home');
 
+Route::get('contract/export/', 'ContractBillingController@export');
+
 Route::middleware('verified')->prefix('dashboard')->group(function () {
 
     Route::get('/', 'DashboardController@index')->name('dashboard.index');

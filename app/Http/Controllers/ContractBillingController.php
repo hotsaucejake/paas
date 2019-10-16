@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\ContractBilling;
+use App\Exports\ContractBillingsExport;
+use Maatwebsite\Excel\Facades\Excel;
 use Illuminate\Http\Request;
 use Illuminate\Support\Carbon;
 use App\Mail\ContractBillingSubmitted;
@@ -386,5 +388,11 @@ class ContractBillingController extends Controller
                 ->with('title', 'Error!')
                 ->with('message', 'Hmmm... there was some type of error with this.');
         }
+    }
+
+
+    public function export() 
+    {
+        return Excel::download(new ContractBillingsExport, 'contract_billings.xlsx');
     }
 }

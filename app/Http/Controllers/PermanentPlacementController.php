@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\PermanentPlacement;
+use App\Exports\PermanentPlacementsExport;
+use Maatwebsite\Excel\Facades\Excel;
 use Illuminate\Http\Request;
 use Illuminate\Support\Carbon;
 use App\Mail\PermanentPlacementSubmitted;
@@ -18,6 +20,7 @@ class PermanentPlacementController extends Controller
         $this->middleware('permission:add_permanent_placements')->only(['create', 'store']);
         $this->middleware('owner')->only(['edit', 'update']);
         $this->middleware('permission:delete_permanent_placements')->only('delete');
+        $this->middleware('permission:export_permanent_placements')->only('export');
     }
 
 
@@ -322,6 +325,12 @@ class PermanentPlacementController extends Controller
                 ->with('title', 'Error!')
                 ->with('message', 'Hmmm... there was some type of error with this.');
         }
+    }
+
+
+    public function export() 
+    {
+        return Excel::download(new PermanentPlacementsExport, 'permanent_placements.xlsx');
     }
 
 }

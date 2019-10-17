@@ -21,6 +21,7 @@ class ContractBillingController extends Controller
         $this->middleware('permission:add_contract_billings')->only(['create', 'store']);
         $this->middleware('owner')->only(['edit', 'update']);
         $this->middleware('permission:delete_contract_billings')->only('delete');
+        $this->middleware('permission:export_contract_billings')->only('export');
     }
 
 

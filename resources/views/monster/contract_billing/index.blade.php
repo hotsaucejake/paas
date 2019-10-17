@@ -23,7 +23,12 @@ Contract Billings: Index
 
 
 @section('breadcrumb-buttons')
-@if(auth()->user()->hasPermissionTo('add_contract_billings'))<a class="btn pull-right btn-success" href="{{ route('contract_billing.create') }}"><i class="mdi mdi-plus-circle"></i> Create</a>@endif
+    @if(auth()->user()->hasPermissionTo('add_contract_billings'))
+        <a class="btn pull-right btn-success" href="{{ route('contract_billing.create') }}"><strong><i class="mdi mdi-plus-circle"></i> Create</strong></a>
+    @endif
+    @if(auth()->user()->hasPermissionTo('export_contract_billings'))
+        <a class="btn pull-right btn-warning mr-3" href="{{ route('contract_billing.export') }}"><strong><i class="mdi mdi-file-export"></i> Export</strong></a>
+    @endif
 @endsection
 
 

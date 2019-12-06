@@ -194,6 +194,10 @@ Contract Billing: Create
                         <input class="form-check-input" type="radio" name="project_type" id="project_type2" value="sow" {{ old('project_type') == 'sow' ? 'checked' : '' }} required>
                         <label class="form-check-label" for="project_type2">SOW</label>
                     </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="project_type" id="project_type3" value="pse" {{ old('project_type') == 'pse' ? 'checked' : '' }} required>
+                        <label class="form-check-label" for="project_type3">Professional Services Engagement</label>
+                    </div>
                 </div>
 
                 <div class="form-group">

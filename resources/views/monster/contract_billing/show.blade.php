@@ -171,6 +171,8 @@ Contract Billing: Create
                         @else 
                             SOW
                         @endif
+                    @elseif($contractBilling->project_type == 'pse')
+                        Professional Services Engagement
                     @endif
                 </p>
             </div>

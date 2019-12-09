@@ -49,7 +49,9 @@ Position Details
 
 **Start Date:** {{ $billing->start_date }}
 
-**Contract Period:** {{ $billing->contract_period }}
+**Estimated End Date:** {{ $billing->estimated_end_date }}
+
+**Contract Length:** {{ $billing->contract_period }}
 
 **Environment:** {{ ucwords($billing->environment) }}
 

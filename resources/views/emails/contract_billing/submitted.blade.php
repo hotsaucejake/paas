@@ -53,6 +53,10 @@ Position Details
 
 **Contract Length:** {{ $billing->contract_period }}
 
+@if($billing->termination_date)
+**Termination Date:** {{ $billing->termination_date }}
+@endif
+
 **Environment:** {{ ucwords($billing->environment) }}
 
 **Hire Type:** {{ ucwords($billing->hire_type) }}

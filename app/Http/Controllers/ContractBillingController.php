@@ -232,6 +232,7 @@ class ContractBillingController extends Controller
             'start_date' => 'required|date',
             'estimated_end_date' => 'nullable|date',
             'contract_period' => 'required|string',
+            'termination_date' => 'nullable|date',
             'drug_test' => 'required|in:no,p5,p9,p10,p11,other',
             'benefits' => 'required|boolean',
             'client_contact' => 'required|string',
@@ -270,6 +271,7 @@ class ContractBillingController extends Controller
         $contractBilling->concur = $validated['concur'];
         $contractBilling->start_date = Carbon::parse($validated['start_date'])->toDateString();
         $contractBilling->estimated_end_date = isset($validated['estimated_end_date']) ? Carbon::parse($validated['estimated_end_date'])->toDateString() : NULL;
+        $contractBilling->termination_date = isset($validated['termination_date']) ? Carbon::parse($validated['termination_date'])->toDateString() : NULL;
         $contractBilling->contract_period = $validated['contract_period'];
         $contractBilling->drug_test = $validated['drug_test'];
         $contractBilling->benefits = $validated['benefits'];

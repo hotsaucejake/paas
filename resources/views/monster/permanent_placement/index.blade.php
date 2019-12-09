@@ -185,6 +185,10 @@ Permanent Placements: Index
                 },
                 {
                     targets: 8,
+                    className: 'dt-center'
+                },
+                {
+                    targets: 9,
                     className: 'dt-center',
                     "orderable": false
                 },

@@ -168,6 +168,11 @@ Contract Billing: Create
                 </div>
 
                 <div class="form-group">
+                    <label for="estimated_end_date">Estimated End Date</label>
+                    <input type="text" id="estimated_end_date" name="estimated_end_date" class="form-control" placeholder="05/16/1985" value="{{ old('estimated_end_date') }}">
+                </div>
+
+                <div class="form-group">
                     <label for="contract_period">Contract Length<span class="text-danger">*</span></label>
                     <input type="text" class="form-control" id="contract_period" name="contract_period" placeholder="6 mo." value="{{ old('contract_period') }}" required>
                 </div>
@@ -392,5 +397,6 @@ Contract Billing: Create
 <script src="https://cdn.jsdelivr.net/npm/gijgo@1.9.10/js/gijgo.min.js" type="text/javascript"></script>
 <script>
     $('#start_date').datepicker();
+    $('#estimated_end_date').datepicker();
 </script>
 @endsection

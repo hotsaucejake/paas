@@ -147,6 +147,11 @@ Contract Billing: Create
             </div>
 
             <div class="form-group">
+                <label for="estimated_end_date">Estimated End Date</label>
+                <p class="lead font-weight-bold">{{ $contractBilling->estimated_end_date }}</p>
+            </div>
+
+            <div class="form-group">
                 <label for="contract_period">Contract Length</label>
                 <p class="lead font-weight-bold">{{ $contractBilling->contract_period }}</p>
             </div>

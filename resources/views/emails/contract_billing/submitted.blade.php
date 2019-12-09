@@ -9,6 +9,8 @@ View the Contract Billing Form
 
 ## Form #{{ $billing->id }} created by {{ $billing->user->name }} on {{ $billing->created_at->toDateString() }}
 
+**Converge Company:** {{ optional($billing->convergeCompany)->title }}
+
 @component('mail::panel')
 Candidate Info
 @endcomponent
@@ -53,7 +55,7 @@ Position Details
 
 **Hire Type:** {{ ucwords($billing->hire_type) }}
 
-**Project Type:** {{ $billing->project_type == 'aug' ? 'Staff Augmentation' : 'SOW'}}
+**Project Type:** {{ $billing->project_type == 'aug' ? 'Staff Augmentation' : ($billing->project_type == 'sow' ? 'SOW' : ($billing->project_type == 'pse' ? 'Professional Services Engagement' : '')) }}
 
 @if ($billing->sow)
 **SOW:** {{ $billing->sow }}

@@ -61,6 +61,7 @@ class ContractBillingController extends Controller
     public function store(Request $request)
     {
         $validated = $request->validate([
+            'converge_company_id' => 'required|exists:contract_billings,id',
             'first_name' => 'required|string',
             'mi' => 'nullable|string',
             'last_name' => 'required|string',
@@ -98,6 +99,7 @@ class ContractBillingController extends Controller
 
         $billing = new ContractBilling([
             'user_id' => auth()->user()->id,
+            'converge_company_id' => $validated['converge_company_id'],
             'first_name' => $validated['first_name'],
             'mi' => $validated['mi'],
             'last_name' => $validated['last_name'],
@@ -197,6 +199,7 @@ class ContractBillingController extends Controller
     public function update(Request $request, ContractBilling $contractBilling)
     {
         $validated = $request->validate([
+            'converge_company_id' => 'required|exists:contract_billings,id',
             'first_name' => 'required|string',
             'mi' => 'nullable|string',
             'last_name' => 'required|string',
@@ -232,6 +235,7 @@ class ContractBillingController extends Controller
             'notes' => 'nullable|string',
         ]);
 
+        $contractBilling->converge_company_id = $validated['converge_company_id'];
         $contractBilling->first_name = $validated['first_name'];
         $contractBilling->mi = $validated['mi'];
         $contractBilling->last_name = $validated['last_name'];

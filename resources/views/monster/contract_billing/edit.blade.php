@@ -341,6 +341,11 @@ Contract Billing: Edit
                     <input type="email" class="form-control" id="manager_email" name="manager_email" placeholder="Email" value="{{ $contractBilling->manager_email }}" required>
                 </div>
 
+                <div class="form-group">
+                    <label for="paycom_id">Paycom ID</label>
+                    <input type="text" class="form-control" id="paycom_id" name="paycom_id" placeholder="ID" value="{{ $contractBilling->paycom_id }}">
+                </div>
+
             </div>
 
             <div class="col-sm">

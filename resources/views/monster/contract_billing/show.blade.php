@@ -276,6 +276,11 @@ Contract Billing: Create
                 <p class="lead font-weight-bold">{{ $contractBilling->manager_email }}</p>
             </div>
 
+            <div class="form-group">
+                <label for="paycom_id">Paycom ID</label>
+                <p class="lead font-weight-bold">{{ $contractBilling->paycom_id }}</p>
+            </div>
+
         </div>
 
         <div class="col-sm">

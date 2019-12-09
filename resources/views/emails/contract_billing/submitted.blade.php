@@ -43,7 +43,7 @@ Position Details
 
 **Bill Rate:** {{ $billing->bill_rate }}
 
-**Overtime Eligible:** {{ $billing->overtime_eligible ? 'Yes' : 'No' }}
+**Overtime Eligible at a Rate of Time and a Half:** {{ $billing->overtime_eligible ? 'Yes' : 'No' }}
 
 **Base Salary:** {{ $billing->base_salary }}
 

@@ -126,7 +126,7 @@ Contract Billing: Create
             </div>
 
             <div class="form-group">
-                <legend style="font-weight:400;font-size:1rem;">Overtime Eligible</legend>
+                <legend style="font-weight:400;font-size:1rem;">Overtime Eligible at a Rate of Time and a Half</legend>
                 <p class="lead font-weight-bold">
                     @if($contractBilling->overtime_eligible)
                         Yes

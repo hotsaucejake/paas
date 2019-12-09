@@ -147,7 +147,7 @@ Contract Billing: Edit
                 </div>
 
                 <div class="form-group">
-                    <legend style="font-weight:400;font-size:1rem;">Overtime Eligible?<span class="text-danger">*</span></legend>
+                    <legend style="font-weight:400;font-size:1rem;">Overtime Eligible at a Rate of Time and a Half?<span class="text-danger">*</span></legend>
                     <div class="form-check form-check-inline">
                         <input class="form-check-input" type="radio" name="overtime_eligible" id="overtime_eligible1" value="1" {{ $contractBilling->overtime_eligible == "1" ? 'checked' : '' }} required>
                         <label class="form-check-label" for="overtime_eligible1">Yes</label>

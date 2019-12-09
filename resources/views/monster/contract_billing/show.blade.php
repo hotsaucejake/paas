@@ -155,6 +155,11 @@ Contract Billing: Create
                 <label for="contract_period">Contract Length</label>
                 <p class="lead font-weight-bold">{{ $contractBilling->contract_period }}</p>
             </div>
+
+            <div class="form-group">
+                <label for="termination_date">Termination Date</label>
+                <p class="lead font-weight-bold">{{ $contractBilling->termination_date }}</p>
+            </div>
         </div>
 
         <div class="col-sm">

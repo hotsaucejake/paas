@@ -177,6 +177,11 @@ Contract Billing: Edit
                     <label for="contract_period">Contract Length<span class="text-danger">*</span></label>
                     <input type="text" class="form-control" id="contract_period" name="contract_period" placeholder="6 mo." value="{{ $contractBilling->contract_period }}" required>
                 </div>
+
+                <div class="form-group">
+                    <label for="estimated_end_date">Termination Date</label>
+                    <input type="text" id="termination_date" name="termination_date" class="form-control" placeholder="05/16/1985" value="{{ $contractBilling->termination_date ? Carbon\Carbon::parse($contractBilling->termination_date)->format('m/d/Y') : '' }}">
+                </div>
             </div>
 
             <div class="col-sm">
@@ -399,5 +404,6 @@ Contract Billing: Edit
 <script>
     $('#start_date').datepicker();
     $('#estimated_end_date').datepicker();
+    $('#termination_date').datepicker();
 </script>
 @endsection

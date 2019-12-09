@@ -46,6 +46,8 @@ Placement Info
 
 **Salary:** {{ $placement->salary }}
 
+**Additional Cost:** {{ $placement->additional_cost }}
+
 **Perm Fee Percentage:** {{ $placement->perm_fee }}
 
 **Total Fee:** {{ $placement->total_fee }}

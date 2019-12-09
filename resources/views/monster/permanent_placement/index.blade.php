@@ -140,6 +140,7 @@ Permanent Placements: Index
         $('#myTable').DataTable( {
             responsive: true,
             "pageLength": 50,
+            "lengthMenu": [[50, 100, 500, -1], [50, 100, 500, "All"]],
             "order": [],
             dom: 'lfrtip',
             buttons: [

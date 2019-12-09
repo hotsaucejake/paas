@@ -35,7 +35,7 @@ class PermanentPlacementController extends Controller
         $permanentPlacements = PermanentPlacement::latest()->with('user')
                     ->orderBy('id', 'desc')
                     ->select('id', 'user_id', 'customer_name', 'customer_po', 'placement_name', 'position', 'recruiter', 'created_at', 'approved', 'active')
-                    ->paginate(250);
+                    ->paginate(2000);
 
         return view('monster.permanent_placement.index', compact('permanentPlacements'));
     }

@@ -35,7 +35,7 @@ class ContractBillingController extends Controller
         $contractBillings = ContractBilling::latest()->with('user')
                     ->orderBy('id', 'desc')
                     ->select('id', 'user_id', 'first_name', 'last_name', 'client_name', 'job_title', 'recruiter', 'created_at', 'approved', 'active')
-                    ->paginate(250);
+                    ->paginate(2000);
 
         return view('monster.contract_billing.index', compact('contractBillings'));
     }

@@ -9,6 +9,8 @@ View the Permanent Placement Form
 
 ## Form #{{ $placement->id }} created by {{ $placement->user->name }} on {{ $placement->created_at->toDateString() }}
 
+**Converge Company:** {{ optional($placement->convergeCompany)->title }}
+
 @component('mail::panel')
 Customer Info
 @endcomponent

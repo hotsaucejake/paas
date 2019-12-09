@@ -10,6 +10,7 @@ use Illuminate\Support\Carbon;
 use App\Mail\PermanentPlacementSubmitted;
 use Illuminate\Support\Facades\Mail;
 use App\DistributionList;
+use App\ConvergeCompany;
 
 class PermanentPlacementController extends Controller
 {
@@ -46,7 +47,9 @@ class PermanentPlacementController extends Controller
      */
     public function create()
     {
-        return view('monster.permanent_placement.create');
+        $convergeCompanies = ConvergeCompany::orderBy('title', 'asc')->get();
+
+        return view('monster.permanent_placement.create', compact('convergeCompanies'));
     }
 
     /**
@@ -58,6 +61,7 @@ class PermanentPlacementController extends Controller
     public function store(Request $request)
     {
         $validated = $request->validate([
+            'converge_company_id' => 'required|exists:contract_billings,id',
             'customer_name' => 'required|string',
             'ap_contact' => 'required|string',
             'ap_email' => 'required|email',
@@ -80,6 +84,7 @@ class PermanentPlacementController extends Controller
 
         $placement = new PermanentPlacement([
             'user_id' => auth()->user()->id,
+            'converge_company_id' => $validated['converge_company_id'],
             'customer_name' => $validated['customer_name'],
             'ap_contact' => $validated['ap_contact'],
             'ap_email' => $validated['ap_email'],
@@ -149,7 +154,9 @@ class PermanentPlacementController extends Controller
      */
     public function edit(PermanentPlacement $permanentPlacement)
     {
-        return view('monster.permanent_placement.edit', compact('permanentPlacement'));
+        $convergeCompanies = ConvergeCompany::orderBy('title', 'asc')->get();
+
+        return view('monster.permanent_placement.edit', compact('permanentPlacement', 'convergeCompanies'));
     }
 
     /**
@@ -162,6 +169,7 @@ class PermanentPlacementController extends Controller
     public function update(Request $request, PermanentPlacement $permanentPlacement)
     {
         $validated = $request->validate([
+            'converge_company_id' => 'required|exists:contract_billings,id',
             'customer_name' => 'required|string',
             'ap_contact' => 'required|string',
             'ap_email' => 'required|email',
@@ -183,6 +191,7 @@ class PermanentPlacementController extends Controller
         ]);
 
 
+        $permanentPlacement->converge_company_id = $validated['converge_company_id'];
         $permanentPlacement->customer_name = $validated['customer_name'];
         $permanentPlacement->ap_contact = $validated['ap_contact'];
         $permanentPlacement->ap_email = $validated['ap_email'];

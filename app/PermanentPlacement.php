@@ -15,6 +15,12 @@ class PermanentPlacement extends Model
     }
     
 
+    public function convergeCompany()
+    {
+        return $this->belongsTo('App\ConvergeCompany');
+    }
+    
+
     public function scopeApproved($query)
     {
         return $query->where('approved', 1);

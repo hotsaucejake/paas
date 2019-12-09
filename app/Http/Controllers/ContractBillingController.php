@@ -93,6 +93,7 @@ class ContractBillingController extends Controller
             'manager' => 'required|string',
             'manager_email' => 'required|email',
             'manager_phone' => 'nullable|string',
+            'paycom_id' => 'nullable|string',
             'recruiter' => 'required|string',
             'account_manager' => 'required|string',
             'notes' => 'nullable|string',
@@ -132,6 +133,7 @@ class ContractBillingController extends Controller
             'manager' => $validated['manager'],
             'manager_email' => $validated['manager_email'],
             'manager_phone' => $validated['manager_phone'],
+            'paycom_id' => $validated['paycom_id'],
             'recruiter' => $validated['recruiter'],
             'account_manager' => $validated['account_manager'],
             'notes' => $validated['notes'],
@@ -233,6 +235,7 @@ class ContractBillingController extends Controller
             'manager' => 'required|string',
             'manager_email' => 'required|email',
             'manager_phone' => 'nullable|string',
+            'paycom_id' => 'nullable|string',
             'recruiter' => 'required|string',
             'account_manager' => 'required|string',
             'notes' => 'nullable|string',
@@ -270,6 +273,7 @@ class ContractBillingController extends Controller
         $contractBilling->manager = $validated['manager'];
         $contractBilling->manager_email = $validated['manager_email'];
         $contractBilling->manager_phone = $validated['manager_phone'];
+        $contractBilling->paycom_id = $validated['paycom_id'];
         $contractBilling->recruiter = $validated['recruiter'];
         $contractBilling->account_manager = $validated['account_manager'];
         $contractBilling->notes = $validated['notes'];

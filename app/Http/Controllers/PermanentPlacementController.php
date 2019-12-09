@@ -34,7 +34,7 @@ class PermanentPlacementController extends Controller
     {
         $permanentPlacements = PermanentPlacement::latest()->with('user')
                     ->orderBy('id', 'desc')
-                    ->select('id', 'user_id', 'customer_name', 'customer_po', 'placement_name', 'position', 'recruiter', 'created_at', 'approved')
+                    ->select('id', 'user_id', 'customer_name', 'customer_po', 'placement_name', 'position', 'recruiter', 'created_at', 'approved', 'active')
                     ->paginate(250);
 
         return view('monster.permanent_placement.index', compact('permanentPlacements'));
@@ -326,6 +326,32 @@ class PermanentPlacementController extends Controller
                 ->with('toastr', 'success')
                 ->with('title', 'Success!')
                 ->with('message', 'Permanent Placement has been unapproved.');
+
+        } else {
+
+            return back()
+                ->with('toastr', 'error')
+                ->with('title', 'Error!')
+                ->with('message', 'Hmmm... there was some type of error with this.');
+        }
+    }
+
+
+    public function activeStatus(Request $request, PermanentPlacement $permanentPlacement)
+    {
+        $permanentPlacement->active = !$permanentPlacement->active;
+
+        $activeStatus = $permanentPlacement->save();
+
+        if($activeStatus){
+
+            $subject = 'Active Status: Permanent Placement';
+            $message = 'Permanent Placement #' . $permanentPlacement->id . ' status has been updated.';
+
+            return back()
+                ->with('toastr', 'success')
+                ->with('title', 'Success!')
+                ->with('message', $message);
 
         } else {
 

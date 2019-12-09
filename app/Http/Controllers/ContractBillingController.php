@@ -34,7 +34,7 @@ class ContractBillingController extends Controller
     {
         $contractBillings = ContractBilling::latest()->with('user')
                     ->orderBy('id', 'desc')
-                    ->select('id', 'user_id', 'first_name', 'last_name', 'client_name', 'job_title', 'recruiter', 'created_at', 'approved')
+                    ->select('id', 'user_id', 'first_name', 'last_name', 'client_name', 'job_title', 'recruiter', 'created_at', 'approved', 'active')
                     ->paginate(250);
 
         return view('monster.contract_billing.index', compact('contractBillings'));
@@ -385,6 +385,32 @@ class ContractBillingController extends Controller
                 ->with('toastr', 'success')
                 ->with('title', 'Success!')
                 ->with('message', 'Contract Billing has been unapproved.');
+
+        } else {
+
+            return back()
+                ->with('toastr', 'error')
+                ->with('title', 'Error!')
+                ->with('message', 'Hmmm... there was some type of error with this.');
+        }
+    }
+
+
+    public function activeStatus(Request $request, ContractBilling $contractBilling)
+    {
+        $contractBilling->active = !$contractBilling->active;
+
+        $activeStatus = $contractBilling->save();
+
+        if($activeStatus){
+
+            $subject = 'Active Status: Contract Billing Form';
+            $message = 'Contract Billing Form #' . $contractBilling->id . ' status has been updated.';
+
+            return back()
+                ->with('toastr', 'success')
+                ->with('title', 'Success!')
+                ->with('message', $message);
 
         } else {
 

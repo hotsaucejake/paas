@@ -74,6 +74,7 @@ class PermanentPlacementController extends Controller
             'placement_email' => 'required|email',
             'position' => 'required|string',
             'salary' => 'required|string',
+            'additional_cost' => 'required|string',
             'perm_fee' => 'required|string',
             'total_fee' => 'required|string',
             'start_date' => 'required|date',
@@ -97,6 +98,7 @@ class PermanentPlacementController extends Controller
             'placement_phone' => $validated['placement_phone'],
             'position' => $validated['position'],
             'salary' => $validated['salary'],
+            'additional_cost' => $validated['additional_cost'],
             'perm_fee' => $validated['perm_fee'],
             'total_fee' => $validated['total_fee'],
             'start_date' => Carbon::parse($validated['start_date'])->toDateString(),
@@ -182,6 +184,7 @@ class PermanentPlacementController extends Controller
             'placement_email' => 'required|email',
             'position' => 'required|string',
             'salary' => 'required|string',
+            'additional_cost' => 'required|string',
             'perm_fee' => 'required|string',
             'total_fee' => 'required|string',
             'start_date' => 'required|date',
@@ -204,6 +207,7 @@ class PermanentPlacementController extends Controller
         $permanentPlacement->placement_phone = $validated['placement_phone'];
         $permanentPlacement->position = $validated['position'];
         $permanentPlacement->salary = $validated['salary'];
+        $permanentPlacement->additional_cost = $validated['additional_cost'];
         $permanentPlacement->perm_fee = $validated['perm_fee'];
         $permanentPlacement->total_fee = $validated['total_fee'];
         $permanentPlacement->start_date = Carbon::parse($validated['start_date'])->toDateString();

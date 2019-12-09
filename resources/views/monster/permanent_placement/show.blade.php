@@ -103,6 +103,10 @@ Permanent Placement: View
                     <label for="salary">Salary</label>
                     <p class="lead font-weight-bold">{{ $permanentPlacement->salary }}</p>
                 </div>
+                <div class="form-group">
+                    <label for="salary">Additional Cost</label>
+                    <p class="lead font-weight-bold">{{ $permanentPlacement->additional_cost }}</p>
+                </div>
             </div>
 
             <div class="col-sm">

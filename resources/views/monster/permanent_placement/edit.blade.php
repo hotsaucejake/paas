@@ -134,7 +134,7 @@ Permanent Placement: Edit
 
             <div class="col-sm">
                 <div class="form-group">
-                    <label for="perm_fee">Perm Fee<span class="text-danger">*</span></label>
+                    <label for="perm_fee">Perm Fee Percentage<span class="text-danger">*</span></label>
                     <input type="text" class="form-control" id="perm_fee" name="perm_fee" placeholder="%" value="{{ $permanentPlacement->perm_fee }}" required>
                 </div>
                 <div class="form-group">

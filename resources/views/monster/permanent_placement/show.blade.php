@@ -107,7 +107,7 @@ Permanent Placement: View
 
             <div class="col-sm">
                 <div class="form-group">
-                    <label for="perm_fee">Perm Fee</label>
+                    <label for="perm_fee">Perm Fee Percentage</label>
                     <p class="lead font-weight-bold">{{ $permanentPlacement->perm_fee }}</p>
                 </div>
                 <div class="form-group">

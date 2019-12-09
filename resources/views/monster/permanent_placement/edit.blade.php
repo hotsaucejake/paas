@@ -39,6 +39,28 @@ Permanent Placement: Edit
         </div>
 
         <div class="row">
+            <div class="col-md-4">
+
+            </div>
+
+            <div class="col-md-4">
+                <div class="form-group">
+                    <legend style="font-weight:400;font-size:1rem;">Converge Company<span class="text-danger">*</span></legend>
+                    <select class="custom-select" name="converge_company_id" style="max-width: 100%" required>
+                        <option>---</option>
+                        @foreach ($convergeCompanies as $convergeCompany)
+                            <option value="{{ $convergeCompany->id }}" {{ $permanentPlacement->converge_company_id == $convergeCompany->id ? 'selected' : '' }}>{{ $convergeCompany->title }}</option>
+                        @endforeach
+                    </select>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+
+            </div>
+        </div>
+
+        <div class="row">
 
             <div class="col-sm">
                 <div class="form-group">

@@ -33,6 +33,9 @@ Contract Billing: Create
 <div class="container">
     <div class="jumbotron">
         <h1 class="text-center">New Contractor Request</h1>
+        @if(optional($contractBilling->convergeCompany)->id)
+            <h2 class="text-center">{{ $contractBilling->convergeCompany->title }}</h2>
+        @endif
         <p class="text-center">Form #{{ $contractBilling->id }} created by <strong>{{ $contractBilling->user->name }}</strong> on {{ $contractBilling->created_at->toDateString() }}</p>
     </div>
 

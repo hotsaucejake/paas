@@ -37,6 +37,28 @@ Contract Billing: Create
             <p class="lead text-center">Please prepare the new hire paperwork for review ASAP</p>
         </div>
 
+        <div class="row">
+            <div class="col-md-4">
+
+            </div>
+
+            <div class="col-md-4">
+                <div class="form-group">
+                    <legend style="font-weight:400;font-size:1rem;">Converge Company<span class="text-danger">*</span></legend>
+                    <select class="custom-select" name="converge_company_id" style="max-width: 100%" required>
+                        <option>---</option>
+                        @foreach ($convergeCompanies as $convergeCompany)
+                            <option value="{{ $convergeCompany->id }}" {{ old('converge_company_id') == $convergeCompany->id ? 'selected' : '' }}>{{ $convergeCompany->title }}</option>
+                        @endforeach
+                    </select>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+
+            </div>
+        </div>
+
         <h3 class="text-center">Candidate Info</h3>
 
         <div class="row">

@@ -34,6 +34,9 @@ Permanent Placement: View
     <div class="container">
         <div class="jumbotron">
             <h1 class="text-center">Permanent Placement Billing Request</h1>
+            @if(optional($permanentPlacement->convergeCompany)->id)
+                <h2 class="text-center">{{ $permanentPlacement->convergeCompany->title }}</h2>
+            @endif
             <p class="text-center">Form #{{ $permanentPlacement->id }} created by <strong>{{ $permanentPlacement->user->name }}</strong> on {{ $permanentPlacement->created_at->toDateString() }}</p>
         </div>
 

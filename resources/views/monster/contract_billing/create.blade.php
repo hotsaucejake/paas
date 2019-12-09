@@ -37,6 +37,28 @@ Contract Billing: Create
             <p class="lead text-center">Please prepare the new hire paperwork for review ASAP</p>
         </div>
 
+        <div class="row">
+            <div class="col-md-4">
+
+            </div>
+
+            <div class="col-md-4">
+                <div class="form-group">
+                    <legend style="font-weight:400;font-size:1rem;">Converge Company<span class="text-danger">*</span></legend>
+                    <select class="custom-select" name="converge_company_id" style="max-width: 100%" required>
+                        <option>---</option>
+                        @foreach ($convergeCompanies as $convergeCompany)
+                            <option value="{{ $convergeCompany->id }}" {{ old('converge_company_id') == $convergeCompany->id ? 'selected' : '' }}>{{ $convergeCompany->title }}</option>
+                        @endforeach
+                    </select>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+
+            </div>
+        </div>
+
         <h3 class="text-center">Candidate Info</h3>
 
         <div class="row">
@@ -124,7 +146,7 @@ Contract Billing: Create
                 </div>
 
                 <div class="form-group">
-                    <legend style="font-weight:400;font-size:1rem;">Overtime Eligible?<span class="text-danger">*</span></legend>
+                    <legend style="font-weight:400;font-size:1rem;">Overtime Eligible at a Rate of Time and a Half?<span class="text-danger">*</span></legend>
                     <div class="form-check form-check-inline">
                         <input class="form-check-input" type="radio" name="overtime_eligible" id="overtime_eligible1" value="1" {{ old('overtime_eligible') == "1" ? 'checked' : '' }} required>
                         <label class="form-check-label" for="overtime_eligible1">Yes</label>
@@ -146,7 +168,12 @@ Contract Billing: Create
                 </div>
 
                 <div class="form-group">
-                    <label for="contract_period">Contract Period<span class="text-danger">*</span></label>
+                    <label for="estimated_end_date">Estimated End Date</label>
+                    <input type="text" id="estimated_end_date" name="estimated_end_date" class="form-control" placeholder="05/16/1985" value="{{ old('estimated_end_date') }}">
+                </div>
+
+                <div class="form-group">
+                    <label for="contract_period">Contract Length<span class="text-danger">*</span></label>
                     <input type="text" class="form-control" id="contract_period" name="contract_period" placeholder="6 mo." value="{{ old('contract_period') }}" required>
                 </div>
             </div>
@@ -193,6 +220,10 @@ Contract Billing: Create
                     <div class="form-check form-check-inline">
                         <input class="form-check-input" type="radio" name="project_type" id="project_type2" value="sow" {{ old('project_type') == 'sow' ? 'checked' : '' }} required>
                         <label class="form-check-label" for="project_type2">SOW</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="project_type" id="project_type3" value="pse" {{ old('project_type') == 'pse' ? 'checked' : '' }} required>
+                        <label class="form-check-label" for="project_type3">Professional Services Engagement</label>
                     </div>
                 </div>
 
@@ -256,6 +287,18 @@ Contract Billing: Create
                 </div>
 
                 <div class="form-group">
+                    <legend style="font-weight:400;font-size:1rem;">Issued Concur?<span class="text-danger">*</span></legend>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="concur" id="concur1" value="1" {{ old('concur') == "1" ? 'checked' : '' }} required>
+                        <label class="form-check-label" for="concur1">Yes</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="concur" id="concur2" value="0" {{ old('concur') == "0" ? 'checked' : '' }} required>
+                        <label class="form-check-label" for="concur2">No</label>
+                    </div>
+                </div>
+
+                <div class="form-group">
                     <label for="drug_test">Drug Test?<span class="text-danger">*</span></label>
                     <select class="form-control" id="drug_test" name="drug_test" required>
                         <option value="no" {{ old('drug_test') == 'no' ? 'selected' : '' }}>No</option>
@@ -300,6 +343,11 @@ Contract Billing: Create
                 <div class="form-group">
                     <label for="manager_email">Hiring Manager / Timesheet Approver Email<span class="text-danger">*</span></label>
                     <input type="email" class="form-control" id="manager_email" name="manager_email" placeholder="Email" value="{{ old('manager_email') }}" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="paycom_id">Paycom ID</label>
+                    <input type="text" class="form-control" id="paycom_id" name="paycom_id" placeholder="ID" value="{{ old('paycom_id') }}">
                 </div>
 
             </div>
@@ -349,5 +397,6 @@ Contract Billing: Create
 <script src="https://cdn.jsdelivr.net/npm/gijgo@1.9.10/js/gijgo.min.js" type="text/javascript"></script>
 <script>
     $('#start_date').datepicker();
+    $('#estimated_end_date').datepicker();
 </script>
 @endsection

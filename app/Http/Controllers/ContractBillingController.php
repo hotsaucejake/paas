@@ -34,8 +34,8 @@ class ContractBillingController extends Controller
     {
         $contractBillings = ContractBilling::latest()->with('user')
                     ->orderBy('id', 'desc')
-                    ->select('id', 'user_id', 'first_name', 'last_name', 'client_name', 'job_title', 'recruiter', 'created_at', 'approved')
-                    ->paginate(250);
+                    ->select('id', 'user_id', 'first_name', 'last_name', 'client_name', 'job_title', 'recruiter', 'created_at', 'approved', 'active')
+                    ->paginate(2000);
 
         return view('monster.contract_billing.index', compact('contractBillings'));
     }
@@ -61,6 +61,7 @@ class ContractBillingController extends Controller
     public function store(Request $request)
     {
         $validated = $request->validate([
+            'converge_company_id' => 'required|exists:contract_billings,id',
             'first_name' => 'required|string',
             'mi' => 'nullable|string',
             'last_name' => 'required|string',
@@ -77,13 +78,15 @@ class ContractBillingController extends Controller
             'bill_rate' => 'required|string',
             'overtime_eligible' => 'required|boolean',
             'base_salary' => 'nullable|string',
-            'project_type' => 'required|in:aug,sow',
+            'project_type' => 'required|in:aug,sow,pse',
             'sow' => 'nullable|string',
             'issued_hardware' => 'required|string',
             'corus_email' => 'required|boolean',
             'background_check' => 'required|in:yes,no,completed',
             'travel_reporting' => 'required|boolean',
+            'concur' => 'required|boolean',
             'start_date' => 'required|date',
+            'estimated_end_date' => 'nullable|date',
             'contract_period' => 'required|string',
             'drug_test' => 'required|in:no,p5,p9,p10,p11,other',
             'benefits' => 'required|boolean',
@@ -91,6 +94,7 @@ class ContractBillingController extends Controller
             'manager' => 'required|string',
             'manager_email' => 'required|email',
             'manager_phone' => 'nullable|string',
+            'paycom_id' => 'nullable|string',
             'recruiter' => 'required|string',
             'account_manager' => 'required|string',
             'notes' => 'nullable|string',
@@ -98,6 +102,7 @@ class ContractBillingController extends Controller
 
         $billing = new ContractBilling([
             'user_id' => auth()->user()->id,
+            'converge_company_id' => $validated['converge_company_id'],
             'first_name' => $validated['first_name'],
             'mi' => $validated['mi'],
             'last_name' => $validated['last_name'],
@@ -120,7 +125,9 @@ class ContractBillingController extends Controller
             'corus_email' => $validated['corus_email'],
             'background_check' => $validated['background_check'],
             'travel_reporting' => $validated['travel_reporting'],
+            'concur' => $validated['concur'],
             'start_date' => Carbon::parse($validated['start_date'])->toDateString(),
+            'estimated_end_date' => isset($validated['estimated_end_date']) ? Carbon::parse($validated['estimated_end_date'])->toDateString() : NULL,
             'contract_period' => $validated['contract_period'],
             'drug_test' => $validated['drug_test'],
             'benefits' => $validated['benefits'],
@@ -128,6 +135,7 @@ class ContractBillingController extends Controller
             'manager' => $validated['manager'],
             'manager_email' => $validated['manager_email'],
             'manager_phone' => $validated['manager_phone'],
+            'paycom_id' => $validated['paycom_id'],
             'recruiter' => $validated['recruiter'],
             'account_manager' => $validated['account_manager'],
             'notes' => $validated['notes'],
@@ -197,6 +205,7 @@ class ContractBillingController extends Controller
     public function update(Request $request, ContractBilling $contractBilling)
     {
         $validated = $request->validate([
+            'converge_company_id' => 'required|exists:contract_billings,id',
             'first_name' => 'required|string',
             'mi' => 'nullable|string',
             'last_name' => 'required|string',
@@ -213,25 +222,30 @@ class ContractBillingController extends Controller
             'bill_rate' => 'required|string',
             'overtime_eligible' => 'required|boolean',
             'base_salary' => 'nullable|string',
-            'project_type' => 'required|in:aug,sow',
+            'project_type' => 'required|in:aug,sow,pse',
             'sow' => 'nullable|string',
             'issued_hardware' => 'required|string',
             'corus_email' => 'required|boolean',
             'background_check' => 'required|in:yes,no,completed',
             'travel_reporting' => 'required|boolean',
+            'concur' => 'required|boolean',
             'start_date' => 'required|date',
+            'estimated_end_date' => 'nullable|date',
             'contract_period' => 'required|string',
+            'termination_date' => 'nullable|date',
             'drug_test' => 'required|in:no,p5,p9,p10,p11,other',
             'benefits' => 'required|boolean',
             'client_contact' => 'required|string',
             'manager' => 'required|string',
             'manager_email' => 'required|email',
             'manager_phone' => 'nullable|string',
+            'paycom_id' => 'nullable|string',
             'recruiter' => 'required|string',
             'account_manager' => 'required|string',
             'notes' => 'nullable|string',
         ]);
 
+        $contractBilling->converge_company_id = $validated['converge_company_id'];
         $contractBilling->first_name = $validated['first_name'];
         $contractBilling->mi = $validated['mi'];
         $contractBilling->last_name = $validated['last_name'];
@@ -254,7 +268,10 @@ class ContractBillingController extends Controller
         $contractBilling->corus_email = $validated['corus_email'];
         $contractBilling->background_check = $validated['background_check'];
         $contractBilling->travel_reporting = $validated['travel_reporting'];
+        $contractBilling->concur = $validated['concur'];
         $contractBilling->start_date = Carbon::parse($validated['start_date'])->toDateString();
+        $contractBilling->estimated_end_date = isset($validated['estimated_end_date']) ? Carbon::parse($validated['estimated_end_date'])->toDateString() : NULL;
+        $contractBilling->termination_date = isset($validated['termination_date']) ? Carbon::parse($validated['termination_date'])->toDateString() : NULL;
         $contractBilling->contract_period = $validated['contract_period'];
         $contractBilling->drug_test = $validated['drug_test'];
         $contractBilling->benefits = $validated['benefits'];
@@ -262,6 +279,7 @@ class ContractBillingController extends Controller
         $contractBilling->manager = $validated['manager'];
         $contractBilling->manager_email = $validated['manager_email'];
         $contractBilling->manager_phone = $validated['manager_phone'];
+        $contractBilling->paycom_id = $validated['paycom_id'];
         $contractBilling->recruiter = $validated['recruiter'];
         $contractBilling->account_manager = $validated['account_manager'];
         $contractBilling->notes = $validated['notes'];
@@ -381,6 +399,32 @@ class ContractBillingController extends Controller
                 ->with('toastr', 'success')
                 ->with('title', 'Success!')
                 ->with('message', 'Contract Billing has been unapproved.');
+
+        } else {
+
+            return back()
+                ->with('toastr', 'error')
+                ->with('title', 'Error!')
+                ->with('message', 'Hmmm... there was some type of error with this.');
+        }
+    }
+
+
+    public function activeStatus(Request $request, ContractBilling $contractBilling)
+    {
+        $contractBilling->active = !$contractBilling->active;
+
+        $activeStatus = $contractBilling->save();
+
+        if($activeStatus){
+
+            $subject = 'Active Status: Contract Billing Form';
+            $message = 'Contract Billing Form #' . $contractBilling->id . ' status has been updated.';
+
+            return back()
+                ->with('toastr', 'success')
+                ->with('title', 'Success!')
+                ->with('message', $message);
 
         } else {
 

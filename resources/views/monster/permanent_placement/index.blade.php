@@ -48,9 +48,10 @@ Permanent Placements: Index
                     <th data-priority="2">Placement Name</th>
                     <th data-priority="5">Position</th>
                     <th data-priority="7">Recruiter</th>
-                    <th data-priority="8">Created</th>
+                    <th data-priority="10">Created</th>
                     <th data-priority="6">By</th>
                     <th data-priority="4">Approved</th>
+                    <th data-priority="8">Active</th>
                     <th data-priority="3" width="15%">Actions</th>
                 </tr>
             </thead>
@@ -65,6 +66,19 @@ Permanent Placements: Index
                         <td>{{ ($placement->created_at)->toDateString() }}</td>
                         <td>{{ $placement->user->name }}</td>
                         <td>{!! $placement->approved ? '<i class="fa fa-check fa-lg text-success"></i>' : '<i class="fa fa-times fa-lg text-danger"></i>' !!}</td>
+                        <td>
+                            @if(auth()->user()->hasPermissionTo('edit_permanent_placements') || auth()->user()->id == $placement->user_id)
+                                <form action="{{ route('permanent_placement.activeStatus', ['permanent_placement' => $placement->id]) }}" method="POST" style="display: inline;">
+                                    @method('PATCH')
+                                    @csrf
+                                    <button type="submit" class="btn btn-link">
+                            @endif
+                            {!! $placement->active ? '<i class="fa fa-check fa-lg text-success"></i>' : '<i class="fa fa-times fa-lg text-danger"></i>' !!}
+                            @if(auth()->user()->hasPermissionTo('edit_permanent_placements') || auth()->user()->id == $placement->user_id)
+                                    </button>
+                                </form>
+                            @endif
+                        </td>
                         <td>
                             @if(auth()->user()->hasPermissionTo('view_permanent_placements'))
                                 <button type="button" class="btn btn-link">
@@ -104,6 +118,7 @@ Permanent Placements: Index
                     <th>Created</th>
                     <th>By</th>
                     <th>Approved</th>
+                    <th>Active</th>
                     <th>Actions</th>
                 </tr>
             </tfoot>
@@ -125,6 +140,7 @@ Permanent Placements: Index
         $('#myTable').DataTable( {
             responsive: true,
             "pageLength": 50,
+            "lengthMenu": [[50, 100, 500, -1], [50, 100, 500, "All"]],
             "order": [],
             dom: 'lfrtip',
             buttons: [
@@ -170,6 +186,10 @@ Permanent Placements: Index
                 },
                 {
                     targets: 8,
+                    className: 'dt-center'
+                },
+                {
+                    targets: 9,
                     className: 'dt-center',
                     "orderable": false
                 },

@@ -31,7 +31,7 @@ class CreateContractBillingsTable extends Migration
             $table->string('contract_rate');
             $table->string('bill_rate');
             $table->string('base_salary')->nullable();
-            $table->enum('project_type', ['aug', 'sow']);
+            $table->enum('project_type', ['aug', 'sow', 'pse']);
             $table->enum('issued_hardware', ['corus360', 'client', 'none']);
             $table->boolean('corus_email')->default(0);
             $table->enum('background_check', ['yes', 'no', 'completed']);

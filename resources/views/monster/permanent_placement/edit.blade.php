@@ -39,6 +39,28 @@ Permanent Placement: Edit
         </div>
 
         <div class="row">
+            <div class="col-md-4">
+
+            </div>
+
+            <div class="col-md-4">
+                <div class="form-group">
+                    <legend style="font-weight:400;font-size:1rem;">Converge Company<span class="text-danger">*</span></legend>
+                    <select class="custom-select" name="converge_company_id" style="max-width: 100%" required>
+                        <option>---</option>
+                        @foreach ($convergeCompanies as $convergeCompany)
+                            <option value="{{ $convergeCompany->id }}" {{ $permanentPlacement->converge_company_id == $convergeCompany->id ? 'selected' : '' }}>{{ $convergeCompany->title }}</option>
+                        @endforeach
+                    </select>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+
+            </div>
+        </div>
+
+        <div class="row">
 
             <div class="col-sm">
                 <div class="form-group">
@@ -108,11 +130,21 @@ Permanent Placement: Edit
                     <label for="salary">Salary<span class="text-danger">*</span></label>
                     <input type="text" class="form-control" id="salary" name="salary" placeholder="$" value="{{ $permanentPlacement->salary }}" required>
                 </div>
+
+                <div class="form-group">
+                    <legend style="font-weight:400;font-size:1rem;">Additional Cost</legend>
+                    <select class="custom-select" name="additional_cost" style="max-width: 100%">
+                        <option value="None" {{ $permanentPlacement->additional_cost == 'None' ? 'selected' : '' }}>None</option>
+                        <option value="Bonus" {{ $permanentPlacement->additional_cost == 'Bonus' ? 'selected' : '' }}>Bonus</option>
+                        <option value="Per Diem" {{ $permanentPlacement->additional_cost == 'Per Diem' ? 'selected' : '' }}>Per Diem</option>
+                        <option value="Other" {{ $permanentPlacement->additional_cost == 'Other' ? 'selected' : '' }}>Other</option>
+                    </select>
+                </div>
             </div>
 
             <div class="col-sm">
                 <div class="form-group">
-                    <label for="perm_fee">Perm Fee<span class="text-danger">*</span></label>
+                    <label for="perm_fee">Perm Fee Percentage<span class="text-danger">*</span></label>
                     <input type="text" class="form-control" id="perm_fee" name="perm_fee" placeholder="%" value="{{ $permanentPlacement->perm_fee }}" required>
                 </div>
                 <div class="form-group">

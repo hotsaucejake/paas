@@ -33,6 +33,9 @@ Contract Billing: Create
 <div class="container">
     <div class="jumbotron">
         <h1 class="text-center">New Contractor Request</h1>
+        @if(optional($contractBilling->convergeCompany)->id)
+            <h2 class="text-center">{{ $contractBilling->convergeCompany->title }}</h2>
+        @endif
         <p class="text-center">Form #{{ $contractBilling->id }} created by <strong>{{ $contractBilling->user->name }}</strong> on {{ $contractBilling->created_at->toDateString() }}</p>
     </div>
 
@@ -123,7 +126,7 @@ Contract Billing: Create
             </div>
 
             <div class="form-group">
-                <legend style="font-weight:400;font-size:1rem;">Overtime Eligible</legend>
+                <legend style="font-weight:400;font-size:1rem;">Overtime Eligible at a Rate of Time and a Half</legend>
                 <p class="lead font-weight-bold">
                     @if($contractBilling->overtime_eligible)
                         Yes
@@ -144,8 +147,18 @@ Contract Billing: Create
             </div>
 
             <div class="form-group">
-                <label for="contract_period">Contract Period</label>
+                <label for="estimated_end_date">Estimated End Date</label>
+                <p class="lead font-weight-bold">{{ $contractBilling->estimated_end_date }}</p>
+            </div>
+
+            <div class="form-group">
+                <label for="contract_period">Contract Length</label>
                 <p class="lead font-weight-bold">{{ $contractBilling->contract_period }}</p>
+            </div>
+
+            <div class="form-group">
+                <label for="termination_date">Termination Date</label>
+                <p class="lead font-weight-bold">{{ $contractBilling->termination_date }}</p>
             </div>
         </div>
 
@@ -171,6 +184,8 @@ Contract Billing: Create
                         @else 
                             SOW
                         @endif
+                    @elseif($contractBilling->project_type == 'pse')
+                        Professional Services Engagement
                     @endif
                 </p>
             </div>
@@ -200,6 +215,17 @@ Contract Billing: Create
                 <legend style="font-weight:400;font-size:1rem;">Traveling, expense reporting?</legend>
                 <p class="lead font-weight-bold">
                         @if($contractBilling->travel_reporting)
+                            Yes
+                        @else 
+                            No
+                        @endif
+                    </p>
+            </div>
+
+            <div class="form-group">
+                <legend style="font-weight:400;font-size:1rem;">Issued Concur?</legend>
+                <p class="lead font-weight-bold">
+                        @if($contractBilling->concur)
                             Yes
                         @else 
                             No
@@ -258,6 +284,11 @@ Contract Billing: Create
             <div class="form-group">
                 <label for="manager_email">Hiring Manager / Timesheet Approver Email</label>
                 <p class="lead font-weight-bold">{{ $contractBilling->manager_email }}</p>
+            </div>
+
+            <div class="form-group">
+                <label for="paycom_id">Paycom ID</label>
+                <p class="lead font-weight-bold">{{ $contractBilling->paycom_id }}</p>
             </div>
 
         </div>

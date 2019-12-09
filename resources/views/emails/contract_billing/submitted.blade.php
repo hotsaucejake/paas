@@ -9,6 +9,8 @@ View the Contract Billing Form
 
 ## Form #{{ $billing->id }} created by {{ $billing->user->name }} on {{ $billing->created_at->toDateString() }}
 
+**Converge Company:** {{ optional($billing->convergeCompany)->title }}
+
 @component('mail::panel')
 Candidate Info
 @endcomponent
@@ -41,19 +43,25 @@ Position Details
 
 **Bill Rate:** {{ $billing->bill_rate }}
 
-**Overtime Eligible:** {{ $billing->overtime_eligible ? 'Yes' : 'No' }}
+**Overtime Eligible at a Rate of Time and a Half:** {{ $billing->overtime_eligible ? 'Yes' : 'No' }}
 
 **Base Salary:** {{ $billing->base_salary }}
 
 **Start Date:** {{ $billing->start_date }}
 
-**Contract Period:** {{ $billing->contract_period }}
+**Estimated End Date:** {{ $billing->estimated_end_date }}
+
+**Contract Length:** {{ $billing->contract_period }}
+
+@if($billing->termination_date)
+**Termination Date:** {{ $billing->termination_date }}
+@endif
 
 **Environment:** {{ ucwords($billing->environment) }}
 
 **Hire Type:** {{ ucwords($billing->hire_type) }}
 
-**Project Type:** {{ $billing->project_type == 'aug' ? 'Staff Augmentation' : 'SOW'}}
+**Project Type:** {{ $billing->project_type == 'aug' ? 'Staff Augmentation' : ($billing->project_type == 'sow' ? 'SOW' : ($billing->project_type == 'pse' ? 'Professional Services Engagement' : '')) }}
 
 @if ($billing->sow)
 **SOW:** {{ $billing->sow }}
@@ -66,6 +74,8 @@ Position Details
 **Background Check:** {{ ucwords($billing->background_check) }}
 
 **Traveling, expense reporting?** {{ $billing->travel_reporting ? 'Yes' : 'No' }}
+
+**Issued Concur?** {{ $billing->concur ? 'Yes' : 'No' }}
 
 **Drug Test?**
 @if($billing->drug_test == 'no')
@@ -95,6 +105,8 @@ Details
 **Hiring Manager / Timesheet Approver Email:** {{ $billing->manager_email }}
 
 **Hiring Manager / Timesheet Approver Phone:** {{ $billing->manager_phone }}
+
+**Paycom ID:** {{ $billing->paycom_id }}
 
 **Recruiter(s):** {{ $billing->recruiter }}
 

@@ -10,6 +10,7 @@ use Illuminate\Support\Carbon;
 use App\Mail\PermanentPlacementSubmitted;
 use Illuminate\Support\Facades\Mail;
 use App\DistributionList;
+use App\ConvergeCompany;
 
 class PermanentPlacementController extends Controller
 {
@@ -33,8 +34,8 @@ class PermanentPlacementController extends Controller
     {
         $permanentPlacements = PermanentPlacement::latest()->with('user')
                     ->orderBy('id', 'desc')
-                    ->select('id', 'user_id', 'customer_name', 'customer_po', 'placement_name', 'position', 'recruiter', 'created_at', 'approved')
-                    ->paginate(250);
+                    ->select('id', 'user_id', 'customer_name', 'customer_po', 'placement_name', 'position', 'recruiter', 'created_at', 'approved', 'active')
+                    ->paginate(2000);
 
         return view('monster.permanent_placement.index', compact('permanentPlacements'));
     }
@@ -46,7 +47,9 @@ class PermanentPlacementController extends Controller
      */
     public function create()
     {
-        return view('monster.permanent_placement.create');
+        $convergeCompanies = ConvergeCompany::orderBy('title', 'asc')->get();
+
+        return view('monster.permanent_placement.create', compact('convergeCompanies'));
     }
 
     /**
@@ -58,6 +61,7 @@ class PermanentPlacementController extends Controller
     public function store(Request $request)
     {
         $validated = $request->validate([
+            'converge_company_id' => 'required|exists:contract_billings,id',
             'customer_name' => 'required|string',
             'ap_contact' => 'required|string',
             'ap_email' => 'required|email',
@@ -70,6 +74,7 @@ class PermanentPlacementController extends Controller
             'placement_email' => 'required|email',
             'position' => 'required|string',
             'salary' => 'required|string',
+            'additional_cost' => 'required|string',
             'perm_fee' => 'required|string',
             'total_fee' => 'required|string',
             'start_date' => 'required|date',
@@ -80,6 +85,7 @@ class PermanentPlacementController extends Controller
 
         $placement = new PermanentPlacement([
             'user_id' => auth()->user()->id,
+            'converge_company_id' => $validated['converge_company_id'],
             'customer_name' => $validated['customer_name'],
             'ap_contact' => $validated['ap_contact'],
             'ap_email' => $validated['ap_email'],
@@ -92,6 +98,7 @@ class PermanentPlacementController extends Controller
             'placement_phone' => $validated['placement_phone'],
             'position' => $validated['position'],
             'salary' => $validated['salary'],
+            'additional_cost' => $validated['additional_cost'],
             'perm_fee' => $validated['perm_fee'],
             'total_fee' => $validated['total_fee'],
             'start_date' => Carbon::parse($validated['start_date'])->toDateString(),
@@ -149,7 +156,9 @@ class PermanentPlacementController extends Controller
      */
     public function edit(PermanentPlacement $permanentPlacement)
     {
-        return view('monster.permanent_placement.edit', compact('permanentPlacement'));
+        $convergeCompanies = ConvergeCompany::orderBy('title', 'asc')->get();
+
+        return view('monster.permanent_placement.edit', compact('permanentPlacement', 'convergeCompanies'));
     }
 
     /**
@@ -162,6 +171,7 @@ class PermanentPlacementController extends Controller
     public function update(Request $request, PermanentPlacement $permanentPlacement)
     {
         $validated = $request->validate([
+            'converge_company_id' => 'required|exists:contract_billings,id',
             'customer_name' => 'required|string',
             'ap_contact' => 'required|string',
             'ap_email' => 'required|email',
@@ -174,6 +184,7 @@ class PermanentPlacementController extends Controller
             'placement_email' => 'required|email',
             'position' => 'required|string',
             'salary' => 'required|string',
+            'additional_cost' => 'required|string',
             'perm_fee' => 'required|string',
             'total_fee' => 'required|string',
             'start_date' => 'required|date',
@@ -183,6 +194,7 @@ class PermanentPlacementController extends Controller
         ]);
 
 
+        $permanentPlacement->converge_company_id = $validated['converge_company_id'];
         $permanentPlacement->customer_name = $validated['customer_name'];
         $permanentPlacement->ap_contact = $validated['ap_contact'];
         $permanentPlacement->ap_email = $validated['ap_email'];
@@ -195,6 +207,7 @@ class PermanentPlacementController extends Controller
         $permanentPlacement->placement_phone = $validated['placement_phone'];
         $permanentPlacement->position = $validated['position'];
         $permanentPlacement->salary = $validated['salary'];
+        $permanentPlacement->additional_cost = $validated['additional_cost'];
         $permanentPlacement->perm_fee = $validated['perm_fee'];
         $permanentPlacement->total_fee = $validated['total_fee'];
         $permanentPlacement->start_date = Carbon::parse($validated['start_date'])->toDateString();
@@ -317,6 +330,32 @@ class PermanentPlacementController extends Controller
                 ->with('toastr', 'success')
                 ->with('title', 'Success!')
                 ->with('message', 'Permanent Placement has been unapproved.');
+
+        } else {
+
+            return back()
+                ->with('toastr', 'error')
+                ->with('title', 'Error!')
+                ->with('message', 'Hmmm... there was some type of error with this.');
+        }
+    }
+
+
+    public function activeStatus(Request $request, PermanentPlacement $permanentPlacement)
+    {
+        $permanentPlacement->active = !$permanentPlacement->active;
+
+        $activeStatus = $permanentPlacement->save();
+
+        if($activeStatus){
+
+            $subject = 'Active Status: Permanent Placement';
+            $message = 'Permanent Placement #' . $permanentPlacement->id . ' status has been updated.';
+
+            return back()
+                ->with('toastr', 'success')
+                ->with('title', 'Success!')
+                ->with('message', $message);
 
         } else {
 

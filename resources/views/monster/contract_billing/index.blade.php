@@ -45,9 +45,10 @@ Contract Billings: Index
                     <th data-priority="5">Client</th>
                     <th data-priority="6">Job Title</th>
                     <th data-priority="10">Recruiter</th>
-                    <th data-priority="8">Created</th>
+                    <th data-priority="11">Created</th>
                     <th data-priority="7">By</th>
                     <th data-priority="4">Approved</th>
+                    <th data-priority="8">Active</th>
                     <th data-priority="3" width="15%">Actions</th>
                 </tr>
             </thead>
@@ -63,6 +64,19 @@ Contract Billings: Index
                         <td>{{ ($billing->created_at)->toDateString() }}</td>
                         <td>{{ $billing->user->name }}</td>
                         <td>{!! $billing->approved ? '<i class="fa fa-check fa-lg text-success"></i>' : '<i class="fa fa-times fa-lg text-danger"></i>' !!}</td>
+                        <td>
+                            @if(auth()->user()->hasPermissionTo('edit_contract_billings') || auth()->user()->id == $billing->user_id)
+                                <form action="{{ route('contract_billing.activeStatus', ['contract_billing' => $billing->id]) }}" method="POST" style="display: inline;">
+                                    @method('PATCH')
+                                    @csrf
+                                    <button type="submit" class="btn btn-link">
+                            @endif
+                            {!! $billing->active ? '<i class="fa fa-check fa-lg text-success"></i>' : '<i class="fa fa-times fa-lg text-danger"></i>' !!}
+                            @if(auth()->user()->hasPermissionTo('edit_contract_billings') || auth()->user()->id == $billing->user_id)
+                                    </button>
+                                </form>
+                            @endif
+                        </td>
                         <td>
                             @if(auth()->user()->hasPermissionTo('view_contract_billings'))
                                 <button type="button" class="btn btn-link">
@@ -103,6 +117,7 @@ Contract Billings: Index
                     <th>Created</th>
                     <th>By</th>
                     <th>Approved</th>
+                    <th>Active</th>
                     <th>Actions</th>
                 </tr>
             </tfoot>
@@ -129,6 +144,7 @@ Contract Billings: Index
         $('#myTable').DataTable( {
             responsive: true,
             "pageLength": 50,
+            "lengthMenu": [[50, 100, 500, -1], [50, 100, 500, "All"]],
             "order": [],
             dom: 'lfrtip',
             buttons: [
@@ -177,7 +193,11 @@ Contract Billings: Index
                     className: 'dt-center'
                 },
                 {
-                    targets: 8,
+                    targets: 9,
+                    className: 'dt-center'
+                },
+                {
+                    targets: 10,
                     className: 'dt-center',
                     "orderable": false
                 },

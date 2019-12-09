@@ -168,7 +168,7 @@ Contract Billing: Create
                 </div>
 
                 <div class="form-group">
-                    <label for="contract_period">Contract Period<span class="text-danger">*</span></label>
+                    <label for="contract_period">Contract Length<span class="text-danger">*</span></label>
                     <input type="text" class="form-control" id="contract_period" name="contract_period" placeholder="6 mo." value="{{ old('contract_period') }}" required>
                 </div>
             </div>

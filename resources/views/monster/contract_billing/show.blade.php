@@ -213,6 +213,17 @@ Contract Billing: Create
             </div>
 
             <div class="form-group">
+                <legend style="font-weight:400;font-size:1rem;">Issued Concur?</legend>
+                <p class="lead font-weight-bold">
+                        @if($contractBilling->concur)
+                            Yes
+                        @else 
+                            No
+                        @endif
+                    </p>
+            </div>
+
+            <div class="form-group">
                 <label for="drug_test">Drug Test?</label>
                 <p class="lead font-weight-bold">
                     @if($contractBilling->drug_test == 'no')

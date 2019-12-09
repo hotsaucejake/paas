@@ -282,6 +282,18 @@ Contract Billing: Create
                 </div>
 
                 <div class="form-group">
+                    <legend style="font-weight:400;font-size:1rem;">Issued Concur?<span class="text-danger">*</span></legend>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="concur" id="concur1" value="1" {{ old('concur') == "1" ? 'checked' : '' }} required>
+                        <label class="form-check-label" for="concur1">Yes</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="concur" id="concur2" value="0" {{ old('concur') == "0" ? 'checked' : '' }} required>
+                        <label class="form-check-label" for="concur2">No</label>
+                    </div>
+                </div>
+
+                <div class="form-group">
                     <label for="drug_test">Drug Test?<span class="text-danger">*</span></label>
                     <select class="form-control" id="drug_test" name="drug_test" required>
                         <option value="no" {{ old('drug_test') == 'no' ? 'selected' : '' }}>No</option>

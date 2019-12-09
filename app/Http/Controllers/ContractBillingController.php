@@ -84,6 +84,7 @@ class ContractBillingController extends Controller
             'corus_email' => 'required|boolean',
             'background_check' => 'required|in:yes,no,completed',
             'travel_reporting' => 'required|boolean',
+            'concur' => 'required|boolean',
             'start_date' => 'required|date',
             'contract_period' => 'required|string',
             'drug_test' => 'required|in:no,p5,p9,p10,p11,other',
@@ -122,6 +123,7 @@ class ContractBillingController extends Controller
             'corus_email' => $validated['corus_email'],
             'background_check' => $validated['background_check'],
             'travel_reporting' => $validated['travel_reporting'],
+            'concur' => $validated['concur'],
             'start_date' => Carbon::parse($validated['start_date'])->toDateString(),
             'contract_period' => $validated['contract_period'],
             'drug_test' => $validated['drug_test'],
@@ -222,6 +224,7 @@ class ContractBillingController extends Controller
             'corus_email' => 'required|boolean',
             'background_check' => 'required|in:yes,no,completed',
             'travel_reporting' => 'required|boolean',
+            'concur' => 'required|boolean',
             'start_date' => 'required|date',
             'contract_period' => 'required|string',
             'drug_test' => 'required|in:no,p5,p9,p10,p11,other',
@@ -258,6 +261,7 @@ class ContractBillingController extends Controller
         $contractBilling->corus_email = $validated['corus_email'];
         $contractBilling->background_check = $validated['background_check'];
         $contractBilling->travel_reporting = $validated['travel_reporting'];
+        $contractBilling->concur = $validated['concur'];
         $contractBilling->start_date = Carbon::parse($validated['start_date'])->toDateString();
         $contractBilling->contract_period = $validated['contract_period'];
         $contractBilling->drug_test = $validated['drug_test'];

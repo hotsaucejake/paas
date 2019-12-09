@@ -69,6 +69,8 @@ Position Details
 
 **Traveling, expense reporting?** {{ $billing->travel_reporting ? 'Yes' : 'No' }}
 
+**Issued Concur?** {{ $billing->concur ? 'Yes' : 'No' }}
+
 **Drug Test?**
 @if($billing->drug_test == 'no')
     No

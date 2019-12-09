@@ -100,6 +100,8 @@ Details
 
 **Hiring Manager / Timesheet Approver Phone:** {{ $billing->manager_phone }}
 
+**Paycom ID:** {{ $billing->paycom_id }}
+
 **Recruiter(s):** {{ $billing->recruiter }}
 
 **Account Manager:** {{ $billing->account_manager }}
